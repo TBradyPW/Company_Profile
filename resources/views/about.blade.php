@@ -502,3 +502,87 @@
 </div>
 @endsection
 
+@section ('footer')
+<footer class="style-5">
+    <div class="container">
+        <div class="row gx-0 justify-content-between">
+            <div class="col-lg-3">
+                <div class="items">
+                    <div class="title">
+                        PT. Hexagon Karyatama Indonesia
+                    </div>
+                    <small class="text">
+                        Founded under the name PT. Hexagon Karyatama Indonesia, Hexagon Inc. is a company that operates in the field of digital artwork and IT solutions. With a focus on education and a commitment to providing high-quality services, we have established ourselves as a leading provider in our industry
+                    </small>
+                   
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="items">
+                    <div class="title">
+                        Information
+                    </div>
+                    <small class="text mb-10 d-block">
+                        Jl. Abdul Halim No.128, Cimahi Tengah, <br> Kota Cimahi, Jawa Barat 40522, INA
+                    </small>
+                    <small class="text mb-10 d-block">
+                        <a href="https://wa.me/6281222181823">+62 812 2218 1823</a>
+                    </small>
+                    <small class="text d-block">
+                        <a href="https://mail.google.com/mail/u/0/?view=cm&amp;tf=1&amp;fs=1&amp;to=contact@hexagon.co.id">contact@hexagon.co.id</a>
+                    </small>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="items">
+                    <div class="title">
+                        Our Ecosystem
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="https://hexamedia.id/"> Hexamedia </a>
+                        </li>
+                        <li>
+                            <a href="#"> Hexa Journal </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="items">
+                    <div class="title">
+                        Follow Us
+                    </div>
+                    <div class="socail-icons">
+                        <a href="https://twitter.com/" class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/" class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/" class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <img src="assets/img/logo-footer-50.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <small class="small">
+                        © 2022 Copyrights by <a href="#" class="fw-bold text-decoration-underline">Hexagon Inc.</a> All
+                        Rights Reserved. 
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+@endsection
+
