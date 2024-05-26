@@ -1,0 +1,48 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 06 May 2024 09:26:27 at https://iteck-html.themescamp.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://iteck-html.themescamp.com/ -O1 "C:\Files\Work\landing page templates\iteck" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:28:14	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://iteck-html.themescamp.com/)
+09:32:53	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/fonts/webfonts/fa-brands-400.eot? (from https://iteck-html.themescamp.com/assets/css/lib/all.min.css)
+09:33:10	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/ser_wh_line.png (from https://iteck-html.themescamp.com/assets/css/style.css)
+09:33:10	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/pricing/off.png (from https://iteck-html.themescamp.com/assets/css/style.css)
+09:33:10	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/about/about_s4_bubble.png (from https://iteck-html.themescamp.com/home-app-landing.html)
+09:33:10	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/chrome_icon.png (from https://iteck-html.themescamp.com/home-app-landing.html)
+09:33:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/header/head_shape_l.png (from https://iteck-html.themescamp.com/home-digital-agency.html)
+09:33:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/header/head6_rating.png (from https://iteck-html.themescamp.com/home-marketing-startup.html)
+09:33:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/logos/7.png (from https://iteck-html.themescamp.com/home-marketing-startup.html)
+09:33:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/contact_a.png (from https://iteck-html.themescamp.com/home-marketing-startup.html)
+09:33:16	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/twiter.com (from https://iteck-html.themescamp.com/home-marketing-startup.html)
+09:33:16	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/facebook.com (from https://iteck-html.themescamp.com/home-marketing-startup.html)
+09:33:16	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/instagram.com (from https://iteck-html.themescamp.com/home-marketing-startup.html)
+09:33:16	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/projects/2.png (from https://iteck-html.themescamp.com/home-it-solutions.html)
+09:33:16	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/blog/v_lines.png (from https://iteck-html.themescamp.com/rtl-home-software-company.html)
+09:33:18	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/rtl-page-single-project-html (from https://iteck-html.themescamp.com/rtl-page-portfolio.html)
+09:33:18	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/testimonials/testi7_back.png (from https://iteck-html.themescamp.com/home-it-solutions2.html)
+09:33:21	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/solution/1.png (from https://iteck-html.themescamp.com/home-cyber-security.html)
+09:33:21	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/solution/3.png (from https://iteck-html.themescamp.com/home-cyber-security.html)
+09:33:21	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/blog/18.png (from https://iteck-html.themescamp.com/home-cyber-security.html)
+09:33:21	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/features/24.png (from https://iteck-html.themescamp.com/home-help-desk.html)
+09:33:21	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/header/header_12_1.png (from https://iteck-html.themescamp.com/home-nft-marketplace.html)
+09:33:22	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/logos/45.png (from https://iteck-html.themescamp.com/home-payment-solutions.html)
+09:33:22	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/testi_s14_ic1.png (from https://iteck-html.themescamp.com/home-payment-solutions.html)
+09:33:23	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/team/11.jpg (from https://iteck-html.themescamp.com/home-crypto.html)
+09:33:24	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/comming_light_shape.png (from https://iteck-html.themescamp.com/page-comming-soon-5.html)
+09:33:26	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/rocket.png (from https://iteck-html.themescamp.com/page-404.html)
+09:33:28	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/assets/css/lib/images/ui-icons_444444_256x240.png (from https://iteck-html.themescamp.com/assets/css/lib/jquery-ui.min.css)
+09:33:28	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/assets/css/lib/images/ui-icons_555555_256x240.png (from https://iteck-html.themescamp.com/assets/css/lib/jquery-ui.min.css)
+09:33:28	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/assets/css/lib/images/ui-icons_ffffff_256x240.png (from https://iteck-html.themescamp.com/assets/css/lib/jquery-ui.min.css)
+09:33:28	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/assets/css/lib/images/ui-icons_777620_256x240.png (from https://iteck-html.themescamp.com/assets/css/lib/jquery-ui.min.css)
+09:33:28	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/assets/css/lib/images/ui-icons_cc0000_256x240.png (from https://iteck-html.themescamp.com/assets/css/lib/jquery-ui.min.css)
+09:33:28	Error: 	"Not Found" (404) at link https://iteck-html.themescamp.com/assets/css/lib/images/ui-icons_777777_256x240.png (from https://iteck-html.themescamp.com/assets/css/lib/jquery-ui.min.css)
+09:33:28	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/solution/1.png (from https://iteck-html.themescamp.com/home-cyber-security.html)
+09:33:29	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/icons/solution/3.png (from https://iteck-html.themescamp.com/home-cyber-security.html)
+09:33:34	Warning: 	Retry after error -4 (No data (connection closed)) at link https://iteck-html.themescamp.com/assets/img/logos/45.png (from https://iteck-html.themescamp.com/home-payment-solutions.html)
+09:33:34	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://iteck-html.themescamp.com/assets/img/icons/solution/1.png (from https://iteck-html.themescamp.com/home-cyber-security.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 7 minutes 7 seconds : 848 links scanned, 809 files written (195169147 bytes overall) [179008060 bytes received at 419222 bytes/sec], 22869072 bytes transferred using HTTP compression in 163 files, ratio 28%, 19.2 requests per connection
+(12 errors, 25 warnings, 0 messages)
