@@ -106,18 +106,18 @@
     <!-- ====== end to top button ====== -->
 
     <!-- ====== request ====== -->
-    <script src="iteck/iteckfile/assets/js/lib/jquery-3.0.0.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/bootstrap.bundle.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/wow.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery.fancybox.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/lity.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/swiper.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery.waypoints.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery.counterup.js"></script>
-    <!-- <script src="iteck/iteckfile/assets/js/lib/pace.js"></script> -->
-    <script src="iteck/iteckfile/assets/js/lib/scrollIt.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/main.js"></script>
+    <script src="{{ asset('js/lib/jquery-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('js/lib/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/lib/wow.min.js') }}"></script>
+    <script src="{{ asset('js/lib/jquery.fancybox.js') }}"></script>
+    <script src="{{ asset('js/lib/lity.js') }}"></script>
+    <script src="{{ asset('js/lib/swiper.min.js') }}"></script>
+    <script src="{{ asset('js/lib/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/lib/jquery.counterup.js') }}"></script>
+    <!-- <script src="{{ asset('js/lib/pace.js') }}"></script> -->
+    <script src="{{ asset('js/lib/scrollIt.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 
