@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1B2025;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.posisi {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.kiri img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 2px;
+}
+
+.kiwa h4 {
+    margin-left: 17%;
+}
+
+.kiwa {
+    text-align: left;
+}
+
+.input-container {
+    position: relative;
+    width: 102%;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#mata {
+    cursor: pointer;
+    height: auto;
+    max-width: 30px;
+    width: 26px;
+    position: absolute;
+    top: 56%;
+    right: 0%;
+
+}
+
+input[type=submit] {
+    background-color: #FEEA3C;
+    color: #252525;
+    border: none;
+    padding: 12px;
+    width: 110%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 1px 3px 1px 3px;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(7, 7, 7);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .posisi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kiri img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
