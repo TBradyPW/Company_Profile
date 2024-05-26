@@ -5,7 +5,7 @@
 @section ('loader')
 <div id="preloader">
         <div id="loading-wrapper" class="show">
-            <div id="loading-text"> <img src="iteck/iteckfile/assets/img/Hexagon-logo-NT.png" alt=""> </div>
+            <div id="loading-text"> <img src="{{asset('assets/img/Hexagon-logo-NT.png') }}" alt=""> </div>
             <div id="loading-content"></div>
         </div>
     </div>
@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-light style-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="iteck/iteckfile/assets/img/Hexagon-logo.png" alt="">
+                <img src="{{asset('assets/img/Hexagon-logo.png') }}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -90,19 +90,19 @@
                             <h1>We provide perfect <br> IT Solutions & Technology for any
                                 <span>
                                     Startups
-                                    <img src="iteck/iteckfile/assets/img/header/head5_line.png" alt="" class="head-line">
-                                    <img src="iteck/iteckfile/assets/img/header/head5_pen.png" alt="" class="head-pen">
+                                    <img src="{{asset('assets/img/header/head5_line.png') }}" alt="" class="head-line">
+                                    <img src="{{asset('assets/img/header/head5_pen.png') }}" alt="" class="head-pen">
                                 </span>
                             </h1>
                             <p>
                                 Iteck helps you unify your brand identity by collecting, storing and distributing <br> design
-                                tokens and iteck/iteckfile/assets — automatically.
+                                tokens and automatically.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="main-vid">
-                            <img src="iteck/iteckfile/assets/img/vid-banner.png" alt="">
+                            <img src="{{asset('assets/img/vid-banner.png') }}" alt="">
                             <a href="https://youtu.be/q21HgEzSLO4" data-lity class="play-icon">
                                 <i class="fas fa-play"></i>
                             </a>
@@ -110,10 +110,10 @@
                     </div>
                 </div>
             </div>
-            <img src="iteck/iteckfile/assets/img/header/hand_megaphone.png" alt="" class="hand-mega slide_up_down">
-            <img src="iteck/iteckfile/assets/img/header/head6_rating.png" alt="" class="head6-rating scale_up_down">
-            <img src="iteck/iteckfile/assets/img/header/header5_linechart.png" alt="" class="head6-charts scale_up_down">
-            <img src="iteck/iteckfile/assets/img/header/rocket.png" alt="" class="head6-rocket">
+            <img src="{{asset('assets/img/header/hand_megaphone.png') }}" alt="" class="hand-mega slide_up_down">
+            <img src="{{asset('assets/img/header/head6_rating.png') }}" alt="" class="head6-rating scale_up_down">
+            <img src="{{asset('assets/img/header/header5_linechart.png') }}" alt="" class="head6-charts scale_up_down">
+            <img src="{{asset('assets/img/header/rocket.png') }}" alt="" class="head6-rocket">
         </header>
 @endsection
 
@@ -127,7 +127,7 @@
                 <div class="content rounded-pill">
                     <div class="commun-card">
                         <div class="icon">
-                            <img src="iteck/iteckfile/assets/img/icons/code3d.png" alt="">
+                            <img src="{{asset('assets/img/icons/code3d.png') }}" alt="">
                         </div>
                         <div class="inf">
                             <h5>Front-End Friendly</h5>
@@ -135,7 +135,7 @@
                     </div>
                     <div class="commun-card">
                         <div class="icon">
-                            <img src="iteck/iteckfile/assets/img/icons/price3d.png" alt="">
+                            <img src="{{asset('assets/img/icons/price3d.png') }}" alt="">
                         </div>
                         <div class="inf">
                             <h5>Affordable Price</h5>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="commun-card">
                         <div class="icon">
-                            <img src="iteck/iteckfile/assets/img/icons/message3d.png" alt="">
+                            <img src="{{asset('assets/img/icons/message3d.png') }}" alt="">
                         </div>
                         <div class="inf">
                             <h5>Affordable Price</h5>
@@ -174,13 +174,13 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="img">
-                                <img src="iteck/iteckfile/assets/img/about/superman_3d.png" alt="">
+                                <img src="{{asset('assets/img/about/superman_3d.png') }}" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <img src="iteck/iteckfile/assets/img/about/about_s6_bubbles.png" alt="" class="bubbles rotate-center">
+            <img src="{{asset('assets/img/about/about_s6_bubbles.png') }}" alt="" class="bubbles rotate-center">
         </section>
 @endsection
 
@@ -190,7 +190,7 @@
                 <div class="row justify-content-between gx-0">
                     <div class="col-lg-6">
                         <div class="img">
-                            <img src="iteck/iteckfile/assets/img/choose_us/man_arrow.png" alt="">
+                            <img src="{{asset('assets/img/choose_us/man_arrow.png') }}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -204,7 +204,7 @@
                             <ul>
                                 <li class="d-flex mb-40">
                                     <small class="icon-50 me-4 flex-shrink-0">
-                                        <img src="iteck/iteckfile/assets/img/icons/serv_icons/1.png" alt="">
+                                        <img src="{{asset('assets/img/icons/serv_icons/1.png') }}" alt="">
                                     </small>
                                     <div class="inf">
                                         <h5>IT Consultation</h5>
@@ -215,7 +215,7 @@
                                 </li>
                                 <li class="d-flex mb-40">
                                     <small class="icon-50 me-4 flex-shrink-0">
-                                        <img src="iteck/iteckfile/assets/img/icons/serv_icons/3.png" alt="">
+                                        <img src="{{asset('assets/img/icons/serv_icons/3.png') }}" alt="">
                                     </small>
                                     <div class="inf">
                                         <h5>Software Design & Development</h5>
@@ -226,7 +226,7 @@
                                 </li>
                                 <li class="d-flex">
                                     <small class="icon-50 me-4 flex-shrink-0">
-                                        <img src="iteck/iteckfile/assets/img/icons/serv_icons/5.png" alt="">
+                                        <img src="{{asset('assets/img/icons/serv_icons/5.png') }}" alt="">
                                     </small>
                                     <div class="inf">
                                         <h5>Cloud Services</h5>
@@ -243,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            <img src="iteck/iteckfile/assets/img/about/about_s6_bubbles.png" alt="" class="bubbles rotate-center">
+            <img src="{{asset('assets/img/about/about_s6_bubbles.png') }}" alt="" class="bubbles rotate-center">
         </section>
 @endsection
 
@@ -259,32 +259,32 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/7.png" alt="">
+                                    <img src="{{asset('assets/img/logos/7.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/8.png" alt="">
+                                    <img src="{{asset('assets/img/logos/8.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/9.png" alt="">
+                                    <img src="{{asset('assets/img/logos/9.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/10.png" alt="">
+                                    <img src="{{asset('assets/img/logos/10.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/11.png" alt="">
+                                    <img src="{{asset('assets/img/logos/11.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/12.png" alt="">
+                                    <img src="{{asset('assets/img/logos/12.png') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -296,32 +296,32 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/13.png" alt="">
+                                    <img src="{{asset('assets/img/logos/13.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/14.png" alt="">
+                                    <img src="{{asset('assets/img/logos/14.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/15.png" alt="">
+                                    <img src="{{asset('assets/img/logos/15.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/16.png" alt="">
+                                    <img src="{{asset('assets/img/logos/16.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/17.png" alt="">
+                                    <img src="{{asset('assets/img/logos/17.png') }}" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#" class="img">
-                                    <img src="iteck/iteckfile/assets/img/logos/9.png" alt="">
+                                    <img src="{{asset('assets/img/logos/9.png') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -342,32 +342,32 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="iteck/iteckfile/assets/img/about/cl1.png" class="culture-card d-block" data-fancybox="gallery">
-                                    <img src="iteck/iteckfile/assets/img/about/cl1.png" alt="">
+                                <a href="{{asset('assets/img/about/cl1.png') }}" class="culture-card d-block" data-fancybox="gallery">
+                                    <img src="{{asset('assets/img/about/cl1.png') }}" alt="">
                                     <span class="overlay"></span>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="iteck/iteckfile/assets/img/about/cl2.png" class="culture-card d-block" data-fancybox="gallery">
-                                    <img src="iteck/iteckfile/assets/img/about/cl2.png" alt="">
+                                <a href="{{asset('assets/img/about/cl2.png') }}" class="culture-card d-block" data-fancybox="gallery">
+                                    <img src="{{asset('assets/img/about/cl2.png') }}" alt="">
                                     <span class="overlay"></span>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="iteck/iteckfile/assets/img/about/cl3.png" class="culture-card d-block" data-fancybox="gallery">
-                                    <img src="iteck/iteckfile/assets/img/about/cl3.png" alt="">
+                                <a href="{{asset('assets/img/about/cl3.png') }}" class="culture-card d-block" data-fancybox="gallery">
+                                    <img src="{{asset('assets/img/about/cl3.png') }}" alt="">
                                     <span class="overlay"></span>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="iteck/iteckfile/assets/img/about/cl1.png" class="culture-card d-block" data-fancybox="gallery">
-                                    <img src="iteck/iteckfile/assets/img/about/cl1.png" alt="">
+                                <a href="{{asset('assets/img/about/cl1.png') }}" class="culture-card d-block" data-fancybox="gallery">
+                                    <img src="{{asset('assets/img/about/cl1.png') }}" alt="">
                                     <span class="overlay"></span>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="iteck/iteckfile/assets/img/about/cl2.png" class="culture-card d-block" data-fancybox="gallery">
-                                    <img src="iteck/iteckfile/assets/img/about/cl2.png" alt="">
+                                <a href="{{asset('assets/img/about/cl2.png') }}" class="culture-card d-block" data-fancybox="gallery">
+                                    <img src="{{asset('assets/img/about/cl2.png') }}" alt="">
                                     <span class="overlay"></span>
                                 </a>
                             </div>
@@ -391,7 +391,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card mb-30 mb-lg-0 style-6">
                                 <div class="img img-cover">
-                                    <img src="iteck/iteckfile/assets/img/team/1.jpg" alt="">
+                                    <img src="{{asset('assets/img/team/1.jpg') }}" alt="">
                                     <div class="social-icons">
                                         <a href="#">
                                             <i class="fab fa-twitter"></i>
@@ -416,7 +416,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card mb-30 mb-lg-0 style-6">
                                 <div class="img img-cover">
-                                    <img src="iteck/iteckfile/assets/img/team/5.jpg" alt="">
+                                    <img src="{{asset('assets/img/team/5.jpg') }}" alt="">
                                     <div class="social-icons">
                                         <a href="#">
                                             <i class="fab fa-twitter"></i>
@@ -441,7 +441,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card mb-30 mb-lg-0 style-6">
                                 <div class="img img-cover">
-                                    <img src="iteck/iteckfile/assets/img/team/3.jpg" alt="">
+                                    <img src="{{asset('assets/img/team/3.jpg') }}" alt="">
                                     <div class="social-icons">
                                         <a href="#">
                                             <i class="fab fa-twitter"></i>
@@ -466,7 +466,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card style-6">
                                 <div class="img img-cover">
-                                    <img src="iteck/iteckfile/assets/img/team/4.jpg" alt="">
+                                    <img src="{{asset('assets/img/team/4.jpg') }}" alt="">
                                     <div class="social-icons">
                                         <a href="#">
                                             <i class="fab fa-twitter"></i>
@@ -571,7 +571,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo">
-                        <img src="assets/img/logo-footer-50.png" alt="">
+                        <img src="assets/img/logo-footer-50.png') }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">

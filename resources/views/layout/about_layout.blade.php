@@ -16,26 +16,26 @@
     <title>@yield('Hexagon')</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="iteck/iteckfile/assets/img/Hexagon-logo-NT.png" title="Favicon" sizes="16x16" />
+    <link rel="shortcut icon" href="{{ asset('assets/img/Hexagon-logo-NT.png" title="Favicon" sizes="16x16" />
 
     <!-- ====== bootstrap icons cdn ====== -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css') }}" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/bootstrap.min.css') }}">
 
     <!-- ====== font family ====== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/lib/all.min.css" />
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/lib/animate.css" />
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/lib/jquery.fancybox.css" />
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/lib/lity.css" />
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/lib/swiper.min.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/jquery.fancybox.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/lity.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/lib/swiper.min.css') }}" />
     
     <!-- ====== global style ====== -->
-    <link rel="stylesheet" href="iteck/iteckfile/assets/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 </head>
 
 <body>
@@ -106,18 +106,18 @@
     <!-- ====== end to top button ====== -->
 
     <!-- ====== request ====== -->
-    <script src="iteck/iteckfile/assets/js/lib/jquery-3.0.0.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/bootstrap.bundle.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/wow.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery.fancybox.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/lity.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/swiper.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery.waypoints.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/lib/jquery.counterup.js"></script>
-    <!-- <script src="iteck/iteckfile/assets/js/lib/pace.js"></script> -->
-    <script src="iteck/iteckfile/assets/js/lib/scrollIt.min.js"></script>
-    <script src="iteck/iteckfile/assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/lib/jquery-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/jquery.fancybox.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/lity.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/swiper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lib/jquery.counterup.js') }}"></script>
+    <!-- <script src="{{ asset('assets/js/lib/pace.js') }}"></script> -->
+    <script src="{{ asset('assets/js/lib/scrollIt.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 
