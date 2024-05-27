@@ -1,11 +1,11 @@
 @extends ('layout.about_layout')
 
-@section('Hexagon', 'Hexagon')
+@section('Hexagon', 'Hexagon Inc')
 
 @section('loader')
     <div id="preloader">
         <div id="loading-wrapper" class="show">
-            <div id="loading-text"> <img src="{{ asset('assets/img/Hexagon-logo-NT.png') }}" alt=""> </div>
+            <div id="loading-text"> <img src="{{ asset('assets/About/img/Hexagon-logo-NT.png') }}" alt=""> </div>
             <div id="loading-content"></div>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light style-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('assets/img/Hexagon-logo.png') }}" alt="">
+                <img src="{{ asset('assets/About/img/Hexagon-logo.png') }}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="page-portfolio-5.html">
+                        <a class="nav-link" href="{{ route('Index') }}">
                             Home
                         </a>
                     </li>
@@ -95,8 +95,10 @@
                         <h1>Be the best partner <br> to create solutions
                             <span>
                                 together
-                                <img src="{{ asset('assets/img/header/head5_line.png') }}" alt="" class="head-line">
-                                <img src="{{ asset('assets/img/header/head5_pen.png') }}" alt="" class="head-pen">
+                                <img src="{{ asset('assets/About/img/header/head5_line.png') }}" alt=""
+                                    class="head-line">
+                                <img src="{{ asset('assets/About/img/header/head5_pen.png') }}" alt=""
+                                    class="head-pen">
                             </span>
                         </h1>
                         <p id="brand_keterangan">
@@ -105,7 +107,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="main-vid">
-                        <img src="{{ asset('assets/img/vid-banner.png') }}" alt="">
+                        <img src="{{ asset('assets/About/img/vid-banner.png') }}" alt="">
                         <a id="linkyt" href="" data-lity class="play-icon">
                             <i class="fas fa-play"></i>
                         </a>
@@ -113,10 +115,12 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('assets/img/header/hand_megaphone.png') }}" alt="" class="hand-mega slide_up_down">
-        <img src="{{ asset('assets/img/header/head6_rating.png') }}" alt="" class="head6-rating scale_up_down">
-        <img src="{{ asset('assets/img/header/header5_linechart.png') }}" alt="" class="head6-charts scale_up_down">
-        <img src="{{ asset('assets/img/header/rocket.png') }}" alt="" class="head6-rocket">
+        <img src="{{ asset('assets/About/img/header/hand_megaphone.png') }}" alt="" class="hand-mega slide_up_down">
+        <img src="{{ asset('assets/About/img/header/head6_rating.png') }}" alt=""
+            class="head6-rating scale_up_down">
+        <img src="{{ asset('assets/About/img/header/header5_linechart.png') }}" alt=""
+            class="head6-charts scale_up_down">
+        <img src="{{ asset('assets/About/img/header/rocket.png') }}" alt="" class="head6-rocket">
     </header>
 @endsection
 
@@ -151,13 +155,14 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="img">
-                            <img src="{{ asset('assets/img/about/superman_3d.png') }}" alt="">
+                            <img src="{{ asset('assets/About/img/about/superman_3d.png') }}" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="{{ asset('assets/img/about/about_s6_bubbles.png') }}" alt="" class="bubbles rotate-center">
+        <img src="{{ asset('assets/About/img/about/about_s6_bubbles.png') }}" alt=""
+            class="bubbles rotate-center">
     </section>
 @endsection
 
@@ -167,7 +172,7 @@
             <div class="row justify-content-between gx-0">
                 <div class="col-lg-6">
                     <div class="img">
-                        <img src="{{ asset('assets/img/choose_us/man_arrow.png') }}" alt="">
+                        <img src="{{ asset('assets/About/img/choose_us/man_arrow.png') }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -189,7 +194,8 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('assets/img/about/about_s6_bubbles.png') }}" alt="" class="bubbles rotate-center">
+        <img src="{{ asset('assets/About/img/about/about_s6_bubbles.png') }}" alt=""
+            class="bubbles rotate-center">
     </section>
 @endsection
 
@@ -205,7 +211,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/12.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/12.png') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -217,32 +223,32 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/13.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/13.png') }}" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/14.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/14.png') }}" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/15.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/15.png') }}" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/16.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/16.png') }}" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/17.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/17.png') }}" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="img">
-                                <img src="{{ asset('assets/img/logos/9.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/logos/9.png') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -263,37 +269,37 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="{{ asset('assets/img/about/cl1.png') }}" class="culture-card d-block"
+                            <a href="{{ asset('assets/About/img/about/cl1.png') }}" class="culture-card d-block"
                                 data-fancybox="gallery">
-                                <img src="{{ asset('assets/img/about/cl1.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/about/cl1.png') }}" alt="">
                                 <span class="overlay"></span>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="{{ asset('assets/img/about/cl2.png') }}" class="culture-card d-block"
+                            <a href="{{ asset('assets/About/img/about/cl2.png') }}" class="culture-card d-block"
                                 data-fancybox="gallery">
-                                <img src="{{ asset('assets/img/about/cl2.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/about/cl2.png') }}" alt="">
                                 <span class="overlay"></span>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="{{ asset('assets/img/about/cl3.png') }}" class="culture-card d-block"
+                            <a href="{{ asset('assets/About/img/about/cl3.png') }}" class="culture-card d-block"
                                 data-fancybox="gallery">
-                                <img src="{{ asset('assets/img/about/cl3.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/about/cl3.png') }}" alt="">
                                 <span class="overlay"></span>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="{{ asset('assets/img/about/cl1.png') }}" class="culture-card d-block"
+                            <a href="{{ asset('assets/About/img/about/cl1.png') }}" class="culture-card d-block"
                                 data-fancybox="gallery">
-                                <img src="{{ asset('assets/img/about/cl1.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/about/cl1.png') }}" alt="">
                                 <span class="overlay"></span>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="{{ asset('assets/img/about/cl2.png') }}" class="culture-card d-block"
+                            <a href="{{ asset('assets/About/img/about/cl2.png') }}" class="culture-card d-block"
                                 data-fancybox="gallery">
-                                <img src="{{ asset('assets/img/about/cl2.png') }}" alt="">
+                                <img src="{{ asset('assets/About/img/about/cl2.png') }}" alt="">
                                 <span class="overlay"></span>
                             </a>
                         </div>
@@ -317,7 +323,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card mb-30 mb-lg-0 style-6">
                             <div class="img img-cover">
-                                <img src="{{ asset('assets/img/team/1.jpg') }}" alt="">
+                                <img src="{{ asset('assets/About/img/team/1.jpg') }}" alt="">
                                 <div class="social-icons">
                                     <a href="#">
                                         <i class="fab fa-twitter"></i>
@@ -344,7 +350,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card mb-30 mb-lg-0 style-6">
                             <div class="img img-cover">
-                                <img src="{{ asset('assets/img/team/5.jpg') }}" alt="">
+                                <img src="{{ asset('assets/About/img/team/5.jpg') }}" alt="">
                                 <div class="social-icons">
                                     <a href="#">
                                         <i class="fab fa-twitter"></i>
@@ -371,7 +377,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card mb-30 mb-lg-0 style-6">
                             <div class="img img-cover">
-                                <img src="{{ asset('assets/img/team/3.jpg') }}" alt="">
+                                <img src="{{ asset('assets/About/img/team/3.jpg') }}" alt="">
                                 <div class="social-icons">
                                     <a href="#">
                                         <i class="fab fa-twitter"></i>
@@ -398,7 +404,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="team-card style-6">
                             <div class="img img-cover">
-                                <img src="{{ asset('assets/img/team/4.jpg') }}" alt="">
+                                <img src="{{ asset('assets/About/img/team/4.jpg') }}" alt="">
                                 <div class="social-icons">
                                     <a href="#">
                                         <i class="fab fa-twitter"></i>
@@ -528,7 +534,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="logo">
-                            <img src="assets/img/logo-footer-50.png') }}" alt="">
+                            <img src="assets/About/img/logo-footer-50.png') }}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6">
