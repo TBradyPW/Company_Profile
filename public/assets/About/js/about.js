@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: env('API_BASE_URL') + 'abt_hero',
+        url: baseURL + 'abt_hero',
         type: 'GET',
         success: function (data) {
             if (data.data.length > 0) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: env('API_BASE_URL') + 'abt_culture',
+        url: baseURL + 'abt_culture',
         method: 'GET',
         success: function (data) {
             var cultureData = data.data.slice(0, 3);;
@@ -53,7 +53,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: env('API_BASE_URL') + 'Service',
+        url: baseURL + 'Service',
         method: 'GET',
         success: function (data) {
             var serviceData = data.data.slice(0, 3);;
@@ -82,7 +82,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: env('API_BASE_URL') + 'abt_philosophy',
+        url: baseURL + 'abt_philosophy',
         type: 'GET',
         success: function (data) {
             if (data.data.length > 0) {
@@ -98,7 +98,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: baseUrl + 'abt_team',
+        url: baseURL + 'abt_team',
         method: 'GET',
         success: function (data) {
             var teamData = data.data;;
@@ -109,7 +109,7 @@ $(document).ready(function () {
                 <div class="col-lg-3 col-sm-6">
                 <div class="team-card mb-30 mb-lg-0 style-6">
                 <div class="img img-cover">
-                <img src="${baseUrl}images/${team.foto_orang}" alt="">
+                <img src="${baseURL}images/${team.foto_orang}" alt="">
                     <div class="social-icons">
                         <a href="${team.link_ig}">
                             <i class="fab fa-twitter"></i>
