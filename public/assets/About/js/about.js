@@ -56,7 +56,6 @@ $(document).ready(function () {
         }
     });
 
-
     $.ajax({
         url: baseUrl + 'Service',
         method: 'GET',
@@ -96,6 +95,51 @@ $(document).ready(function () {
             } else {
                 $('#philosophy').text('Tidak ada philosophy');
             }
+        },
+        error: function (_xhr, status, error) {
+            console.error(status + ': ' + error);
+        }
+    });
+
+    $.ajax({
+        url: baseUrl + 'abt_culture',
+        method: 'GET',
+        success: function (data) {
+            var cultureData = data.data.slice(0, 3);;
+            var container = $('#culture');
+            container.empty();
+            cultureData.forEach(function () {
+                let konten = ` 
+                <div class="col-lg-3 col-sm-6">
+                <div class="team-card mb-30 mb-lg-0 style-6">
+                    <div class="img img-cover">
+                        <img src="{{ asset('assets/About/img/team/1.jpg') }}" alt="">
+                        <div class="social-icons">
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <a class="d-block" href="#">
+                            <h6>Michael Edwards</h6>
+                        </a>
+                        <small>CEO Founder</small>
+                    </div>
+                </div>
+            </div>
+            `;
+                container.append(konten);
+            });
         },
         error: function (_xhr, status, error) {
             console.error(status + ': ' + error);
