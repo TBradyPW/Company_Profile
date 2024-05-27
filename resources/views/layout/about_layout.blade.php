@@ -14,14 +14,15 @@
     <meta name="author" content="" />
 
     <!-- Title  -->
-    <title>@yield('Hexagon')</title>
+    <title>@yield('Hexagon Inc')</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon"
-        href="{{ asset('assets/About/img/Hexagon-logo-NT.png') }}" title="Favicon" sizes="16x16" />
-                
+    <link rel="shortcut icon" href="{{ asset('assets/About/img/Hexagon-logo-NT.png') }}" title="Favicon"
+        sizes="16x16" />
+
     <!-- ====== bootstrap icons cdn ====== -->
-        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css') }}"
+    <link rel="stylesheet"
+        href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css') }}"
         integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
