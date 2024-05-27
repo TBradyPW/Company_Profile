@@ -41,3 +41,61 @@
     </style>
 @endsection
 
+@section ('Navbar')
+<nav class="navbar navbar-expand-lg navbar-dark style-2 position-absolute w-100 p-0">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/Index/img/logo-header-white-25.png') }}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase" id="nav-menus">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">
+                            services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="posts.html">
+                            news
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrier.html">
+                            Career
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-side">
+                    <div class="qoute-nav ps-4">
+                        <a href="#" class="search-icon me-3">
+                            <i class="bi bi-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+@endsection
