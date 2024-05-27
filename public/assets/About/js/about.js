@@ -1,8 +1,7 @@
 $(document).ready(function () {
-    const baseUrl = 'http://192.168.1.3:8000/api/'
-    const tampilGmbr = baseUrl + 'images/'
+    console.log(`env yeuh`)
     $.ajax({
-        url: baseUrl + 'abt_brand_message',
+        url: baseURL + 'abt_brand_message',
         type: 'GET',
         success: function (data) {
             if (data.data.length > 0) {
@@ -16,7 +15,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: baseUrl + 'abt_hero',
+        url: env('API_BASE_URL') + 'abt_hero',
         type: 'GET',
         success: function (data) {
             if (data.data.length > 0) {
@@ -30,7 +29,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: baseUrl + 'abt_culture',
+        url: env('API_BASE_URL') + 'abt_culture',
         method: 'GET',
         success: function (data) {
             var cultureData = data.data.slice(0, 3);;
@@ -39,9 +38,6 @@ $(document).ready(function () {
             cultureData.forEach(function (culture) {
                 let konten = ` 
                 <div class="commun-card">
-                <div class="icon">
-                    <img src="assets/img/icons/code3d.png" alt="">
-                </div>
                 <div class="inf">
                     <h5>${culture.judul_culture}</h5>
                     <small>${culture.ket_culture}</small>
@@ -57,13 +53,13 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: baseUrl + 'Service',
+        url: env('API_BASE_URL') + 'Service',
         method: 'GET',
         success: function (data) {
-            var cultureData = data.data.slice(0, 3);;
+            var serviceData = data.data.slice(0, 3);;
             var container = $('#service-abt');
             container.empty();
-            cultureData.forEach(function (service) {
+            serviceData.forEach(function (service) {
                 let konten = ` 
                 <li class="d-flex mb-40">   
                 <small class="icon-50 me-4 flex-shrink-0">
@@ -86,7 +82,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: baseUrl + 'abt_philosophy',
+        url: env('API_BASE_URL') + 'abt_philosophy',
         type: 'GET',
         success: function (data) {
             if (data.data.length > 0) {
@@ -102,40 +98,40 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: baseUrl + 'abt_culture',
+        url: baseUrl + 'abt_team',
         method: 'GET',
         success: function (data) {
-            var cultureData = data.data.slice(0, 3);;
-            var container = $('#culture');
+            var teamData = data.data;;
+            var container = $('#team');
             container.empty();
-            cultureData.forEach(function () {
+            teamData.forEach(function (team) {
                 let konten = ` 
                 <div class="col-lg-3 col-sm-6">
                 <div class="team-card mb-30 mb-lg-0 style-6">
-                    <div class="img img-cover">
-                        <img src="{{ asset('assets/About/img/team/1.jpg') }}" alt="">
-                        <div class="social-icons">
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <a class="d-block" href="#">
-                            <h6>Michael Edwards</h6>
+                <div class="img img-cover">
+                <img src="${baseUrl}images/${team.foto_orang}" alt="">
+                    <div class="social-icons">
+                        <a href="${team.link_ig}">
+                            <i class="fab fa-twitter"></i>
                         </a>
-                        <small>CEO Founder</small>
+                        <a href="${team.link_fb}">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="${team.link_in}">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="${team.link_ig}">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                     </div>
                 </div>
+                <div class="info">
+                    <a class="d-block" href="#">
+                        <h6>${team.nama_orang}</h6>
+                    </a>
+                    <small>${team.jabatan}</small>
+                </div>
+            </div>
             </div>
             `;
                 container.append(konten);
