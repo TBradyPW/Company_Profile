@@ -176,44 +176,10 @@
                             <h2> Our <span> Services </span> </h2>
                         </div>
                         <div class="text mb-50 fs-12px color-666">
-                            With Iteck Marketplace, choose from hundreds of payment gateways for your customers.
+                            Build Your brand and grow your business
                         </div>
-                        <ul>
-                            <li class="d-flex mb-40">
-                                <small class="icon-50 me-4 flex-shrink-0">
-                                    <img src="{{ asset('assets/img/icons/serv_icons/1.png') }}" alt="">
-                                </small>
-                                <div class="inf">
-                                    <h5>IT Consultation</h5>
-                                    <p class="fs-12px color-666 mt-2">
-                                        Nanotechnology immersion along the information high will close the loop on focusing
-                                        solely
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="d-flex mb-40">
-                                <small class="icon-50 me-4 flex-shrink-0">
-                                    <img src="{{ asset('assets/img/icons/serv_icons/3.png') }}" alt="">
-                                </small>
-                                <div class="inf">
-                                    <h5>Software Design & Development</h5>
-                                    <p class="fs-12px color-666 mt-2">
-                                        Our top-notch Experts with much years of experience certail will give best solutions
-                                        for your business
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <small class="icon-50 me-4 flex-shrink-0">
-                                    <img src="{{ asset('assets/img/icons/serv_icons/5.png') }}" alt="">
-                                </small>
-                                <div class="inf">
-                                    <h5>Cloud Services</h5>
-                                    <p class="fs-12px color-666 mt-2">
-                                        Customer support is always our number one priority.
-                                    </p>
-                                </div>
-                            </li>
+                        <ul id="service-abt">
+
                         </ul>
                         <a href="page-services-5.html"
                             class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold mt-60 px-5">

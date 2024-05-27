@@ -5,10 +5,12 @@ $(document).ready(function () {
         url: baseUrl + 'abt_brand_message',
         type: 'GET',
         success: function (data) {
-            var keterangan = data.data[0].keterangan;
-            $('#brand_keterangan').text(keterangan);
+            if (data.data.length > 0) {
+                var keterangan = data.data[data.data.length - 1].keterangan;
+                $('#brand_keterangan').text(keterangan);
+            }
         },
-        error: function (xhr, status, error) {
+        error: function (_xhr, status, error) {
             console.error(status + ': ' + error);
         }
     });
@@ -17,10 +19,12 @@ $(document).ready(function () {
         url: baseUrl + 'abt_hero',
         type: 'GET',
         success: function (data) {
-            var linkyt = data.data[0].linkyt;
-            $('#linkyt').attr('href', linkyt);
+            if (data.data.length > 0) {
+                var linkyt = data.data[data.data.length - 1].linkyt;
+                $('#linkyt').attr('href', linkyt);
+            }
         },
-        error: function (xhr, status, error) {
+        error: function (_xhr, status, error) {
             console.error(status + ': ' + error);
         }
     });
@@ -47,7 +51,37 @@ $(document).ready(function () {
                 container.append(konten);
             });
         },
-        error: function (xhr, status, error) {
+        error: function (_xhr, status, error) {
+            console.error(status + ': ' + error);
+        }
+    });
+
+
+    $.ajax({
+        url: baseUrl + 'Service',
+        method: 'GET',
+        success: function (data) {
+            var cultureData = data.data.slice(0, 3);;
+            var container = $('#service-abt');
+            container.empty();
+            cultureData.forEach(function (service) {
+                let konten = ` 
+                <li class="d-flex mb-40">   
+                <small class="icon-50 me-4 flex-shrink-0">
+                <img src="${baseUrl}images/${service.fotoservice}" alt="">
+            </small>
+            <div class="inf">
+                <h5>${service.judul_service}</h5>
+                <p class="fs-12px color-666 mt-2">
+                ${service.ket_service}
+                </p>
+            </div>
+            </li>
+            `;
+                container.append(konten);
+            });
+        },
+        error: function (_xhr, status, error) {
             console.error(status + ': ' + error);
         }
     });
@@ -56,11 +90,14 @@ $(document).ready(function () {
         url: baseUrl + 'abt_philosophy',
         type: 'GET',
         success: function (data) {
-            var latestData = data.data;
-            var philosophy = latestData.ket_pilo;
-            $('#philosophy').text(philosophy);
+            if (data.data.length > 0) {
+                var philosophy = data.data[data.data.length - 1].ket_pilo;
+                $('#philosophy').text(philosophy);
+            } else {
+                $('#philosophy').text('Tidak ada philosophy');
+            }
         },
-        error: function (xhr, status, error) {
+        error: function (_xhr, status, error) {
             console.error(status + ': ' + error);
         }
     });
