@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/about', function () {
     return view('about');
-})->name('about');
+})->name('About');
 
 Route::get('/Portofolio', function () {
     return view('Portofolio');
-})->name('about');
+})->name('Portofolio');
 
 Route::get('/', function () {
     return view('Index');

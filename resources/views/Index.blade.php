@@ -243,3 +243,24 @@
         </section>
 @endsection
 
+@section ('Contact')
+<section class="contact style-2 bg-darkBlue pt-50">
+    <div class="container">
+        <div class="content text-center text-white">
+            <p class="op-7 mb-70 text-uppercase">Let us opportunity to help you!</p>
+            <h2 class="ltspc-20 text-uppercase fs-1 lh-1 mb-50">(+62) 812 2218 1823</h2>
+            <h4 class="fw-normal mb-20 op-9">contact@hexagon.co.id</h4>
+            <h4 class="fw-normal mb-30 op-7">Jl. Abdul Halim No.128, Kota Cimahi 40522</h4>
+            <div class="text-center">
+                <a href="https://wa.me/6281222181823" class="sm-butn btn border text-white radius-9 hover-lightBlue border-lightBlue m-2">
+                    <span>Let’s Chat</span>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?view=cm&amp;tf=1&amp;fs=1&amp;to=contact@hexagon.co.id" class="sm-butn btn border text-white radius-9 hover-lightBlue border-lightBlue m-2">
+                    <span>Request Consultation</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        <img src="{{ asset('assets/Index/img/global2.png') }}" alt="" class="global_2">
+</section>
+@endsection

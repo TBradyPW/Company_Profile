@@ -91,50 +91,42 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase" id="nav-menus">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">
-                            About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
-                            portfolio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="service.html">
-                            services
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="posts.html">
-                            news
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="carrier.html">
-                            Career
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            contact
-                        </a>
-                    </li>
-                </ul>
-                <div class="nav-side">
-                    <div class="qoute-nav ps-4">
-                        <a href="#" class="search-icon me-3">
-                            <i class="bi bi-search"></i>
-                        </a>
-                    </div>
-                </div>
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase" id="nav-menus"><li class="nav-item">
+                    <a class="nav-link" href="{{ route('Index') }}">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('About') }}">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('Portofolio') }}">
+                        portfolio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">
+                        services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="posts.html">
+                        news
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrier.html">
+                        Career
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        contact
+                    </a>
+                </li>
+</ul>
             </div>
         </div>
     </nav>
@@ -261,25 +253,7 @@
         <!-- ====== end reviews ====== -->
 
         <!-- ====== start contact ====== -->
-        <section class="contact style-2 bg-darkBlue pt-50">
-            <div class="container">
-                <div class="content text-center text-white">
-                    <p class="op-7 mb-70 text-uppercase">Let us opportunity to help you!</p>
-                    <h2 class="ltspc-20 text-uppercase fs-1 lh-1 mb-50">(+62) 812 2218 1823</h2>
-                    <h4 class="fw-normal mb-20 op-9">contact@hexagon.co.id</h4>
-                    <h4 class="fw-normal mb-30 op-7">Jl. Abdul Halim No.128, Kota Cimahi 40522</h4>
-                    <div class="text-center">
-                        <a href="https://wa.me/6281222181823" class="sm-butn btn border text-white radius-9 hover-lightBlue border-lightBlue m-2">
-                            <span>Let’s Chat</span>
-                        </a>
-                        <a href="https://mail.google.com/mail/u/0/?view=cm&amp;tf=1&amp;fs=1&amp;to=contact@hexagon.co.id" class="sm-butn btn border text-white radius-9 hover-lightBlue border-lightBlue m-2">
-                            <span>Request Consultation</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <img src="{{ asset('assets/Index/img/global2.png') }}" alt="" class="global_2">
-        </section>
+        @yield ('Contact')
         <!-- ====== end contact ====== -->
     </main>
     <!--End-Contents-->
@@ -381,6 +355,7 @@
     </script>
 
 </body>
+
 
 
 <!-- Mirrored from hexagon.co.id/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Sep 2023 01:36:30 GMT -->
