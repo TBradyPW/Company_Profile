@@ -19,7 +19,7 @@
 
     <!-- ====== bootstrap icons cdn ====== -->
     <link rel="stylesheet"
-        href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css') }}"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css""
         integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -39,6 +39,8 @@
 
     <!-- ====== global style ====== -->
     <link rel="stylesheet" href="{{ asset('assets/About/css/style.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/Index/css/lib/bootstrap.min.css') }}">
 </head>
 
 <body>
@@ -47,10 +49,119 @@
     <!-- <div id="preloader">
     </div> -->
     <!-- ---------- loader ---------- -->
-    @yield('loader')
+    <!-- <div class="mypreloader" id="myPreloader">
+        <div class="spinner" id="loadingBulat"></div>
+    </div>
+    <style>
+        #myPreloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #dfe5ed;
+            z-index: 9999;
+        }
+
+        #loadingBulat {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: -25px; /* Mengatur tinggi agar loading bulat berada di tengah2 layar */
+        margin-left: -25px; /* Mengatur lebar agar loading bulat berada di tengah2 layar */
+        border: 5px solid #146df8;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+        z-index: 200;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        } -->
+    </style>
     <!-- ====== end loading page ====== -->
+
     <!-- ====== start navbar ====== -->
-    @yield('navbar')
+    <nav class="navbar navbar-expand-lg navbar-light style-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/About/img/Hexagon-logo.png') }}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Index') }}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-blog-5.html">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-contact-5.html">
+                            Portofolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-contact-5.html">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-contact-5.html">
+                            News
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-contact-5.html">
+                            Career
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-contact-5.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="col-lg-2">
+                    <div class="items">
+                        <div class="socail-icons">
+                            <a href="https://twitter.com/"
+                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2"
+                                target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://facebook.com/"
+                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/"
+                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray"
+                                target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- ====== end navbar ====== -->
 
     <!--Contents-->

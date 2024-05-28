@@ -17,6 +17,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/Portofolio', function () {
+    return view('Portofolio');
+})->name('about');
+
 Route::get('/', function () {
     return view('Index');
 })->name('Index');
