@@ -221,6 +221,9 @@
     <!-- ====== end to top button ====== -->
 
     <!-- ====== request ====== -->
+    <script>
+        window.baseURL = "{{ env('API_BASE_URL') }}"
+    </script>
     <script src="{{ asset('assets/About/js/lib/jquery-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/About/js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/About/js/lib/bootstrap.bundle.min.js') }}"></script>
