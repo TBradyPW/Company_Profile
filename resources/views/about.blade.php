@@ -1,7 +1,5 @@
 @extends ('layout.main_layout')
 
-@section('title', 'Hexagon Inc')
-
 @section ('Contents')
     <main class="about-page style-5">
         <!-- ====== start about ====== -->

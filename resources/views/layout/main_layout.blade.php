@@ -11,7 +11,7 @@
     <meta name="author" content="" />
 
     <!-- Title  -->
-    <title>@yield('title')</title>
+    <title>Hexagon Inc</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav-hexagon.png') }}" title="Favicon"
@@ -114,12 +114,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-contact-5.html">
+                        <a class="nav-link" href="{{ route('Services') }}">
                             Services
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-contact-5.html">
+                        <a class="nav-link" href="{{ route('News') }}">
                             News
                         </a>
                     </li>

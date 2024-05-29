@@ -1,7 +1,5 @@
 @extends ('layout.main_layout')
 
-@section ('title' , 'Hexagon Inc')
-
 @section ('Contents')
 <main class="portfolio-page style-1">
         <!-- ====== start portfolio-projects ====== -->
@@ -27,7 +25,7 @@
                             <div class="col-lg-4 mix security consultation">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/prog/1.jpg" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/prog/1.jpg') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -47,7 +45,7 @@
                             <div class="col-lg-4 mix design security">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/prog/2.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/prog/2.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -69,7 +67,7 @@
                             <div class="col-lg-4 mix website development">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/prog/3.jpg" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/prog/3.jpg') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -90,7 +88,7 @@
                             <div class="col-lg-4 mix cloud design">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/4.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/4.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -110,7 +108,7 @@
                             <div class="col-lg-4 mix website development cloud">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/5.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/5.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -132,7 +130,7 @@
                             <div class="col-lg-4 mix design consultation">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/7.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/7.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -153,7 +151,7 @@
                             <div class="col-lg-4 mix cloud design">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/1.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/1.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -173,7 +171,7 @@
                             <div class="col-lg-4 mix security cloud">
                                 <div class="portfolio-card mb-50">
                                     <div class="img">
-                                        <img src="assets/img/projects/2.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/2.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -194,7 +192,7 @@
                             <div class="col-lg-4 mix development consultation">
                                 <div class="portfolio-card">
                                     <div class="img">
-                                        <img src="assets/img/projects/6.png" alt="">
+                                        <img src="{{ asset('assets/Main/img/projects/6.png') }}" alt="">
                                     </div>
                                     <div class="info">
                                         <h5>
@@ -241,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/img/contact_globe.svg" alt="" class="contact_globe">
+            <img src="{{ asset('assets/Main/img/contact_globe.svg') }}" alt="" class="contact_globe">
         </section>
         <!-- ====== end portfolio-projects ====== -->
 </main>

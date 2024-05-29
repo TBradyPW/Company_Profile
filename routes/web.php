@@ -24,6 +24,14 @@ Route::get('/Portofolio', function () {
     return view('portofolio');
 })->name('Portofolio');
 
+Route::get('/Services', function () {
+    return view('Services');
+})->name('Services');
+
+Route::get('/News', function () {
+    return view('News');
+})->name('News');
+
 
 
 

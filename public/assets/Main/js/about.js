@@ -63,7 +63,7 @@ $(document).ready(function () {
                 let konten = ` 
                 <li class="d-flex mb-40">   
                 <small class="icon-50 me-4 flex-shrink-0">
-                <img src="${baseUrl}images/${service.fotoservice}" alt="">
+                <img src="${baseURL}images/${service.fotoservice}" alt="">
             </small>
             <div class="inf">
                 <h5>${service.judul_service}</h5>
