@@ -14,8 +14,8 @@
     <title>@yield('title')</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/Main/img/Hexagon-logo-NT.png') }}" title="Favicon"
-        sizes="16x16" />
+    <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav-hexagon.png') }}" title="Favicon"
+        sizes="" />
 
     <!-- ====== bootstrap icons cdn ====== -->
     <link rel="stylesheet"
@@ -104,12 +104,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-blog-5.html">
+                        <a class="nav-link" href="{{ route('About') }}">
                             About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-contact-5.html">
+                        <a class="nav-link" href="{{ route('Portofolio') }}">
                             Portofolio
                         </a>
                     </li>
