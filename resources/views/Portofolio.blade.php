@@ -10,14 +10,14 @@
                     <h2 class="mb-20">Our  <span> Projects </span> </h2>
                     <p>We have an experienced team of production and inspection personnel to ensure quality.</p>
                 </div>
-                <div class="controls">
-                    <button type="button" class="control" data-filter="all">All</button>
+                <div class="controls" id=Category>
+                    <!-- <button type="button" class="control" data-filter="all">All</button>
                     <button type="button" class="control" data-filter=".consultation">IT Consultation</button>
                     <button type="button" class="control" data-filter=".security">Data Security</button>
                     <button type="button" class="control" data-filter=".website">Website Development</button>
                     <button type="button" class="control" data-filter=".design">UI/UX Design</button>
                     <button type="button" class="control" data-filter=".cloud">Cloud Service</button>
-                    <button type="button" class="control" data-filter=".development">Game Development</button>
+                    <button type="button" class="control" data-filter=".development">Game Development</button> -->
                 </div>
                 <section class="portfolio style-1">
                     <div class="content">

@@ -17,7 +17,7 @@ Route::get('/', function () {
 })->name('Index');
 
 Route::get('/about', function () {
-    return view('about');
+    return view('About');
 })->name('About');
 
 Route::get('/Portofolio', function () {
@@ -32,6 +32,13 @@ Route::get('/News', function () {
     return view('News');
 })->name('News');
 
+Route::get('/Career', function () {
+    return view('Career');
+})->name('Career');
+
+Route::get('/Contact' , function(){
+    return view('Contact');
+})->name('Contact');
 
 
 

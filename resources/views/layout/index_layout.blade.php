@@ -91,42 +91,43 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase" id="nav-menus"><li class="nav-item">
-                    <a class="nav-link" href="{{ route('Index') }}">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('About') }}">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Portofolio') }}">
-                        portfolio
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="service.html">
-                        services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="posts.html">
-                        news
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="carrier.html">
-                        Career
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">
-                        contact
-                    </a>
-                </li>
-</ul>
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase" id="nav-menus">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Index') }}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('About') }}">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Portofolio') }}">
+                            portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Services') }}">
+                            services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('News') }}">
+                            news
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Career') }}">
+                            Career
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Contact') }}">
+                            contact
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

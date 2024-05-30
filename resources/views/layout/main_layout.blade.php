@@ -127,12 +127,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-contact-5.html">
+                        <a class="nav-link" href="{{ route('Career') }}">
                             Career
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-contact-5.html">
+                        <a class="nav-link" href="{{ route('Contact') }}">
                             Contact
                         </a>
                     </li>
@@ -289,6 +289,7 @@
     <script src="{{ asset('assets/Main/js/lib/scrollIt.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/main.js') }}"></script>
     <script src="{{ asset('assets/Main/js/about.js') }}"></script>
+    <script src="{{ asset('assets/Main/js/portofolio.js') }}"></script>
     <script>
         $(document).ajaxStart(function() {
             // Show the preloader when an Ajax request starts
