@@ -127,65 +127,35 @@
                 <p>More than 100 companies trust and choose Hexagon Inc</p>
             </div>
             <div class="content">
-                <div class="clients-slider5">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper" id="client">>
+                <div class="clients-slider5" dir="rtl">
+                    <div class="swiper-container swiper-container-atas">
+                        <div class="swiper-wrapper" id="clientAtas">
+
                         </div>
                     </div>
                 </div>
 
                 <div class="clients-slider5" dir="rtl">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="img">
-                                    <img src="{{ asset('assets/Main/img/logos/13.png') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="img">
-                                    <img src="{{ asset('assets/Main/img/logos/14.png') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="img">
-                                    <img src="{{ asset('assets/Main/img/logos/15.png') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="img">
-                                    <img src="{{ asset('assets/Main/img/logos/16.png') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="img">
-                                    <img src="{{ asset('assets/Main/img/logos/17.png') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="img">
-                                    <img src="{{ asset('assets/Main/img/logos/9.png') }}" alt="">
-                                </a>
-                            </div>
+                    <div class="swiper-container swiper-container-bawah">
+                        <div class="swiper-wrapper" id="clientBawah">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- ====== end clients ====== -->
 
 
         <!-- ====== start Culture ====== -->
         <section class="culture section-padding style-5">
             <div class="section-head text-center mb-70 style-5">
-                <h2 class="mb-20"> Our <span> Values </span> </h2>
+                <h2 class="mb-20"> Our <span> Value </span> </h2>
                 <p>Learn, Bright and Idea</p>
             </div>
             <div class="content">
                 <div class="culture-slider position-relative pb-80 style-5">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper" id="swiper-wrapper">
+                    <div class="swiper-container swiper-container-value">
+                        <div class="swiper-wrapper" id="value-abt">
 
                         </div>
                     </div>
