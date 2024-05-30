@@ -1,5 +1,4 @@
-$(document).ready(function () {
-    console.log(`env yeuh`)
+window.onload = function () {
     $.ajax({
         url: baseURL + 'abt_brand_message',
         type: 'GET',
@@ -32,7 +31,7 @@ $(document).ready(function () {
         url: baseURL + 'abt_culture',
         method: 'GET',
         success: function (data) {
-            var cultureData = data.data.slice(0, 3);;
+            var cultureData = data.data.slice(0, 3);
             var container = $('#culture');
             container.empty();
             cultureData.forEach(function (culture) {
@@ -53,16 +52,39 @@ $(document).ready(function () {
     });
 
     $.ajax({
+        url: baseURL + 'abt_client',
+        method: 'GET',
+        success: function (data) {
+            var clientData = data.data;
+            var container = $('#client');
+            container.empty();
+            clientData.forEach(function (client) {
+                let konten1 = ` 
+                <div class="swiper-slide">
+                    <a href="#" class="img">
+                        <img src="${baseURL}images/${client.foto_client}" alt="">
+                    </a>
+                </div>
+                `;
+                container.append(konten1);
+            });
+        },
+        error: function (_xhr, status, error) {
+            console.error(status + ': ' + error);
+        }
+    });
+
+    $.ajax({
         url: baseURL + 'Service',
         method: 'GET',
         success: function (data) {
-            var serviceData = data.data.slice(0, 3);;
+            var serviceData = data.data.slice(0, 3);
             var container = $('#service-abt');
             container.empty();
             serviceData.forEach(function (service) {
                 let konten = ` 
                 <li class="d-flex mb-40">   
-                <small class="icon-50 me-4 flex-shrink-0">
+                <small class="icon-60 me-2 flex-shrink-0">
                 <img src="${baseURL}images/${service.fotoservice}" alt="">
             </small>
             <div class="inf">
@@ -101,7 +123,7 @@ $(document).ready(function () {
         url: baseURL + 'abt_team',
         method: 'GET',
         success: function (data) {
-            var teamData = data.data;;
+            var teamData = data.data;
             var container = $('#team');
             container.empty();
             teamData.forEach(function (team) {
@@ -141,4 +163,4 @@ $(document).ready(function () {
             console.error(status + ': ' + error);
         }
     });
-});
+};

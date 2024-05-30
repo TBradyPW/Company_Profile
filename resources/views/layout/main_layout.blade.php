@@ -14,8 +14,7 @@
     <title>Hexagon Inc</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav-hexagon.png') }}" title="Favicon"
-        sizes="" />
+    <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav-hexagon.png') }}" title="Favicon" sizes="" />
 
     <!-- ====== bootstrap icons cdn ====== -->
     <link rel="stylesheet"
@@ -61,24 +60,27 @@
         }
 
         #loadingBulat {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 50px;
-        height: 50px;
-        margin-top: -25px; /* Mengatur tinggi agar loading bulat berada di tengah2 layar */
-        margin-left: -25px; /* Mengatur lebar agar loading bulat berada di tengah2 layar */
-        border: 5px solid #146df8;
-        border-radius: 50%;
-        border-top-color: transparent;
-        animation: spin 1s linear infinite;
-        z-index: 200;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+            /* Mengatur tinggi agar loading bulat berada di tengah2 layar */
+            margin-left: -25px;
+            /* Mengatur lebar agar loading bulat berada di tengah2 layar */
+            border: 5px solid #146df8;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            z-index: 200;
         }
 
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -92,8 +94,9 @@
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('assets/Main/img/Hexagon-logo.png') }}" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -162,7 +165,7 @@
     <!-- ====== end navbar ====== -->
 
     <!--Contents-->
-        @yield ('Contents')
+    @yield ('Contents')
     <!--End-Contents-->
 
     <!-- ====== start footer ====== -->
@@ -175,8 +178,10 @@
                             PT. Hexagon Karyatama Indonesia
                         </div>
                         <small class="text">
-                            Founded under the name PT. Hexagon Karyatama Indonesia, Hexagon Inc. is a company that operates
-                            in the field of digital artwork and IT solutions. With a focus on education and a commitment to
+                            Founded under the name PT. Hexagon Karyatama Indonesia, Hexagon Inc. is a company that
+                            operates
+                            in the field of digital artwork and IT solutions. With a focus on education and a commitment
+                            to
                             providing high-quality services, we have established ourselves as a leading provider in our
                             industry
                         </small>
@@ -244,7 +249,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="logo">
-                            <img src="assets/Main/img/logo-footer-50.png') }}" alt="">
+                            <img src="{{ asset('assets/Main/img/logo-footer-50.png') }}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -268,7 +273,9 @@
     <!-- ====== end to top button ====== -->
 
     <!-- ====== request ====== -->
-    <script>window.baseURL = "{{ env('API_BASE_URL') }}"</script>
+    <script>
+        window.baseURL = "{{ env('API_BASE_URL') }}"
+    </script>
     <script src="{{ asset('assets/Main/js/lib/jquery-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/bootstrap.bundle.min.js') }}"></script>
@@ -283,11 +290,11 @@
     <script src="{{ asset('assets/Main/js/main.js') }}"></script>
     <script src="{{ asset('assets/Main/js/about.js') }}"></script>
     <script>
-         $(document).ajaxStart(function () {
+        $(document).ajaxStart(function() {
             // Show the preloader when an Ajax request starts
             $("#myPreloader").fadeIn();
         });
-        $(document).ajaxStop(function () {
+        $(document).ajaxStop(function() {
             // Show the preloader when an Ajax request starts
             $("#myPreloader").fadeOut();
         });
