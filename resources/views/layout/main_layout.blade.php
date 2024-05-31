@@ -288,8 +288,8 @@
     <!-- <script src="{{ asset('assets/Main/js/lib/pace.js') }}"></script> -->
     <script src="{{ asset('assets/Main/js/lib/scrollIt.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/main.js') }}"></script>
-    <script src="{{ asset('assets/Main/js/about.js') }}"></script>
     <script src="{{ asset('assets/Main/js/portofolio.js') }}"></script>
+    @yield ('script')
     <script>
         $(document).ajaxStart(function() {
             // Show the preloader when an Ajax request starts

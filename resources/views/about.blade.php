@@ -205,3 +205,7 @@
         <!-- ====== End Whatsapp ====== -->
     </main>
 @endsection
+
+@section('script')
+    <script src="{{ asset('assets/Main/js/about.js') }}"></script>
+@endsection

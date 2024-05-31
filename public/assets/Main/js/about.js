@@ -112,24 +112,22 @@ $(window).on('load', function () {
                 });
 
                 var swiperAtas = new Swiper('.swiper-container-atas', {
-                    slidesPerView: 6,
+                    slidesPerView: 4,
                     spaceBetween: 30,
                     loop: true,
                     autoplay: {
                         delay: 0,
-                        disableOnInteraction: false,
                     },
                     speed: 7000,
                     direction: 'horizontal',
                 });
 
                 var swiperBawah = new Swiper('.swiper-container-bawah', {
-                    slidesPerView: 6,
+                    slidesPerView: 4,
                     spaceBetween: 30,
                     loop: true,
                     autoplay: {
                         delay: 0,
-                        disableOnInteraction: false,
                     },
                     speed: 7000,
                     direction: 'horizontal',
@@ -162,7 +160,7 @@ $(window).on('load', function () {
                 serviceData.forEach(function (service) {
                     let konten = ` 
                         <li class="d-flex mb-40">   
-                            <small class="icon-60 me-2 flex-shrink-0">
+                            <small class="icon-50 me-4 flex-shrink-0">
                                 <img src="${baseURL}images/${service.fotoservice}" alt="">
                             </small>
                             <div class="inf">
@@ -184,7 +182,6 @@ $(window).on('load', function () {
         }
     });
     // akhir get data Service
-
     // ajax get data team
     $.ajax({
         url: baseURL + 'abt_team',
@@ -196,7 +193,8 @@ $(window).on('load', function () {
 
             if (teamData.length > 0) {
                 teamData.forEach(function (team) {
-                    let konten = ` 
+                    if (!team.is_new_update) {
+                        let konten = ` 
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card mb-30 mb-lg-0 style-6">
                                 <div class="img img-cover">
@@ -225,7 +223,8 @@ $(window).on('load', function () {
                             </div>
                         </div>
                     `;
-                    container.append(konten);
+                        container.append(konten);
+                    }
                 });
             } else {
                 container.append('<center><h1>Tidak ada data tim</h1></center>');
@@ -235,7 +234,7 @@ $(window).on('load', function () {
             console.error(status + ': ' + error);
         }
     });
-    // akhhir get data team
+    // akhir get data team
 
     // ajax get data value
     $.ajax({
