@@ -11,17 +11,11 @@
                     <p>We have an experienced team of production and inspection personnel to ensure quality.</p>
                 </div>
                 <div class="controls" id=Category>
-                    <!-- <button type="button" class="control" data-filter="all">All</button>
-                                                                                                <button type="button" class="control" data-filter=".consultation">IT Consultation</button>
-                                                                                                <button type="button" class="control" data-filter=".security">Data Security</button>
-                                                                                                <button type="button" class="control" data-filter=".website">Website Development</button>
-                                                                                                <button type="button" class="control" data-filter=".design">UI/UX Design</button>
-                                                                                                <button type="button" class="control" data-filter=".cloud">Cloud Service</button>
-                                                                                                <button type="button" class="control" data-filter=".development">Game Development</button> -->
+                    {{-- disini adalah category --}}
                 </div>
                 <section class="portfolio style-1">
                     <div class="content">
-                        <div class="row mix-container">
+                        <div id="cardsContainer" class="row mix-container">
                             {{-- ini card  --}}
                             {{-- <div class="col-lg-4 mix security consultation">
                                 <div class="portfolio-card mb-50">
