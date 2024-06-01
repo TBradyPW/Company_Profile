@@ -190,7 +190,6 @@ $(window).on('load', function () {
             var teamData = data.data;
             var container = $('#team');
             container.empty();
-
             if (teamData.length > 0) {
                 teamData.forEach(function (team) {
                     if (!team.is_new_update) {
