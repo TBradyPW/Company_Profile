@@ -26,6 +26,7 @@
         </div>
     </section>
     <!-- ====== end blog-slider ====== -->
+    
 
 
     <!-- ====== start Popular Posts ====== -->
@@ -169,4 +170,8 @@
     </section>
     <!-- ====== end all-news ====== -->
 </main>
+@endsection
+
+@section ('script')
+    <script src="{{ asset('assets/Main/js/news.js') }}"></script>
 @endsection
