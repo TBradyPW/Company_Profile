@@ -32,7 +32,26 @@ function loadAllCards() {
                     cardsContainer.append(content);
                 });
             } else {
-                let content = `<h1>Tidak ada kartu tersedia</h1>`;
+                let content = ` <div class="col-lg-4 mix security consultation">
+                <div class="portfolio-card mb-50">
+                    <div class="img">
+                        <img src="{{ asset('assets/Main/img/projects/prog/1.jpg') }}" alt="">
+                    </div>
+                    <div class="info">
+                        <h5>
+                            <a href="page-single-project-5.html"> Infrastructure Upgrade </a>
+                        </h5>
+                        <small class="d-block color-main text-uppercase">IT Consultation</small>
+                        <div class="text">
+                            Trust our top minds to eliminate workflow pain points, implement new tech & app.
+                        </div>
+                        <div class="tags">
+                            <a href="#">Consultation</a>
+                            <a href="#">Management</a>
+                        </div>
+                    </div>
+                </div>
+            </div>  `;
                 cardsContainer.append(content);
             }
         },
@@ -76,7 +95,25 @@ function loadCategoryCards(categoryId) {
                     cardsContainer.append(content);
                 });
             } else {
-                let content = `<h1>Tidak ada kartu di kategori ini</h1>`;
+                let content = ` <div class="col-lg-4 mix ">
+                <div class="portfolio-card mb-50">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="info">
+                        <h5>
+                            <a href=""> Category ini tidak di temukan </a>
+                        </h5>
+                        <small class="d-block color-main text-uppercase"></small>
+                        <div class="text">
+                            Tidak ad adata disini..
+                        </div>
+                        <div class="tags">
+                            Pemuda pancasila
+                        </div>
+                    </div>
+                </div>
+            </div>`;
                 cardsContainer.append(content);
             }
         },
@@ -109,4 +146,9 @@ $.ajax({
     error: function (_xhr, status, error) {
         console.error(status + ': ' + error);
     }
+});
+
+// Memuat semua kartu saat halaman pertama kali dimuat
+$(document).ready(function () {
+    loadAllCards();
 });
