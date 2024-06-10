@@ -3,12 +3,11 @@
 @section('Contents')
     <main class="portfolio-page style-1">
         <!-- ====== start portfolio-projects ====== -->
-        <section class="portfolio-projects section-padding pt-50 style-1 bg-white">
+        <section class="portfolio-projects section-padding pt-50 style-1 bg-[#e7f1ff]">
             <div class="container">
                 <div class="section-head text-center style-4 mb-40">
-                    <small class="title_small">portfolio</small>
                     <h2 class="mb-20">Our <span> Projects </span> </h2>
-                    <p>We have an experienced team of production and inspection personnel to ensure quality.</p>
+                    <p>Empowering businesses, one solution at a time</p>
                 </div>
                 <div class="controls" id=Category>
                     {{-- disini adalah category --}}
@@ -16,32 +15,12 @@
                 <section class="portfolio style-1">
                     <div class="content">
                         <div id="cardsContainer" class="row mix-container">
-                            {{-- ini card  --}}
-                            {{-- <div class="col-lg-4 mix security consultation">
-                                <div class="portfolio-card mb-50">
-                                    <div class="img">
-                                        <img src="{{ asset('assets/Main/img/projects/prog/1.jpg') }}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h5>
-                                            <a href="page-single-project-5.html"> Infrastructure Upgrade </a>
-                                        </h5>
-                                        <small class="d-block color-main text-uppercase">IT Consultation</small>
-                                        <div class="text">
-                                            Trust our top minds to eliminate workflow pain points, implement new tech & app.
-                                        </div>
-                                        <div class="tags">
-                                            <a href="#">Consultation</a>
-                                            <a href="#">Management</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-                            <div class="text-center">
-                                <a href="#" class="btn rounded-pill bg-blue4 fw-bold text-white me-4" target="_blank">
-                                    <small> Show More (24) </small>
-                                </a>
-                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="btn rounded-pill bg-blue4 fw-bold text-white me-4" target="_blank">
+                                <small> Show More (24) </small>
+                            </a>
+                        </div>
                 </section>
             </div>
         </section>

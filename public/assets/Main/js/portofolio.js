@@ -1,30 +1,41 @@
-// Fungsi untuk memuat semua kartu tanpa filter kategori
-function loadAllCards() {
+function truncateText(text, maxLength) {
+    if (text.length > maxLength) {
+        return text.substring(0, maxLength) + '...';
+    }
+    return text;
+}
+
+function munculkanSemua() {
     $.ajax({
         url: baseURL + 'Portofolio',
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#cardsContainer');
             cardsContainer.empty();
-            if (response.data.length > 0) {
+            if (response.data && response.data.length > 0) {
                 var cardsData = response.data;
                 cardsData.forEach(function (card) {
+                    let tagsContent = '';
+                    if (Array.isArray(card.tags)) {
+                        tagsContent = card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ');
+                    }
+                    let truncatedDescription = truncateText(card.ket_porto, 60);
                     let content = `
-                        <div class="col-lg-4 mix ${card.category}">
+                        <div class="col-lg-4 mix ${card.Kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="${card.imageUrl}" alt="">
+                                    <img src="https://cdn.dribbble.com/users/4174206/screenshots/16831422/media/94d29474875d173706b59dd856c4012d.jpg?resize=1000x750&vertical=center" alt="">
                                 </div>
-                                <div class="info">
+                                <div class="info" style="background-color: white;">
                                     <h5>
-                                        <a href="${card.link}"> ${card.title} </a>
+                                        <a href="${card.link}"> ${card.judul_porto} </a>
                                     </h5>
-                                    <small class="d-block color-main text-uppercase">${card.category}</small>
+                                    <small class="d-block color-main text-uppercase">${card.Kategori}</small>
                                     <div class="text">
-                                        ${card.description}
+                                        ${truncatedDescription}
                                     </div>
                                     <div class="tags">
-                                        ${card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ')}
+                                        <a href="#"> ${card.Kategori}</a>
                                     </div>
                                 </div>
                             </div>
@@ -32,26 +43,26 @@ function loadAllCards() {
                     cardsContainer.append(content);
                 });
             } else {
-                let content = ` <div class="col-lg-4 mix security consultation">
-                <div class="portfolio-card mb-50">
-                    <div class="img">
-                        <img src="{{ asset('assets/Main/img/projects/prog/1.jpg') }}" alt="">
-                    </div>
-                    <div class="info">
-                        <h5>
-                            <a href="page-single-project-5.html"> Infrastructure Upgrade </a>
-                        </h5>
-                        <small class="d-block color-main text-uppercase">IT Consultation</small>
-                        <div class="text">
-                            Trust our top minds to eliminate workflow pain points, implement new tech & app.
+                let content = `<div class="col-lg-4 mix security consultation">
+                    <div class="portfolio-card mb-50">
+                        <div class="img">
+                            <img src="https://cdn.dribbble.com/users/4174206/screenshots/16831422/media/94d29474875d173706b59dd856c4012d.jpg?resize=1000x750&vertical=center" alt="">
                         </div>
-                        <div class="tags">
-                            <a href="#">Consultation</a>
-                            <a href="#">Management</a>
+                        <div class="info">
+                            <h5>
+                                <a href="page-single-project-5.html"> Infrastructure Upgrade </a>
+                            </h5>
+                            <small class="d-block color-main text-uppercase">IT Consultation</small>
+                            <div class="text">
+                                Trust our top minds to eliminate workflow pain points, implement new tech & app.
+                            </div>
+                            <div class="tags">
+                                <a href="#">Consultation</a>
+                                <a href="#">Management</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>  `;
+                </div>`;
                 cardsContainer.append(content);
             }
         },
@@ -61,33 +72,37 @@ function loadAllCards() {
     });
 }
 
-// Fungsi untuk memuat kartu berdasarkan kategori
-function loadCategoryCards(categoryId) {
+function munculkanBerdasarkan(nama_category) {
     $.ajax({
-        url: baseURL + 'Portofolio?categoryId=' + categoryId,
+        url: baseURL + 'Portofolio?nama_category=' + nama_category,
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#cardsContainer');
             cardsContainer.empty();
-            if (response.data.length > 0) {
+            if (response.data && response.data.length > 0) {
                 var cardsData = response.data;
                 cardsData.forEach(function (card) {
+                    let tagsContent = '';
+                    if (Array.isArray(card.tags)) {
+                        tagsContent = card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ');
+                    }
+                    let truncatedDescription = truncateText(card.ket_porto, 60);
                     let content = `
-                        <div class="col-lg-4 mix ${card.category}">
+                        <div class="col-lg-4 mix ${card.Kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="${card.imageUrl}" alt="">
+                                    <img src="https://cdn.dribbble.com/users/4174206/screenshots/16831422/media/94d29474875d173706b59dd856c4012d.jpg?resize=1000x750&vertical=center" alt="">
                                 </div>
-                                <div class="info">
+                                <div class="info" style="background-color: white;" >
                                     <h5>
-                                        <a href="${card.link}"> ${card.title} </a>
+                                        <a href="${card.link}"> ${card.judul_porto} </a>
                                     </h5>
-                                    <small class="d-block color-main text-uppercase">${card.category}</small>
+                                    <small class="d-block color-main text-uppercase">${card.Kategori}</small>
                                     <div class="text">
-                                        ${card.description}
+                                        ${truncatedDescription}
                                     </div>
                                     <div class="tags">
-                                        ${card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ')}
+                                        <a href="#"> ${card.Kategori}</a>
                                     </div>
                                 </div>
                             </div>
@@ -95,25 +110,25 @@ function loadCategoryCards(categoryId) {
                     cardsContainer.append(content);
                 });
             } else {
-                let content = ` <div class="col-lg-4 mix ">
-                <div class="portfolio-card mb-50">
-                    <div class="img">
-                        <img src="" alt="">
-                    </div>
-                    <div class="info">
-                        <h5>
-                            <a href=""> Category ini tidak di temukan </a>
-                        </h5>
-                        <small class="d-block color-main text-uppercase"></small>
-                        <div class="text">
-                            Tidak ad adata disini..
+                let content = `<div class="col-lg-4 mix">
+                    <div class="portfolio-card mb-50">
+                        <div class="img">
+                            <img src="https://cdn.dribbble.com/users/4174206/screenshots/16831422/media/94d29474875d173706b59dd856c4012d.jpg?resize=1000x750&vertical=center" alt="">
                         </div>
-                        <div class="tags">
-                            Pemuda pancasila
+                        <div class="info">
+                            <h5>
+                                <a href=""> Category ini tidak ditemukan </a>
+                            </h5>
+                            <small class="d-block color-main text-uppercase"></small>
+                            <div class="text">
+                                Tidak ada data di sini.
+                            </div>
+                            <div class="tags">
+                                <a href="#">Pemuda pancasila</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>`;
+                </div>`;
                 cardsContainer.append(content);
             }
         },
@@ -123,19 +138,19 @@ function loadCategoryCards(categoryId) {
     });
 }
 
-// Menampilkan kategori dan tombol untuk semua kartu
 $.ajax({
     url: baseURL + 'Category',
     type: 'GET',
     success: function (response) {
-        if (response.data.length > 0) {
+        console.log(response); // Debugging log
+        if (response.data && response.data.length > 0) {
             var categoryData = response.data;
             var container = $('#Category');
             container.empty();
-            let showAllButton = `<button type="button" class="control" onclick="loadAllCards()">All</button>`;
+            let showAllButton = `<button type="button" class="control" onclick="munculkanSemua()">All</button>`;
             container.append(showAllButton);
             categoryData.forEach(function (category) {
-                let content = `<button type="button" class="control" data-filter="${category.id}" onclick="loadCategoryCards(${category.id})">${category.nama_category}</button>`;
+                let content = `<button type="button" class="control" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">${category.nama_category}</button>`;
                 container.append(content);
             });
         } else {
@@ -148,7 +163,6 @@ $.ajax({
     }
 });
 
-// Memuat semua kartu saat halaman pertama kali dimuat
 $(document).ready(function () {
-    loadAllCards();
+    munculkanSemua();
 });

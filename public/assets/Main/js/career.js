@@ -12,7 +12,7 @@ $(window).on('load', function () {
                     <div class="col-lg-3">
                             <a href="#" class="features-card mb-30 style-5">
                                 <div class="image">
-                                    <img src="storage/carriers-images/s8gD5wONfQgcQMX2fQtZATqgKLIDhl8tk1UFv1KD.jpg"
+                                    <img src="https://hexagon.co.id/storage/carrier-images/1WiFmQkGjMQDNBTikMEbP8N8wZOzgkzoKl1huIV7.jpg"
                                         alt="${career.lowong_krj}">
                                 </div>
                                 <div class="info">
