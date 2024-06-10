@@ -356,8 +356,4 @@
     </script>
 
 </body>
-
-
-
-<!-- Mirrored from hexagon.co.id/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Sep 2023 01:36:30 GMT -->
 </html>
