@@ -1,4 +1,4 @@
-
+$(window).on('load', function () {
     // ajax get data services
     $.ajax({
         url: baseURL + 'Career',
@@ -36,3 +36,4 @@
             console.error(status + ': ' + error);
         }
     });
+});

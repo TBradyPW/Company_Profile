@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+
     // ajax get data services
     $.ajax({
         url: baseURL + 'Service',
@@ -98,4 +98,3 @@ $(window).on('load', function () {
             console.error(status + ': ' + error);
         }
     });
-});
