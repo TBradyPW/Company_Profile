@@ -88,8 +88,8 @@ $(window).on('load', function () {
     $.ajax({
         url: baseURL + 'abt_client',
         method: 'GET',
-        success: function (konto) {
-            var clientData = konto.data;
+        success: function (data) {
+            var clientData = data.data;
             var clientAtas = $('#clientAtas');
             var clientBawah = $('#clientBawah');
             clientAtas.empty();

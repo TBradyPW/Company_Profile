@@ -9,17 +9,54 @@
                     <h2 class="mb-20">Our <span> Projects </span> </h2>
                     <p>Empowering businesses, one solution at a time</p>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel"
+                    aria-hidden="true" data-bs-backdrop="false">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="portfolioModalLabel">Judul Portofolio</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    <img class="img-fluid rounded" id="portfolioImage"
+                                        src="https://resources.hexagon.co.id/storage/portfolio/Aplikasi%20UMKM%20Sumedang_umkm-dashboard.png"
+                                        alt="Gambar Portofolio">
+                                </div>
+                                <p id="portfolioDescription"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .modal-body {
+                        max-height: 60vh;
+                        overflow-y: auto;
+                    }
+
+                    .modal-header {
+                        position: sticky;
+                        top: 0;
+                        background: white;
+                        z-index: 1000;
+                    }
+
+                    .modal-dialog {
+                        max-width: 800px;
+                    }
+
+                    .control.active {
+                        color: #007bff;
+                    }
+                </style>
                 <div class="controls" id=Category>
                     {{-- disini adalah category --}}
                 </div>
                 <section class="portfolio style-1">
                     <div class="content">
                         <div id="cardsContainer" class="row mix-container">
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="btn rounded-pill bg-blue4 fw-bold text-white me-4" target="_blank">
-                                <small> Show More (24) </small>
-                            </a>
                         </div>
                 </section>
             </div>

@@ -113,7 +113,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('Portofolio') }}">
-                            Portofolio
+                            Portfolio
                         </a>
                     </li>
                     <li class="nav-item">
@@ -302,4 +302,5 @@
     </script>
 
 </body>
+
 </html>
