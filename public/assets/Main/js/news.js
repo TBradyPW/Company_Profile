@@ -92,78 +92,100 @@ function tampilRandome() {
         }
     });
 }
-
 function beritaBaru() {
-    $.ajax({
-        url: baseURL + 'News',
-        type: 'GET',
-        success: function (response) {
-            console.log('tes' + response)
-            var cardsContainer = $('#beritaBaru');
-            cardsContainer.empty();
+    let allData = [];
+    let page = 1;
+    let totalPages = 1;
 
-            if (response.data && Array.isArray(response.data) && response.data.length > 0) {
-                var cardData = response.data.reverse();
-                var cardsData = cardData.slice(0, 3);
-
-                cardsData.forEach(function (card) {
-                    let tagsContent = '';
-                    if (Array.isArray(card.tags)) {
-                        tagsContent = card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ');
+    function fetchPage(page) {
+        $.ajax({
+            url: baseURL + 'News?page=' + page,
+            type: 'GET',
+            success: function (response) {
+                if (response.data && Array.isArray(response.data) && response.data.length > 0) {
+                    allData = allData.concat(response.data);
+                    if (response.last_page) {
+                        totalPages = response.last_page;
                     }
-                    let truncatedDescription = truncateText(card.ket_news, 100);
-                    let truncatedJudul = truncateText(card.judul_news, 40);
-                    let timeAgo = timeSince(card.created_at);
-                    let content = `
-                    <div class="col-lg-4">
-                        <div class="card border-0 bg-transparent rounded-0 mb-30 mb-lg-0 d-block">
-                            <div class="img radius-7 overflow-hidden img-cover">
-                                <img src="https://hexagon.co.id/storage/post-images/591skxQEdBUUXUarcPL78FiRNuSzaxq4pt9oOMiF.jpg" class="card-img-top" alt="...">
-                            </div>
-                            <div class="card-body px-0">
-                                <small class="d-block date mt-10 fs-10px fw-bold">
-                                    <a href="#"
-                                        class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5">${card.category_news}</a>
-                                    <i class="bi bi-clock me-1"></i>
-                                    <a href="#" class="op-8">Posted on ${timeAgo}</a>
-                                </small>
-                                <h5 class="fw-bold mt-10 title">
-                                    <a href="page-single-post-5.html">${truncatedJudul}</a>
-                                </h5>
-                                <p class="small mt-2 op-8 fs-10px">${truncatedDescription}
-                                </p>
-                                <div class="d-flex small mt-20 align-items-center justify-content-between op-9">
-                                    <div class="l_side d-flex align-items-center">
-                                        <span
-                                            class="icon-20 rounded-circle d-inline-flex justify-content-center align-items-center text-uppercase bg-main p-1 me-2 text-white">
-                                            a
-                                        </span>
-                                        <a href="#" class="mt-1">
-                                            By Admin Hexagon
-                                        </a>
-                                    </div>
+                    if (page < totalPages) {
+                        fetchPage(page + 1);
+                    } else {
+                        displayBerita(allData);
+                    }
+                } else {
+                    displayBerita(allData);
+                }
+            },
+            error: function (_xhr, status, error) {
+                console.error(status + ': ' + error);
+                displayBerita(allData);
+            }
+        });
+    }
+
+    function displayBerita(data) {
+        var cardsContainer = $('#beritaBaru');
+        cardsContainer.empty();
+
+        if (data.length > 0) {
+            var cardData = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            var cardsData = cardData.slice(0, 3);
+
+            cardsData.forEach(function (card) {
+                let tagsContent = '';
+                if (Array.isArray(card.tags)) {
+                    tagsContent = card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ');
+                }
+                let truncatedDescription = truncateText(card.ket_news, 100);
+                let truncatedJudul = truncateText(card.judul_news, 40);
+                let timeAgo = timeSince(card.created_at);
+                let content = `
+                <div class="col-lg-4">
+                    <div class="card border-0 bg-transparent rounded-0 mb-30 mb-lg-0 d-block">
+                        <div class="img radius-7 overflow-hidden img-cover">
+                            <img src="https://hexagon.co.id/storage/post-images/591skxQEdBUUXUarcPL78FiRNuSzaxq4pt9oOMiF.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body px-0">
+                            <small class="d-block date mt-10 fs-10px fw-bold">
+                                <a href="#"
+                                    class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5">${card.category_news}</a>
+                                <i class="bi bi-clock me-1"></i>
+                                <a href="#" class="op-8">Posted on ${timeAgo}</a>
+                            </small>
+                            <h5 class="fw-bold mt-10 title">
+                                <a href="page-single-post-5.html">${truncatedJudul}</a>
+                            </h5>
+                            <p class="small mt-2 op-8 fs-10px">${truncatedDescription}
+                            </p>
+                            <div class="d-flex small mt-20 align-items-center justify-content-between op-9">
+                                <div class="l_side d-flex align-items-center">
+                                    <span
+                                        class="icon-20 rounded-circle d-inline-flex justify-content-center align-items-center text-uppercase bg-main p-1 me-2 text-white">
+                                        a
+                                    </span>
+                                    <a href="#" class="mt-1">
+                                        By Admin Hexagon
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>`;
-                    cardsContainer.append(content);
-                });
-            } else {
-                let content = `<center><h1>TIDAK ADA BERITA</h1></center>`;
+                    </div>
+                </div>`;
                 cardsContainer.append(content);
-            }
-        },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+            });
+        } else {
+            let content = `<center><h1>TIDAK ADA BERITA</h1></center>`;
+            cardsContainer.append(content);
         }
-    });
+    }
+    fetchPage(page);
 }
+
 // Memuat kategori saat dokumen siap
 $.ajax({
     url: baseURL + 'category_news',
     type: 'GET',
     success: function (response) {
-        console.log(response); // Log the response object
         if (response && response.data && Array.isArray(response.data) && response.data.length > 0) {
             var categoryData = response.data;
             var container = $('#Category');

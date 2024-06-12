@@ -39,7 +39,7 @@
             </div>
             <div class="content">
                 <div class="services-slider position-relative style-6">
-                    <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-container swiper-container-initialized swiper-container-horizontal services-slider">
                         <div class="swiper-wrapper" id="top-service-swiper">
                             <!-- konten di append kesini -->
                         </div>

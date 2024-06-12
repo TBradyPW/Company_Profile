@@ -1,5 +1,12 @@
 $(window).on('load', function () {
-    // ajax get data Brand message
+    pesanHeader();
+    hero();
+    team();
+    client();
+    culture();
+});
+
+function pesanHeader() {
     $.ajax({
         url: baseURL + 'abt_brand_message',
         type: 'GET',
@@ -8,16 +15,16 @@ $(window).on('load', function () {
                 var keterangan = data.data[data.data.length - 1].keterangan;
                 $('#brand_keterangan').text(keterangan);
             } else {
-                $('#brand_keterangan').text('Tidak ada pesan merek');
+                $('#brand_keterangan').text('Tidak ada pesan');
             }
         },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+        error: function (error) {
+            console.error('Gagal mengambil data:', error);
         }
     });
-    // akhir get data Brand message
+}
 
-    // ajax get data Hero
+function hero() {
     $.ajax({
         url: baseURL + 'abt_hero',
         type: 'GET',
@@ -25,24 +32,21 @@ $(window).on('load', function () {
             if (data.data.length > 0) {
                 var linkyt = data.data[data.data.length - 1].linkyt;
                 $('#linkyt').attr('href', linkyt);
-            } else {
-                $('#linkyt').attr('href', '#').text('Tidak ada tautan hero');
             }
         },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+        error: function (error) {
+            console.error('Gagal mengambil data:', error);
         }
     });
-    // akhir get data Hero
+}
 
-    // ajax get data Culture
+function culture() {
     $.ajax({
         url: baseURL + 'abt_culture',
         method: 'GET',
         success: function (data) {
             var container = $('#culture');
             container.empty();
-
             if (data.data.length > 0) {
                 var cultureData = data.data.slice(0, 3);
                 cultureData.forEach(function (culture) {
@@ -57,34 +61,34 @@ $(window).on('load', function () {
                     container.append(konten);
                 });
             } else {
-                container.append('<center><h1>Tidak ada data budaya</h1></center>');
+                container.append('<h6>Data culture kosong</h6>');
             }
         },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+        error: function (error) {
+            console.error('Gagal mengambil data:', error);
         }
     });
-    // akhir get data Culture
+}
 
-    // ajax get data Philosophy
-    $.ajax({
-        url: baseURL + 'abt_philosophy',
-        type: 'GET',
-        success: function (data) {
-            if (data.data.length > 0) {
-                var philosophy = data.data[data.data.length - 1].ket_pilo;
-                $('#philosophy').text(philosophy);
-            } else {
-                $('#philosophy').text('Tidak ada philosophy');
-            }
-        },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+// ajax get data Philosophy
+$.ajax({
+    url: baseURL + 'abt_philosophy',
+    type: 'GET',
+    success: function (data) {
+        if (data.data.length > 0) {
+            var philosophy = data.data[data.data.length - 1].ket_pilo;
+            $('#philosophy').text(philosophy);
+        } else {
+            $('#philosophy').text("Lebah adalah makhluk ajaib yang di informasikan oleh Allah SWT sebagai salah satu makhluk spesial yang mendapatkan wahyu (Surat An-Nahl Ayat 68-69). Lebah hidup dengan baik yaitu selalu dekat dengan yang baik, memakan yang baik, menghasilkan kebaikan dan kebermanfaatan. Lebah terkenal sebagai makhluk yang loyal, cerdas, kuat, massive dan sangat solid, salah satu kemampuan spesial dari lebah ialah selalu mampu mengetahui jalan pulang (solusi) sesulit dan sejauh apapun perjalanannya (proses)");
         }
-    });
-    // akhhir get data Philosophy
+    },
+    error: function (error) {
+        console.error('Gagal mengambil data:', error);
+    }
+});
+// akhhir get data Philosophy
 
-    // ajax get data Client
+function client() {
     $.ajax({
         url: baseURL + 'abt_client',
         method: 'GET',
@@ -137,28 +141,27 @@ $(window).on('load', function () {
                     slide.style.transform = 'rotateY(180deg)';
                 });
             } else {
-                clientAtas.append('<center><h1>Tidak ada data klien</h1></center>');
-                clientBawah.append('<center><h1>Tidak ada data klien</h1></center>');
+                clientAtas.append('<center><h6>Data client kosong</h6></center>');
             }
         },
         error: function (error) {
-            console.error('Error fetching client data:', error);
+            console.error('Gagal mengambil data:', error);
         }
     });
-    // akhir get data Client
+}
 
-    // ajax get data Service
-    $.ajax({
-        url: baseURL + 'Service',
-        method: 'GET',
-        success: function (data) {
-            var container = $('#service-abt');
-            container.empty();
+// ajax get data Service
+$.ajax({
+    url: baseURL + 'Service',
+    method: 'GET',
+    success: function (data) {
+        var container = $('#service-abt');
+        container.empty();
 
-            if (data.data.length > 0) {
-                var serviceData = data.data.slice(0, 3);
-                serviceData.forEach(function (service) {
-                    let konten = ` 
+        if (data.data.length > 0) {
+            var serviceData = data.data.slice(0, 3);
+            serviceData.forEach(function (service) {
+                let konten = ` 
                         <li class="d-flex mb-40">   
                             <small class="icon-50 me-4 flex-shrink-0">
                                 <img src="${baseURL}images/${service.fotoservice}" alt="">
@@ -171,33 +174,35 @@ $(window).on('load', function () {
                             </div>
                         </li>
                     `;
-                    container.append(konten);
-                });
-            } else {
-                container.append('<center><h1>Tidak ada data layanan</h1></center>');
-            }
-        },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+                container.append(konten);
+            });
+        } else {
+            container.append('<center><h6>Data service kosong</h6></center>');
         }
-    });
-    // akhir get data Service
-    // ajax get data team
+    },
+    error: function (error) {
+        console.error('Gagal mengambil data' + error);
+    }
+});
+// akhir get data Service
+
+function team() {
     $.ajax({
         url: baseURL + 'abt_team',
         method: 'GET',
         success: function (data) {
-            var teamData = data.data;
             var container = $('#team');
+            var teamData = data.data;
             container.empty();
             if (teamData.length > 0) {
                 teamData.forEach(function (team) {
                     if (!team.is_new_update) {
+                        let gambar = team.foto_orang ? `${baseURL}images/${team.foto_orang}` : `${baseURL}images/placeholder.png`;
                         let konten = ` 
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card mb-30 mb-lg-0 style-6">
                                 <div class="img img-cover">
-                                    <img src="${baseURL}images/${team.foto_orang}" alt="">
+                                    <img src="${gambar}" alt="">
                                     <div class="social-icons">
                                         <a href="${team.link_ig}">
                                             <i class="fab fa-twitter"></i>
@@ -226,26 +231,27 @@ $(window).on('load', function () {
                     }
                 });
             } else {
-                container.append('<center><h1>Tidak ada data tim</h1></center>');
+                container.append('<center><h6>Data team kosong</h6></center>');
             }
         },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+        error: function (error) {
+            console.error('Gagal mengambil data' + error);
         }
     });
-    // akhir get data team
+}
 
-    // ajax get data value
-    $.ajax({
-        url: baseURL + 'abt_value',
-        method: 'GET',
-        success: function (data) {
-            var container = $('#value-abt');
-            container.empty();
+// ajax get data value
+$.ajax({
+    url: baseURL + 'abt_value',
+    method: 'GET',
+    success: function (data) {
+        var container = $('#value-abt');
+        var dataAbt = data.data;
+        container.empty();
 
-            if (data.data.length > 0) {
-                data.data.forEach(function (value) {
-                    let konten = `
+        if (data.data.length > 0) {
+            dataAbt.forEach(function (value) {
+                let konten = `
                     <div class="swiper-slide" style="width: 455px; margin-right: 30px;">
                         <a href="" class="culture-card d-block" data-fancybox="gallery">
                             <img src="${baseURL}images/${value.foto_value}" alt="">
@@ -253,33 +259,32 @@ $(window).on('load', function () {
                         </a>
                     </div>
                 `;
-                    container.append(konten);
-                });
+                container.append(konten);
+            });
 
-                new Swiper('.swiper-container-value', {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    autoplay: {
-                        delay: 4000,
-                        disableOnInteraction: false,
-                    },
-                });
-            } else {
-                container.append('<center><h1>Tidak ada data</h1></center>');
-            }
-        },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+            new Swiper('.swiper-container-value', {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+            });
+        } else {
+            container.append('<center><h6>Data value kosong</h6></center>');
         }
-    });
-    // akhir get data Value
+    },
+    error: function (error) {
+        console.error('Gagal mengambil data' + error);
+    }
 });
+// akhir get data Value

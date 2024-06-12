@@ -1,18 +1,18 @@
-
-    // ajax get data services
+function dataService() {
     $.ajax({
         url: baseURL + 'Service',
         method: 'GET',
         success: function (data) {
             var container = $('#our-service');
             container.empty();
-
             if (data.data.length > 0) {
-                data.data.forEach(function (service) {
+                var serviceData = data.data;
+                serviceData.forEach(function (service) {
+                    let gambar = service.fotoservice ? `${baseURL}images/${service.fotoservice}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-service-management-enterprise-resource-planning-services-hand-service-people.png`;
                     let konten = ` 
                     <div class="col-lg-3 col-md-6">
                         <a href="#" class="features-card mb-30 style-5">
-                            <div class="icon"><img src="${baseURL}images/${service.fotoservice}" alt="${service.judul_service}"></div>
+                            <div class="icon"><img src="${gambar}" alt="${service.judul_service}"></div>
                             <div class="info">
                                 <h5 class="card-title">${service.judul_service}</h5>
                                 <p class="text">${service.ket_service}</p>
@@ -23,14 +23,16 @@
                     container.append(konten);
                 });
             } else {
-                container.append('<center><h1>Tidak ada data service</h1></center>');
+                container.append('<center><h6>Data service kosong</h6></center>');
             }
         },
-        error: function (_xhr, status, error) {
-            console.error(status + ': ' + error);
+        error: function (error) {
+            console.error('Gagal mengambil data' + error);
         }
     });
-    // ajax get data top services
+}
+
+function dataAtas() {
     $.ajax({
         url: baseURL + 'Service',
         method: 'GET',
@@ -60,16 +62,12 @@
 
                 // Inisialisasi Swiper setelah data ditambahkan
                 var swiper = new Swiper('.services-slider', {
-                    slidesPerView: 3,
+                    slidesPerView: 5,
                     spaceBetween: 30,
                     loop: true,
                     autoplay: {
                         delay: 5000,
                         disableOnInteraction: false,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
                     },
                     breakpoints: {
                         1024: {
@@ -98,3 +96,10 @@
             console.error(status + ': ' + error);
         }
     });
+}
+
+
+$(document).ready(function () {
+    dataAtas();
+    dataService();
+});
