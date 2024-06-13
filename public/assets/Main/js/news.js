@@ -63,7 +63,7 @@ function tampilRandome() {
                                     <i class="bi bi-clock me-1"></i>
                                     <a href="#" class="op-8">${timeAgo}</a>
                                 </small>
-                                <a href="page-single-post-5.html?newsId=${card.id}" class="card-title mb-10">${truncatedJudul}</a>
+                                <a href="News/Post/${card.id}" class="card-title mb-10">${truncatedJudul}</a>
                                 <p class="fs-13px color-666">${truncatedDescription}</p>
                                 <div class="auther-comments d-flex small align-items-center justify-content-between op-9">
                                     <div class="l_side d-flex align-items-center">
@@ -150,10 +150,10 @@ function beritaBaru() {
                                 <a href="#"
                                     class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5">${card.category_news}</a>
                                 <i class="bi bi-clock me-1"></i>
-                                <a href="#" class="op-8">Posted on ${timeAgo}</a>
+                                <a href="#" class="op-8">Di post ${timeAgo}</a>
                             </small>
                             <h5 class="fw-bold mt-10 title">
-                                <a href="news-detail.?id=${card.id}">${truncatedJudul}</a>
+                                <a href="News/Post/${card.id}">${truncatedJudul}</a>
                             </h5>
                             <p class="small mt-2 op-8 fs-10px">${truncatedDescription}
                             </p>
