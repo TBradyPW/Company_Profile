@@ -41,6 +41,10 @@ Route::get('/Contact', function () {
     return view('Contact');
 })->name('Contact');
 
+Route::get('/News/Post', function () {
+    return view('singlepost');
+})->name('singlepost');
+
 
 
 
