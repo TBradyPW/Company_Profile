@@ -14,15 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Index');
-})->name('Index');
+    return redirect('/home');
+})->name('Home');
+
+Route::get('/home', function () {
+    return view('Home');
+})->name('Home');
 
 Route::get('/about', function () {
     return view('About');
 })->name('About');
 
 Route::get('/Portofolio', function () {
-    return view('portofolio');
+    return view('Portofolio');
 })->name('Portofolio');
 
 Route::get('/Services', function () {
