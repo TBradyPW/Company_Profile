@@ -153,7 +153,7 @@ function beritaBaru() {
                                 <a href="#" class="op-8">Posted on ${timeAgo}</a>
                             </small>
                             <h5 class="fw-bold mt-10 title">
-                                <a href="page-single-post-5.html">${truncatedJudul}</a>
+                                <a href="news-detail.?id=${card.id}">${truncatedJudul}</a>
                             </h5>
                             <p class="small mt-2 op-8 fs-10px">${truncatedDescription}
                             </p>
