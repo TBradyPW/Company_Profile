@@ -11,7 +11,7 @@
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel"
-                    aria-hidden="true" data-bs-backdrop="false">
+                    aria-hidden="true" data-bs-backdrop="false" style="z-index: 99999;">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -21,9 +21,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="text-center">
-                                    <img class="img-fluid rounded" id="portfolioImage"
-                                        src="https://resources.hexagon.co.id/storage/portfolio/Aplikasi%20UMKM%20Sumedang_umkm-dashboard.png"
-                                        alt="Gambar Portofolio">
+                                    <img class="img-fluid rounded" id="portfolioImage" src="" alt="Portfolio Image">
                                 </div>
                                 <p id="portfolioDescription"></p>
                             </div>

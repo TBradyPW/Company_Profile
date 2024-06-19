@@ -157,7 +157,7 @@
                     url: url,
                     method: 'GET',
                     success: function(response) {
-                        var news = response.data.find(n => n.id == id);
+                        var news = response.data.find(n => n.news_id == id);
                         if (news) {
                             callback(news);
                         } else if (response.next_page_url) {
@@ -177,13 +177,16 @@
                 var id = pathArray[pathArray.length - 1];
 
                 fetchNewsData(baseURL + 'News', id, function(news) {
+                    let tampilfoto = `${baseURL}images/${news.fotonews}`;
                     if (news) {
                         $('#judul').text(news.judul_news);
                         $('#isi-konten').html(news.ket_news.replace(/\n/g, '<br/>'));
                         $('#kategori').text(news.category_news);
+                        if (news.fotonews && news.fotonews.length > 0) {}
+                        $('#foto-berita').attr('src', tampilfoto);
                         $('#waktu').text(timeSince(news.created_at));
-                        if (news.fotonews && news.fotonews.length > 0) {
-                            $('#foto-berita').attr('src', news.fotonews[0]);
+                        if (tampilfoto && tampilfoto.length > 0) {
+                            $('#foto-berita').attr('src', tampilfoto);
                         } else {
                             $('#foto-berita').attr('src',
                                 'https://www.exabytes.co.id/blog/wp-content/uploads/2021/11/error-404-not-found.jpg'

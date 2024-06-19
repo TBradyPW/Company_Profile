@@ -21,28 +21,25 @@ function contact() {
 }
 
 
-function culture() {
+
+function alamat() {
     $.ajax({
-        url: baseURL + 'abt_culture',
+        url: baseURL + 'alamat',
         method: 'GET',
         success: function (data) {
-            var container = $('#culture');
+            var container = $('#alamat');
             container.empty();
             if (data.data.length > 0) {
                 var cultureData = data.data.slice(0, 3);
-                cultureData.forEach(function (culture) {
+                cultureData.forEach(function (alm) {
                     let konten = ` 
-                        <div class="commun-card">
-                            <div class="inf">
-                                <h5>${culture.judul_culture}</h5>
-                                <small>${culture.ket_culture}</small>
-                            </div>
-                        </div>
+                    <p> ${alm.nama_tempat}: </p> ${alm.lokasi} <br>
+                    <br>
                     `;
                     container.append(konten);
                 });
             } else {
-                container.append('<h6>Data culture kosong</h6>');
+                container.append('<h6>Lokasi tidak di ketahui</h6>');
             }
         },
         error: function (error) {
@@ -50,3 +47,8 @@ function culture() {
         }
     });
 }
+
+$(document).ready(function () {
+    contact();
+    alamat();
+});

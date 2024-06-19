@@ -17,14 +17,14 @@
                     <div id="alamat">
 
                     </div>
-                    <p> Office 1 : </p> Gedung BITC lt.3, Jl. MHS Mintareja Sarjana Hukum, Baros, Kota Cimahi 40521 <br>
+                    {{-- <p> Office 1 : </p> Gedung BITC lt.3, Jl. MHS Mintareja Sarjana Hukum, Baros, Kota Cimahi 40521 <br>
                     <br>
                     <p> Office 2 : </p> Jl. Terusan Jakarta No. 175A, Antapani, bandung 40287 <br>
                     <br>
                     <p> Marketing Office : </p> Komplek Pondok Indah Plaza 1 Blok UA No. 32 Lt. II, Jaksel, DKI Jakarta <br>
                     <br>
                     <p> Studio : </p>Jl. Abdul Halim No.128, Cimahi Tengah, Kota Cimahi 40522
-                    <p></p>
+                    <p></p> --}}
                 </div>
                 <div class="content">
                     <div class="row justify-content-center">

@@ -7,9 +7,11 @@ function truncateText(text, maxLength) {
 }
 
 // Fungsi untuk menampilkan modal portofolio
-function showPortfolioModal(judul, keterangan) {
+function showPortfolioModal(judul, keterangan, foto) {
+    const tampilFotoPro = `${baseURL}images/${foto}`;
     $('#portfolioModalLabel').text(judul);
-    $('#portfolioDescription').html(keterangan.replace(/\n/g, '<br/>')); // Handle line breaks if any
+    $('#portfolioDescription').html(keterangan.replace(/\n/g, '<br/>'));
+    $('#portfolioImage').attr('src', tampilFotoPro);
     $('#portfolioModal').modal('show');
 }
 
@@ -29,13 +31,13 @@ function munculkanSemua() {
                         <div class="col-lg-4 mix ${card.Kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="https://cdn.dribbble.com/users/4174206/screenshots/16831422/media/94d29474875d173706b59dd856c4012d.jpg?resize=1000x750&vertical=center" alt="">
+                                    <img src="${baseURL}images/${card.fotoprojek}" alt="">
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>
-                                        <a href="javascript:void(0);" onclick="showPortfolioModal('${card.judul_porto}', \`${card.ket_porto.replace(/'/g, "\\'")}\`)">
-                                            ${card.judul_porto}
-                                        </a>
+                                        <a href="javascript:void(0);" onclick="showPortfolioModal('${card.judul_porto}', \`${card.ket_porto.replace(/'/g, "\\'")}\`, '${card.fotoprojek}')">
+    ${card.judul_porto}
+</a>
                                     </h5>
                                     <small class="d-block color-main text-uppercase">${card.Kategori}</small>
                                     <div class="text">
@@ -76,7 +78,7 @@ function munculkanBerdasarkan(nama_category) {
                         <div class="col-lg-4 mix ${card.Kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="${baseURL}images/${fotoprojek}" alt="">
+                                    <img src="${baseURL}images/${card.fotoprojek}" alt="">
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>

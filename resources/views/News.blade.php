@@ -13,91 +13,14 @@
                 </div>
                 <div class="blog-details-slider">
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="content-card">
-                                    <div class="img overlay">
-                                        <img src="assets/img/blog/s_blog.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="cont">
-                                                    <small class="date small mb-20"> <a href="#"
-                                                            class="text-uppercase border-end brd-gray pe-3 me-3"> News </a>
-                                                        <i class="far fa-clock me-1"></i> Di post <a href="#">3 Days
-                                                            ago</a> </small>
-                                                    <h2 class="title">
-                                                        <a href="page-single-post-5.html">Solutions For Big Data Issue,
-                                                            Expert Perspective</a>
-                                                    </h2>
-                                                    <p class="fs-13px mt-10 text-light text-info">If there’s one way that
-                                                        wireless technology has changed the way we work, it’s that will
-                                                        everyone is now connected [...]</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-card">
-                                    <div class="img overlay">
-                                        <img src="assets/img/blog/1.jpg" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="cont">
-                                                    <small class="date small mb-20"> <a href="#"
-                                                            class="text-uppercase border-end brd-gray pe-3 me-3"> News </a>
-                                                        <i class="far fa-clock me-1"></i> Posted on <a href="#">3 Days
-                                                            ago</a> </small>
-                                                    <h2 class="title">
-                                                        <a href="page-single-post-5.html">Solutions For Big Data Issue,
-                                                            Expert Perspective</a>
-                                                    </h2>
-                                                    <p class="fs-13px mt-10 text-light text-info">If there’s one way that
-                                                        wireless technology has changed the way we work, it’s that will
-                                                        everyone is now connected [...]</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-card">
-                                    <div class="img overlay">
-                                        <img src="assets/img/blog/2.jpg" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="cont">
-                                                    <small class="date small mb-20"> <a href="#"
-                                                            class="text-uppercase border-end brd-gray pe-3 me-3"> News </a>
-                                                        <i class="far fa-clock me-1"></i> Posted on <a href="#">3 Days
-                                                            ago</a> </small>
-                                                    <h2 class="title">
-                                                        <a href="page-single-post-5.html">Solutions For Big Data Issue,
-                                                            Expert Perspective</a>
-                                                    </h2>
-                                                    <p class="fs-13px mt-10 text-light text-info">If there’s one way that
-                                                        wireless technology has changed the way we work, it’s that will
-                                                        everyone is now connected [...]</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="swiper-wrapper" id="blog-slider">
+                            <!-- AJAX will inject slides here -->
                         </div>
                     </div>
 
-                    <!-- ====== pagination ====== -->
+                    <!-- Pagination -->
                     <div class="swiper-pagination"></div>
-                    <!-- ====== arrows ====== -->
+                    <!-- Navigation -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
@@ -123,7 +46,7 @@
             <div class="container">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-8" id="tampilRandome">
-                        <div class="pagination style-5 color-5 justify-content-center mt-60">
+                        {{-- <div class="pagination style-5 color-5 justify-content-center mt-60">
                             <a href="#" class="active">
                                 <span>1</span>
                             </a>
@@ -145,7 +68,7 @@
                             <a href="#">
                                 <span class="text">next <i class="fas fa-chevron-right"></i> </span>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-lg-4">
                         <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
@@ -159,9 +82,9 @@
                                     </button>
                                 </div>
                             </form>
-                            <div class="side-categories mb-50">
+                            <div class="side-categories mb-50" id="Category">
                                 <h6 class="title mb-20 text-uppercase fw-normal">categories</h6>
-                                <div id="Category"></div>
+                                <div></div>
                             </div>
                             <div class="side-share mb-50">
                                 <h6 class="title mb-20 text-uppercase fw-normal">social</h6>

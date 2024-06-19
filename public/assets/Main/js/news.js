@@ -51,7 +51,7 @@ function tampilRandome() {
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="img img-cover">
-                                <img src="https://hexagon.co.id/storage/post-images/591skxQEdBUUXUarcPL78FiRNuSzaxq4pt9oOMiF.jpg" class="radius-7" alt="...">
+                                <img src="${baseURL}images/${card.fotonews}" class="radius-7" alt="...">
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -143,7 +143,7 @@ function beritaBaru() {
                 <div class="col-lg-4">
                     <div class="card border-0 bg-transparent rounded-0 mb-30 mb-lg-0 d-block">
                         <div class="img radius-7 overflow-hidden img-cover">
-                            <img src="https://hexagon.co.id/storage/post-images/591skxQEdBUUXUarcPL78FiRNuSzaxq4pt9oOMiF.jpg" class="card-img-top" alt="...">
+                            <img src="${baseURL}images/${card.fotonews}" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body px-0">
                             <small class="d-block date mt-10 fs-10px fw-bold">
@@ -153,7 +153,7 @@ function beritaBaru() {
                                 <a href="#" class="op-8">Di post ${timeAgo}</a>
                             </small>
                             <h5 class="fw-bold mt-10 title">
-                                <a href="News/Post/${card.id}">${truncatedJudul}</a>
+                                <a href="News/Post/${card.news_id}">${truncatedJudul}</a>
                             </h5>
                             <p class="small mt-2 op-8 fs-10px">${truncatedDescription}
                             </p>
@@ -195,7 +195,8 @@ $.ajax({
             </a>`;
             container.append(showAllButton);
             categoryData.forEach(function (category) {
-                let content = `<a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
+                let content = `
+                <a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
                     <span>${category.nama_category}</span>
                 </a>`;
                 container.append(content);
@@ -212,7 +213,9 @@ $.ajax({
     }
 });
 
+
 $(document).ready(function () {
     tampilRandome();
     beritaBaru();
+
 });
