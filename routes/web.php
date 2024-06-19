@@ -23,7 +23,7 @@ Route::get('/home', function () {
 })->name('Home');
 
 Route::get('/about', function () {
-    return view('About');
+    return view('about');
 })->name('About');
 
 Route::get('/Portofolio', function () {
@@ -46,13 +46,9 @@ Route::get('/Contact', function () {
     return view('Contact');
 })->name('Contact');
 
-Route::get('/News/Post', function () {
-    return view('singlepost');
-})->name('singlepost');
-
-
-
-
+Route::get('/News/Post/{id}', function ($id) {
+    return view('singlepost', ['id' => $id]);
+});
 
 Route::get('/about_layout', function () {
     return view('about_layout');

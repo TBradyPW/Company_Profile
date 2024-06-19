@@ -25,7 +25,7 @@
                                                 <div class="cont">
                                                     <small class="date small mb-20"> <a href="#"
                                                             class="text-uppercase border-end brd-gray pe-3 me-3"> News </a>
-                                                        <i class="far fa-clock me-1"></i> Posted on <a href="#">3 Days
+                                                        <i class="far fa-clock me-1"></i> Di post <a href="#">3 Days
                                                             ago</a> </small>
                                                     <h2 class="title">
                                                         <a href="page-single-post-5.html">Solutions For Big Data Issue,
@@ -109,7 +109,7 @@
         <!-- ====== start Popular Posts ====== -->
         <section class="popular-posts pt-50 pb-100 border-bottom brd-gray">
             <div class="container">
-                <h5 class="post-sc-title text-center text-uppercase mb-70">Popular Posts</h5>
+                <h5 class="post-sc-title text-center text-uppercase mb-70">LATEST POSTS</h5>
                 <div class="row gx-5" id="beritaBaru">
 
                 </div>
@@ -147,15 +147,11 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="col-lg-4">
                         <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
-
                             <form action="https://iteck-html.themescamp.com/contact.php" class="search-form mb-50"
                                 method="post">
-                                <h6 class="title mb-20 text-uppercase fw-normal">
-                                    search
-                                </h6>
+                                <h6 class="title mb-20 text-uppercase fw-normal">search</h6>
                                 <div class="form-group position-relative">
                                     <input type="text" class="form-control rounded-pill"
                                         placeholder="Type and hit enter">
@@ -163,35 +159,18 @@
                                     </button>
                                 </div>
                             </form>
-
                             <div class="side-categories mb-50">
-                                <h6 class="title mb-20 text-uppercase fw-normal">
-                                    categories
-                                </h6>
+                                <h6 class="title mb-20 text-uppercase fw-normal">categories</h6>
                                 <div id="Category"></div>
                             </div>
-
                             <div class="side-share mb-50">
-                                <h6 class="title mb-20 text-uppercase fw-normal">
-                                    social
-                                </h6>
-                                <a href="#" class="social-icon">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <i class="fab fa-pinterest"></i>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <i class="fab fa-goodreads-g"></i>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
+                                <h6 class="title mb-20 text-uppercase fw-normal">social</h6>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-goodreads-g"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
