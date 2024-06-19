@@ -4,6 +4,12 @@ function truncateText(text, maxLength) {
     }
     return text;
 }
+function truncateText2(text, maxLength) {
+    if (typeof text === 'string' && text.length > maxLength) {
+        return text.substring(0, maxLength) + '...';
+    }
+    return text;
+}
 // Fungsi untuk menghitung waktu yang telah berlalu
 function timeSince(date) {
     const now = new Date();
@@ -63,7 +69,7 @@ function tampilRandome() {
                                     <i class="bi bi-clock me-1"></i>
                                     <a href="#" class="op-8">${timeAgo}</a>
                                 </small>
-                                <a href="News/Post/${card.id}" class="card-title mb-10">${truncatedJudul}</a>
+                                <a href="News/Post/${card.news_id}" class="card-title mb-10" style="color: black;">${truncatedJudul}</a>
                                 <p class="fs-13px color-666">${truncatedDescription}</p>
                                 <div class="auther-comments d-flex small align-items-center justify-content-between op-9">
                                     <div class="l_side d-flex align-items-center">
@@ -153,7 +159,7 @@ function beritaBaru() {
                                 <a href="#" class="op-8">Di post ${timeAgo}</a>
                             </small>
                             <h5 class="fw-bold mt-10 title">
-                                <a href="News/Post/${card.news_id}">${truncatedJudul}</a>
+                                <a href="News/Post/${card.news_id}" style="color: black;">${truncatedJudul}</a>
                             </h5>
                             <p class="small mt-2 op-8 fs-10px">${truncatedDescription}
                             </p>
@@ -181,41 +187,115 @@ function beritaBaru() {
     fetchPage(page);
 }
 
-// Memuat kategori saat dokumen siap
-$.ajax({
-    url: baseURL + 'category_news',
-    type: 'GET',
-    success: function (response) {
-        if (response && response.data && Array.isArray(response.data) && response.data.length > 0) {
-            var categoryData = response.data;
-            var container = $('#Category');
-            container.empty();
-            let showAllButton = `<a href="#" class="cat-item" onclick="munculkanSemua(); $('.cat-item').removeClass('active'); $(this).addClass('active');">
-                <span>All</span>
-            </a>`;
-            container.append(showAllButton);
-            categoryData.forEach(function (category) {
-                let content = `
-                <a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
-                    <span>${category.nama_category}</span>
-                </a>`;
-                container.append(content);
-            });
-        } else {
-            var container = $('#Category');
-            container.empty();
-            let content = `<h1>Tidak ada category</h1>`;
-            container.append(content);
-        }
-    },
-    error: function (_xhr, status, error) {
-        console.error(status + ': ' + error);
-    }
-});
-
-
 $(document).ready(function () {
     tampilRandome();
     beritaBaru();
+    // Memuat kategori saat dokumen siap
+    $.ajax({
+        url: baseURL + 'category_news',
+        type: 'GET',
+        success: function (response) {
+            if (response && response.data && Array.isArray(response.data) && response.data.length > 0) {
+                var categoryData = response.data;
+                var container = $('#Category');
+                container.empty();
+                let showAllButton = `<a href="#" class="cat-item" onclick="munculkanSemua(); $('.cat-item').removeClass('active'); $(this).addClass('active');">
+                <span>All</span>
+            </a>`;
+                container.append(showAllButton);
+                categoryData.forEach(function (category) {
+                    let content = `
+                <a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
+                    <span>${category.nama_category}</span>
+                </a>`;
+                    container.append(content);
+                });
+            } else {
+                var container = $('#Category');
+                container.empty();
+                let content = `<h1>Tidak ada category</h1>`;
+                container.append(content);
+            }
+        },
+        error: function (_xhr, status, error) {
+            console.error(status + ': ' + error);
+        }
+    });
 
+    // Function to fetch data and initialize Swiper
+    function fetchJournalData() {
+        $.ajax({
+            url: baseURL + 'News', // Update with the correct URL
+            method: 'GET',
+            success: function (data) {
+                var journalData = data.data; // Adjust based on your data structure
+                var journalSlides = $('#journalSlides');
+                journalSlides.empty(); // Clear existing slides
+
+                if (journalData.length > 0) {
+                    journalData.forEach(function (journal) {
+                        let truncatedDescription = truncateText2(journal.ket_news, 300);
+                        let truncatedJudul = truncateText2(journal.judul_news, 45);
+                        let timeAgo = timeSince(journal.created_at);
+                        let slideContent = `
+                            <div class="swiper-slide">
+                                <div class="content-card">
+                                    <div class="img overlay">
+                                        <img src="${baseURL}images/${journal.fotonews}" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="cont">
+                                                    <small class="date small mb-20">
+                                                        <a href="#" class="text-uppercase border-end brd-gray pe-3 me-3" style="color: white;">${journal.category_news}</a>
+                                                        <i class="far fa-clock me-1"></i> Posted on <a href="#" style="color: white;">${timeAgo}</a>
+                                                    </small>
+                                                    <h2 class="title">
+                                                        <a href="News/Post/${journal.news_id}" style="color: white;">${truncatedJudul}</a>
+                                                    </h2>
+                                                    <p class="fs-13px mt-10 text-light text-info">${truncatedDescription}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        journalSlides.append(slideContent);
+                    });
+
+                    initializeSwiper(); // Initialize Swiper after appending slides
+                } else {
+                    journalSlides.append('<center><h6>No journal articles available</h6></center>');
+                }
+            },
+            error: function (error) {
+                console.error('Failed to fetch data:', error);
+            }
+        });
+    }
+
+    // Function to initialize Swiper
+    function initializeSwiper() {
+        new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+
+    // Fetch and display journal data
+    fetchJournalData();
 });

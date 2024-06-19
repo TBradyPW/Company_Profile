@@ -13,18 +13,19 @@
                 </div>
                 <div class="blog-details-slider">
                     <div class="swiper-container">
-                        <div class="swiper-wrapper" id="blog-slider">
-                            <!-- AJAX will inject slides here -->
+                        <div class="swiper-wrapper" id="journalSlides">
+                            <!-- Dynamic Swiper slides will be appended here -->
                         </div>
                     </div>
 
-                    <!-- Pagination -->
+                    <!-- ====== pagination ====== -->
                     <div class="swiper-pagination"></div>
-                    <!-- Navigation -->
+                    <!-- ====== arrows ====== -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
+
         </section>
         <!-- ====== end blog-slider ====== -->
 
@@ -82,9 +83,9 @@
                                     </button>
                                 </div>
                             </form>
-                            <div class="side-categories mb-50" id="Category">
+                            <div class="side-categories mb-50">
                                 <h6 class="title mb-20 text-uppercase fw-normal">categories</h6>
-                                <div></div>
+                                <div id="Category"></div>
                             </div>
                             <div class="side-share mb-50">
                                 <h6 class="title mb-20 text-uppercase fw-normal">social</h6>

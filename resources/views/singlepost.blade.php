@@ -179,6 +179,8 @@
                 fetchNewsData(baseURL + 'News', id, function(news) {
                     let tampilfoto = `${baseURL}images/${news.fotonews}`;
                     if (news) {
+
+                        $('#Judul').text(news.judul_news);
                         $('#judul').text(news.judul_news);
                         $('#isi-konten').html(news.ket_news.replace(/\n/g, '<br/>'));
                         $('#kategori').text(news.category_news);
