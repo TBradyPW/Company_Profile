@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="img">
-                                <img src="{{ asset('assets/Main/img/Main/superman_3d.png') }}" alt="">
+                                <img src="{{ asset('assets/Main/img/choose_us/superman_3d.png') }}" alt="">
                             </div>
                         </div>
                     </div>

@@ -278,6 +278,20 @@ $.ajax({
                     delay: 4000,
                     disableOnInteraction: false,
                 },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    }
+                }
             });
         } else {
             container.append('<center><h6>Data value kosong</h6></center>');
