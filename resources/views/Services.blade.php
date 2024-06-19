@@ -73,7 +73,6 @@
             </div>
         </section>
         <!-- ====== end testimonials ====== -->
-
     </main>
 @endsection
 
