@@ -82,9 +82,9 @@ function munculkanBerdasarkan(nama_category) {
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>
-                                        <a href="javascript:void(0);" onclick="showPortfolioModal('${card.judul_porto}', \`${card.ket_porto.replace(/'/g, "\\'")}\`)">
-                                            ${card.judul_porto}
-                                        </a>
+                                <a href="javascript:void(0);" onclick="showPortfolioModal('${card.judul_porto}', \`${card.ket_porto.replace(/'/g, "\\'")}\`, '${card.fotoprojek}')">
+                                    ${card.judul_porto}
+                                </a>
                                     </h5>
                                     <small class="d-block color-main text-uppercase">${card.Kategori}</small>
                                     <div class="text">

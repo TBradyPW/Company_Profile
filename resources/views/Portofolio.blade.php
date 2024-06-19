@@ -21,7 +21,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="text-center">
-                                    <img class="img-fluid rounded" id="portfolioImage" src="" alt="Portfolio Image">
+                                    <img class="img-fluid rounded" id="portfolioImage" src="">
                                 </div>
                                 <p id="portfolioDescription"></p>
                             </div>
