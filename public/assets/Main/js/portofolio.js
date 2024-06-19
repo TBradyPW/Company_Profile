@@ -76,7 +76,7 @@ function munculkanBerdasarkan(nama_category) {
                         <div class="col-lg-4 mix ${card.Kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="https://cdn.dribbble.com/users/4174206/screenshots/16831422/media/94d29474875d173706b59dd856c4012d.jpg?resize=1000x750&vertical=center" alt="">
+                                    <img src="${baseURL}images/${fotoprojek}" alt="">
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>

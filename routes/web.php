@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return redirect('/home');
-    Route::get('/', [App\Http\Controllers\])
+    Route::get('/', [MainController::class, 'Index']);
 })->name('Home');
 
 Route::get('/home', function () {
