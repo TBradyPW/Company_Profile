@@ -6,7 +6,7 @@ function dataService() {
             var container = $('#our-service');
             container.empty();
             if (data.data.length > 0) {
-                var serviceData = data.data;
+                var serviceData = data.data.slice(0, 4);
                 serviceData.forEach(function (service) {
                     let gambar = service.fotoservice ? `${baseURL}images/${service.fotoservice}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-service-management-enterprise-resource-planning-services-hand-service-people.png`;
                     let konten = ` 
