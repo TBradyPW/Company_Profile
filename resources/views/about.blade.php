@@ -106,8 +106,7 @@
                             <ul id="service-abt">
 
                             </ul>
-                            <a href="page-services-5.html"
-                                class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold mt-60 px-5">
+                            <a href="Services" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold mt-60 px-5">
                                 <span>See More </span>
                             </a>
                         </div>

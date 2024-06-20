@@ -62,7 +62,7 @@ function dataAtas() {
 
                 // Inisialisasi Swiper setelah data ditambahkan
                 var swiper = new Swiper('.services-slider', {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                     spaceBetween: 30,
                     loop: true,
                     autoplay: {

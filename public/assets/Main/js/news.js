@@ -10,27 +10,31 @@ function truncateText2(text, maxLength) {
     }
     return text;
 }
-// Fungsi untuk menghitung waktu yang telah berlalu
+
+// Function to calculate time since a given date
 function timeSince(date) {
     const now = new Date();
     const secondsPast = (now.getTime() - new Date(date).getTime()) / 1000;
 
     if (secondsPast < 60) {
-        return `${Math.floor(secondsPast)} Detik lalu`;
+        return `${Math.floor(secondsPast)} seconds ago`;
     }
     if (secondsPast < 3600) {
-        return `${Math.floor(secondsPast / 60)} Menit lalu`;
+        return `${Math.floor(secondsPast / 60)} minutes ago`;
     }
     if (secondsPast < 86400) {
-        return `${Math.floor(secondsPast / 3600)} Jam lalu`;
+        return `${Math.floor(secondsPast / 3600)} hours ago`;
     }
     if (secondsPast < 604800) {
-        return `${Math.floor(secondsPast / 86400)} Hari lalu`;
+        return `${Math.floor(secondsPast / 86400)} days ago`;
     }
     if (secondsPast < 2419200) {
-        return `${Math.floor(secondsPast / 604800)} Minggu lalu`;
+        return `${Math.floor(secondsPast / 604800)} weeks ago`;
     }
-    return `${Math.floor(secondsPast / 31536000)} Tahun lalu`;
+    if (secondsPast < 31536000) {
+        return `${Math.floor(secondsPast / 2419200)} months ago`;
+    }
+    return `${Math.floor(secondsPast / 31536000)} years ago`;
 }
 
 function tampilRandome() {
@@ -42,8 +46,7 @@ function tampilRandome() {
             cardsContainer.empty();
             if (response.data && Array.isArray(response.data) && response.data.length > 0) {
                 var cardsData = response.data;
-                cardsData = cardsData.sort(() => Math.random() - 0.5);
-                cardsData = cardsData.slice(0, 5);
+                cardsData = cardsData.sort(() => Math.random() - 0.5).slice(0, 5);
                 cardsData.forEach(function (card) {
                     let tagsContent = '';
                     if (Array.isArray(card.tags)) {
@@ -63,11 +66,12 @@ function tampilRandome() {
                         <div class="col-lg-7">
                             <div class="card-body p-0">
                                 <small class="d-block date text">
-                                    <a href="#"
+                                    <b><a href="#"
                                         class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5 fw-bold">
                                         ${card.category_news}</a>
                                     <i class="bi bi-clock me-1"></i>
                                     <a href="#" class="op-8">${timeAgo}</a>
+                                    </b>
                                 </small>
                                 <a href="News/Post/${card.news_id}" class="card-title mb-10" style="color: black;">${truncatedJudul}</a>
                                 <p class="fs-13px color-666">${truncatedDescription}</p>
@@ -98,6 +102,7 @@ function tampilRandome() {
         }
     });
 }
+
 function beritaBaru() {
     let allData = [];
     let page = 1;
@@ -156,7 +161,7 @@ function beritaBaru() {
                                 <a href="#"
                                     class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5">${card.category_news}</a>
                                 <i class="bi bi-clock me-1"></i>
-                                <a href="#" class="op-8">Di post ${timeAgo}</a>
+                                <a href="#" class="op-8">Posted on ${timeAgo}</a>
                             </small>
                             <h5 class="fw-bold mt-10 title">
                                 <a href="News/Post/${card.news_id}" style="color: black;">${truncatedJudul}</a>
@@ -231,7 +236,10 @@ $(document).ready(function () {
                 var journalData = data.data; // Adjust based on your data structure
                 var journalSlides = $('#journalSlides');
                 journalSlides.empty(); // Clear existing slides
-
+                journalData.sort(function (a, b) {
+                    return new Date(b.created_at) - new Date(a.created_at);
+                });
+                journalData = journalData.sort(() => Math.random() - 0.5).slice(0, 3);
                 if (journalData.length > 0) {
                     journalData.forEach(function (journal) {
                         let truncatedDescription = truncateText2(journal.ket_news, 300);
@@ -248,8 +256,9 @@ $(document).ready(function () {
                                             <div class="col-lg-6">
                                                 <div class="cont">
                                                     <small class="date small mb-20">
-                                                        <a href="#" class="text-uppercase border-end brd-gray pe-3 me-3" style="color: white;">${journal.category_news}</a>
-                                                        <i class="far fa-clock me-1"></i> Posted on <a href="#" style="color: white;">${timeAgo}</a>
+                                                    <b>
+                                                        <a href="#" class="text-uppercase border-end brd-gray pe-3 me-3" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">${journal.category_news}</a></b>
+                                                        <i class="far fa-clock me-1"></i> Posted on <a href="#" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">${timeAgo}</a>
                                                     </small>
                                                     <h2 class="title">
                                                         <a href="News/Post/${journal.news_id}" style="color: white;">${truncatedJudul}</a>
@@ -265,9 +274,9 @@ $(document).ready(function () {
                         journalSlides.append(slideContent);
                     });
 
-                    initializeSwiper(); // Initialize Swiper after appending slides
+                    initializeSwiper();
                 } else {
-                    journalSlides.append('<center><h6>No journal articles available</h6></center>');
+                    journalSlides.append('<center><h6>Tidak ada berita</h6></center>');
                 }
             },
             error: function (error) {
