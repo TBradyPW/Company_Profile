@@ -49,13 +49,21 @@
                         color: #007bff;
                     }
                 </style>
-                <div class="controls" id=Category>
+                <div class="controls" id="Category">
                     {{-- disini adalah category --}}
                 </div>
                 <section class="portfolio style-1">
                     <div class="content">
                         <div id="cardsContainer" class="row mix-container">
                         </div>
+                        <div class="pagination style-5 color-5 justify-content-center mt-60">
+                            <a href="#" class="prev" onclick="loadPage(currentPage - 1)"><span><i
+                                        class="fas fa-chevron-left"></i></span></a>
+                            <div id="paginationControls"></div>
+                            <a href="#" class="next" onclick="loadPage(currentPage + 1)"><span><i
+                                        class="fas fa-chevron-right"></i></span></a>
+                        </div>
+                    </div>
                 </section>
             </div>
         </section>
