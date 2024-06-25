@@ -1,5 +1,7 @@
 var currentPage = 1;
 var totalPages = 1;
+
+// Untuk membataskan panjang teks jika terlalu panjang
 function truncateText(text, maxLength) {
     if (typeof text === 'string' && text.length > maxLength) {
         return text.substring(0, maxLength) + '[..]';
@@ -7,6 +9,7 @@ function truncateText(text, maxLength) {
     return text;
 }
 
+// Untuk membataskan panjang teks jika terlalu panjang
 function truncateText2(text, maxLength) {
     if (typeof text === 'string' && text.length > maxLength) {
         return text.substring(0, maxLength) + '...';
@@ -14,7 +17,7 @@ function truncateText2(text, maxLength) {
     return text;
 }
 
-// Function to calculate time since a given date
+// Untuk mengubah format waktu
 function timeSince(date) {
     const now = new Date();
     const secondsPast = (now.getTime() - new Date(date).getTime()) / 1000;
@@ -40,6 +43,7 @@ function timeSince(date) {
     return `${Math.floor(secondsPast / 31536000)} years ago`;
 }
 
+// Untuk menampilkan data secara acak
 function tampilRandome() {
     $.ajax({
         url: baseURL + 'News?page=' + currentPage,
@@ -170,6 +174,8 @@ function beritaBaru() {
         });
     }
 
+
+    // Untuk menampilkan data yang paling terbaru 
     function displayBerita(data) {
         var cardsContainer = $('#beritaBaru');
         cardsContainer.empty();

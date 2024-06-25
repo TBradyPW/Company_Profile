@@ -1,5 +1,4 @@
 var currentPage = 1;
-var pageSize = 10; // Number of items per page
 var currentCategory = '';
 
 function loadPage(page) {
@@ -12,7 +11,7 @@ function loadPage(page) {
     }
 }
 
-// Fungsi untuk memotong teks jika terlalu panjang
+// Untuk membataskan panjang teks jika terlalu panjang
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
         return text.substring(0, maxLength) + '...';
@@ -20,25 +19,16 @@ function truncateText(text, maxLength) {
     return text;
 }
 
-// Fungsi untuk menampilkan modal portofolio
-function showPortfolioModal(judul, keterangan, foto) {
-    const tampilFotoPro = `${baseURL}images/${foto}`;
-    $('#portfolioModalLabel').text(judul);
-    $('#portfolioDescription').html(keterangan.replace(/\n/g, '<br/>'));
-    $('#portfolioImage').attr('src', tampilFotoPro);
-    $('#portfolioModal').modal('show');
-}
-
-// Fungsi untuk memuat semua portofolio
+// Menampilkan seluruh data tanpa berdasarkan category
 function munculkanSemua() {
-    currentCategory = '';
+    currentPage = 1;
     $.ajax({
-        url: baseURL + 'Portofolio?page=' + currentPage,
+        url: baseURL + 'Portofolio?page=' + currentPage + '&page=' + currentPage,
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#cardsContainer');
             cardsContainer.empty();
-            if (response.data && response.data.length > 0) {
+            if (response.data.length > 0) {
                 var cardsData = response.data;
                 cardsData.forEach(function (card) {
                     let truncatedDescription = truncateText(card.ket_porto, 60);
@@ -79,17 +69,17 @@ function munculkanSemua() {
     });
 }
 
-// Fungsi untuk memuat portofolio berdasarkan kategori
+// Menampilkan data berdasarkan category
 function munculkanBerdasarkan(nama_category) {
-    currentCategory = nama_category; // Set current category
-    currentPage = 1; // Reset to page 1
+    currentCategory = nama_category;
+    currentPage = 1;
     $.ajax({
-        url: baseURL + 'Portofolio?nama_category=' + nama_category + '&page=' + currentPage + '&pageSize=' + pageSize,
+        url: baseURL + 'Portofolio?nama_category=' + nama_category + '&page=' + currentPage,
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#cardsContainer');
             cardsContainer.empty();
-            if (response.data && response.data.length > 0) {
+            if (response.data.length > 0) {
                 var cardsData = response.data;
                 cardsData.forEach(function (card) {
                     let truncatedDescription = truncateText(card.ket_porto, 60);
@@ -152,7 +142,7 @@ function hidePaginationControls() {
     $('.pagination').hide();
 }
 
-// Memuat kategori saat dokumen siap
+// Category portofolio
 $.ajax({
     url: baseURL + 'Category',
     type: 'GET',
@@ -171,7 +161,7 @@ $.ajax({
             });
         } else {
             let content1 = `<h1> Tidak ada kategori</h1>`;
-            // container.append(content1);
+            container.append(content1);
         }
     },
     error: function (_xhr, status, error) {
@@ -179,7 +169,7 @@ $.ajax({
     }
 });
 
-// Inisialisasi saat dokumen siap
 $(document).ready(function () {
     munculkanSemua();
+    munculkanBerdasarkan();
 });
