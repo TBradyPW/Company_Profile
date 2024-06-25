@@ -1,10 +1,15 @@
 var currentPage = 1;
 var pageSize = 10; // Number of items per page
+var currentCategory = '';
 
 function loadPage(page) {
     if (page < 1) return;
     currentPage = page;
-    munculkanSemua();
+    if (currentCategory) {
+        munculkanBerdasarkan(currentCategory);
+    } else {
+        munculkanSemua();
+    }
 }
 
 // Fungsi untuk memotong teks jika terlalu panjang
@@ -26,8 +31,9 @@ function showPortfolioModal(judul, keterangan, foto) {
 
 // Fungsi untuk memuat semua portofolio
 function munculkanSemua() {
+    currentCategory = '';
     $.ajax({
-        url: baseURL + 'Portofolio?page=' + currentPage + '&pageSize=' + pageSize,
+        url: baseURL + 'Portofolio?page=' + currentPage,
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#cardsContainer');
@@ -44,7 +50,7 @@ function munculkanSemua() {
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>
-                                        <a href="javascript:void(0);" onclick="showPortfolioModal('${card.judul_porto}', \`${card.ket_porto.replace(/'/g, "\\'")}\`, '${card.fotoprojek}')">
+                                        <a href="Portofolio/Post/${card.id}">
                                             ${card.judul_porto}
                                         </a>
                                     </h5>
@@ -75,6 +81,8 @@ function munculkanSemua() {
 
 // Fungsi untuk memuat portofolio berdasarkan kategori
 function munculkanBerdasarkan(nama_category) {
+    currentCategory = nama_category; // Set current category
+    currentPage = 1; // Reset to page 1
     $.ajax({
         url: baseURL + 'Portofolio?nama_category=' + nama_category + '&page=' + currentPage + '&pageSize=' + pageSize,
         type: 'GET',
@@ -93,7 +101,7 @@ function munculkanBerdasarkan(nama_category) {
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>
-                                        <a href="javascript:void(0);" onclick="showPortfolioModal('${card.judul_porto}', \`${card.ket_porto.replace(/'/g, "\\'")}\`, '${card.fotoprojek}')">
+                                        <a href="Portofolio/Post/${card.id}">
                                             ${card.judul_porto}
                                         </a>
                                     </h5>
@@ -153,7 +161,7 @@ $.ajax({
             var categoryData = response.data;
             var container = $('#Category');
             container.empty();
-            let showAllButton = `<button type="button" class="control" onclick="munculkanSemua(); $('.control').removeClass('active'); $(this).addClass('active');">All</button>`;
+            let showAllButton = `<button type="button"  ./ass="control" onclick="munculkanSemua(); $('.control').removeClass('active'); $(this).addClass('active');">All</button>`;
             container.append(showAllButton);
             categoryData.forEach(function (category) {
                 let content = `<button type="button" class="control" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">

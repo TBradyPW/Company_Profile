@@ -286,6 +286,20 @@ function swiper() {
         autoplay: {
             delay: 0,
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            }
+        },
         speed: 7000,
         direction: 'horizontal',
     });
@@ -296,6 +310,20 @@ function swiper() {
         loop: true,
         autoplay: {
             delay: 0,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            }
         },
         speed: 7000,
         direction: 'horizontal',

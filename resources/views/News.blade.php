@@ -14,7 +14,6 @@
                 <div class="blog-details-slider">
                     <div class="swiper-container">
                         <div class="swiper-wrapper" id="journalSlides">
-                            <!-- Dynamic Swiper slides will be appended here -->
                         </div>
                     </div>
 
@@ -25,7 +24,6 @@
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
-
         </section>
         <!-- ====== end blog-slider ====== -->
 
@@ -41,35 +39,14 @@
         </section>
         <!-- ====== end Popular Posts ====== -->
 
-
         <!-- ====== start all-news ====== -->
         <section class="all-news section-padding blog bg-transparent style-3">
             <div class="container">
                 <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-8" id="tampilRandome">
-                        {{-- <div class="pagination style-5 color-5 justify-content-center mt-60">
-                            <a href="#" class="active">
-                                <span>1</span>
-                            </a>
-                            <a href="#">
-                                <span>2</span>
-                            </a>
-                            <a href="#">
-                                <span>3</span>
-                            </a>
-                            <a href="#">
-                                <span>4</span>
-                            </a>
-                            <a href="#">
-                                <span>...</span>
-                            </a>
-                            <a href="#">
-                                <span>20</span>
-                            </a>
-                            <a href="#">
-                                <span class="text">next <i class="fas fa-chevron-right"></i> </span>
-                            </a>
-                        </div> --}}
+                    <div class="col-lg-8">
+                        <div id="tampilRandome"></div>
+                        <!-- Pagination controls -->
+                        <div class="pagination style-5 color-5 justify-content-center mt-60" id="newsPagination"></div>
                     </div>
                     <div class="col-lg-4">
                         <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
@@ -79,7 +56,8 @@
                                 <div class="form-group position-relative">
                                     <input type="text" class="form-control rounded-pill"
                                         placeholder="Type and hit enter">
-                                    <button class="search-btn border-0 bg-transparent"> <i class="fas fa-search"></i>
+                                    <button class="search-btn border-0 bg-transparent">
+                                        <i class="fas fa-search"></i>
                                     </button>
                                 </div>
                             </form>

@@ -51,6 +51,10 @@ Route::get('/News/Post/{id}', function ($id) {
     return view('singlepost', ['id' => $id]);
 });
 
+Route::get('/Portofolio/Post/{id}', function ($id) {
+    return view('singleporto', ['id' => $id]);
+});
+
 Route::get('/about_layout', function () {
     return view('about_layout');
 });

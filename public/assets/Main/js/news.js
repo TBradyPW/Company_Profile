@@ -1,9 +1,12 @@
+var currentPage = 1;
+var totalPages = 1;
 function truncateText(text, maxLength) {
     if (typeof text === 'string' && text.length > maxLength) {
         return text.substring(0, maxLength) + '[..]';
     }
     return text;
 }
+
 function truncateText2(text, maxLength) {
     if (typeof text === 'string' && text.length > maxLength) {
         return text.substring(0, maxLength) + '...';
@@ -32,21 +35,20 @@ function timeSince(date) {
         return `${Math.floor(secondsPast / 604800)} weeks ago`;
     }
     if (secondsPast < 31536000) {
-        return `${Math.floor(secondsPast / 2419200)} months ago`;
+        return `${Math.floor(secondsPast / 2419200)} months ago}`;
     }
     return `${Math.floor(secondsPast / 31536000)} years ago`;
 }
 
 function tampilRandome() {
     $.ajax({
-        url: baseURL + 'News',
+        url: baseURL + 'News?page=' + currentPage,
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#tampilRandome');
             cardsContainer.empty();
             if (response.data && Array.isArray(response.data) && response.data.length > 0) {
                 var cardsData = response.data;
-                cardsData = cardsData.sort(() => Math.random() - 0.5).slice(0, 5);
                 cardsData.forEach(function (card) {
                     let tagsContent = '';
                     if (Array.isArray(card.tags)) {
@@ -92,6 +94,7 @@ function tampilRandome() {
                 </div>`;
                     cardsContainer.append(content);
                 });
+                updatePaginationControls(response.current_page, response.last_page);
             } else {
                 let content = `<center><h1>TIDAK ADA BERITA</h1></center>`;
                 cardsContainer.append(content);
@@ -101,6 +104,39 @@ function tampilRandome() {
             console.error(status + ': ' + error);
         }
     });
+}
+
+function updatePaginationControls(currentPage, totalPages) {
+    var paginationControls = $('#newsPagination');
+    paginationControls.empty();
+
+    if (totalPages > 1) {
+        $('.pagination').show();
+
+        let prevPage = currentPage > 1 ? currentPage - 1 : 1;
+        let prevControl = `<a href="#" onclick="loadNewsPage(${prevPage})"><span>&laquo</span></a>`;
+        paginationControls.append(prevControl);
+
+        for (var i = 1; i <= totalPages; i++) {
+            let pageControl = `<a href="#" onclick="loadNewsPage(${i})" class="${i === currentPage ? 'active' : ''}"><span>${i}</span></a>`;
+            paginationControls.append(pageControl);
+        }
+
+        let nextPage = currentPage < totalPages ? currentPage + 1 : totalPages;
+        let nextControl = `<a href="#" onclick="loadNewsPage(${nextPage})"><span>&raquo</span></a>`;
+        paginationControls.append(nextControl);
+    } else {
+        hidePaginationControls();
+    }
+}
+
+function hidePaginationControls() {
+    $('.pagination').hide();
+}
+
+function loadNewsPage(page) {
+    currentPage = page;
+    tampilRandome();
 }
 
 function beritaBaru() {
@@ -285,9 +321,15 @@ $(document).ready(function () {
         });
     }
 
+    // Variable to store Swiper instance
+    let swiperInstance;
+
     // Function to initialize Swiper
     function initializeSwiper() {
-        new Swiper('.swiper-container', {
+        if (swiperInstance) {
+            swiperInstance.destroy(true, true); // Destroy the existing instance
+        }
+        swiperInstance = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
