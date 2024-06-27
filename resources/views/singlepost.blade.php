@@ -15,7 +15,7 @@
                                 <a href="posts25d9.html?category=news"
                                     class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5 fw-bold" id="kategori">
                                 </a>
-                                <i class="bi bi-clock me-1"></i> <span class="op-8">Di post <span
+                                <i class="bi bi-clock me-1"></i> <span class="op-8">Posted on <span
                                         id="waktu"></span></span>
                             </small>
                         </div>
@@ -131,21 +131,24 @@
             const secondsPast = (now.getTime() - new Date(date).getTime()) / 1000;
 
             if (secondsPast < 60) {
-                return `${Math.floor(secondsPast)} Detik lalu`;
+                return `${Math.floor(secondsPast)} seconds ago`;
             }
             if (secondsPast < 3600) {
-                return `${Math.floor(secondsPast / 60)} Menit lalu`;
+                return `${Math.floor(secondsPast / 60)} minutes ago`;
             }
             if (secondsPast < 86400) {
-                return `${Math.floor(secondsPast / 3600)} Jam lalu`;
+                return `${Math.floor(secondsPast / 3600)} hours ago`;
             }
             if (secondsPast < 604800) {
-                return `${Math.floor(secondsPast / 86400)} Hari lalu`;
+                return `${Math.floor(secondsPast / 86400)} days ago`;
             }
             if (secondsPast < 2419200) {
-                return `${Math.floor(secondsPast / 604800)} Minggu lalu`;
+                return `${Math.floor(secondsPast / 604800)} weeks ago`;
             }
-            return `${Math.floor(secondsPast / 31536000)} Tahun lalu`;
+            if (secondsPast < 31536000) {
+                return `${Math.floor(secondsPast / 2419200)} months ago}`;
+            }
+            return `${Math.floor(secondsPast / 31536000)} years ago`;
         }
 
         $(document).ready(function() {

@@ -170,6 +170,8 @@ $.ajax({
 });
 
 $(document).ready(function () {
+
+
     munculkanSemua();
     munculkanBerdasarkan();
 });

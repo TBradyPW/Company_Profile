@@ -228,7 +228,7 @@ $.ajax({
             dataAbt.forEach(function (value) {
                 let konten = `
                     <div class="swiper-slide" style="width: 455px; margin-right: 30px;">
-                        <a href="" class="culture-card d-block" data-fancybox="gallery">
+                        <a href="${baseURL}images/${value.foto_value}" class="culture-card d-block" data-fancybox="gallery">
                             <img src="${baseURL}images/${value.foto_value}" alt="">
                             <span class="overlay"></span>
                         </a>
