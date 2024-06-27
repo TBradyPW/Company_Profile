@@ -31,9 +31,12 @@ function munculkanSemua() {
             if (response.data.length > 0) {
                 var cardsData = response.data;
                 cardsData.forEach(function (card) {
-                    let truncatedDescription = truncateText(card.ket_porto, 60);
+                    var keterangan = DOMPurify.sanitize(card.ket_porto);
+                    let truncatedDescription = truncateText(keterangan, 60);
+                    var kategori = DOMPurify.sanitize(card.Kategori);
+                    var judul = DOMPurify.sanitize(card.judul_porto);
                     let content = `
-                        <div class="col-lg-4 mix ${card.Kategori}">
+                        <div class="col-lg-4 mix ${kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
                                     <img src="${baseURL}images/${card.fotoprojek}" alt="">
@@ -41,15 +44,15 @@ function munculkanSemua() {
                                 <div class="info" style="background-color: white;">
                                     <h5>
                                         <a href="Portofolio/Post/${card.id}">
-                                            ${card.judul_porto}
+                                            ${judul}
                                         </a>
                                     </h5>
-                                    <small class="d-block color-main text-uppercase">${card.Kategori}</small>
+                                    <small class="d-block color-main text-uppercase">${kategori}</small>
                                     <div class="text">
                                         ${truncatedDescription}
                                     </div>
                                     <div class="tags">
-                                        <a href="#">${card.Kategori}</a>
+                                        <a href="#">${kategori}</a>
                                     </div>
                                 </div>
                             </div>
@@ -82,9 +85,12 @@ function munculkanBerdasarkan(nama_category) {
             if (response.data.length > 0) {
                 var cardsData = response.data;
                 cardsData.forEach(function (card) {
-                    let truncatedDescription = truncateText(card.ket_porto, 60);
+                    var keterangan = DOMPurify.sanitize(card.ket_porto);
+                    let truncatedDescription = truncateText(keterangan, 60);
+                    var kategori = DOMPurify.sanitize(card.Kategori);
+                    var judul = DOMPurify.sanitize(card.judul_porto);
                     let content = `
-                        <div class="col-lg-4 mix ${card.Kategori}">
+                        <div class="col-lg-4 mix ${kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
                                     <img src="${baseURL}images/${card.fotoprojek}" alt="">
@@ -92,15 +98,15 @@ function munculkanBerdasarkan(nama_category) {
                                 <div class="info" style="background-color: white;">
                                     <h5>
                                         <a href="Portofolio/Post/${card.id}">
-                                            ${card.judul_porto}
+                                            ${judul}
                                         </a>
                                     </h5>
-                                    <small class="d-block color-main text-uppercase">${card.Kategori}</small>
+                                    <small class="d-block color-main text-uppercase">${kategori}</small>
                                     <div class="text">
                                         ${truncatedDescription}
                                     </div>
                                     <div class="tags">
-                                        <a href="#">${card.Kategori}</a>
+                                        <a href="#">${kategori}</a>
                                     </div>
                                 </div>
                             </div>
@@ -169,9 +175,12 @@ $.ajax({
     }
 });
 
-$(document).ready(function () {
+munculkanSemua();
+munculkanBerdasarkan();
 
-
-    munculkanSemua();
-    munculkanBerdasarkan();
-});
+// $(window).on('load', function () {
+// });
+// $(document).ready(function () {
+//     munculkanSemua();
+//     munculkanBerdasarkan();
+// });

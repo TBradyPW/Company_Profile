@@ -13,7 +13,9 @@ function pesanHeader() {
         success: function (data) {
             if (data.data.length > 0) {
                 var keterangan = data.data[data.data.length - 1].keterangan;
-                $('#brand_keterangan').text(keterangan);
+                var Keterangan1 = keterangan.split('\n').join('<br>');
+                var KetSanitize = DOMPurify.sanitize(Keterangan1);
+                $('#brand_keterangan').html(KetSanitize);
             } else {
                 $('#brand_keterangan').text('Tidak ada pesan');
             }
@@ -31,7 +33,8 @@ function hero() {
         success: function (data) {
             if (data.data.length > 0) {
                 var linkyt = data.data[data.data.length - 1].linkyt;
-                $('#linkyt').attr('href', linkyt);
+                var linkyt1 = DOMPurify.sanitize(linkyt);
+                $('#linkyt').attr('href', linkyt1);
             }
         },
         error: function (error) {
@@ -50,11 +53,13 @@ function culture() {
             if (data.data.length > 0) {
                 var cultureData = data.data.slice(0, 3);
                 cultureData.forEach(function (culture) {
+                    var judul = DOMPurify.sanitize(culture.judul_culture);
+                    var keterangan = DOMPurify.sanitize(culture.ket_culture);
                     let konten = ` 
                         <div class="commun-card">
                             <div class="inf">
-                                <h5>${culture.judul_culture}</h5>
-                                <small>${culture.ket_culture}</small>
+                                <h5>${judul}</h5>
+                                <small>${keterangan}</small>
                             </div>
                         </div>
                     `;
@@ -136,15 +141,17 @@ $.ajax({
         if (data.data.length > 0) {
             var serviceData = data.data.slice(0, 3);
             serviceData.forEach(function (service) {
+                var judul = DOMPurify.sanitize(service.service);
+                var keterangan = DOMPurify.sanitize(service.ket_service);
                 let konten = ` 
                         <li class="d-flex mb-40">   
                             <small class="icon-50 me-4 flex-shrink-0">
                                 <img src="${baseURL}images/${service.fotoservice}" alt="">
                             </small>
                             <div class="inf">
-                                <h5>${service.judul_service}</h5>
+                                <h5>${judul}</h5>
                                 <p class="fs-12px color-666 mt-2">
-                                    ${service.ket_service}
+                                    ${keterangan}
                                 </p>
                             </div>
                         </li>
@@ -173,6 +180,8 @@ function team() {
                 teamData.forEach(function (team) {
                     if (!team.is_new_update) {
                         let gambar = team.foto_orang ? `${baseURL}images/${team.foto_orang}` : `${baseURL}images/placeholder.png`;
+                        var nama = DOMPurify.sanitize(team.nama_orang);
+                        var jabatan = DOMPurify.sanitize(team.jabatan);
                         let konten = ` 
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-card mb-30 mb-lg-0 style-6">
@@ -195,9 +204,9 @@ function team() {
                                 </div>
                                 <div class="info">
                                     <a class="d-block" href="#">
-                                        <h6>${team.nama_orang}</h6>
+                                        <h6>${nama}</h6>
                                     </a>
-                                    <small>${team.jabatan}</small>
+                                    <small>${jabatan}</small>
                                 </div>
                             </div>
                         </div>

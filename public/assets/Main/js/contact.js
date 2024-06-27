@@ -32,8 +32,11 @@ function alamat() {
             if (data.data.length > 0) {
                 var cultureData = data.data.slice(0, 3);
                 cultureData.forEach(function (alm) {
+
+                    var divisi = DOMPurify.sanitize(alm.nama_tempat);
+                    var alamat = DOMPurify.sanitize(alm.lokasi);
                     let konten = ` 
-                    <p> ${alm.nama_tempat}: </p> ${alm.lokasi} <br>
+                    <p> ${divisi}: </p> ${alamat} <br>
                     <br>
                     `;
                     container.append(konten);

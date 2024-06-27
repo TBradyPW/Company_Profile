@@ -24,6 +24,7 @@
 
     <!-- bootstrap 5 -->
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/bootstrap.min.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js"></script>
 
     <!-- ====== font family ====== -->
     <link

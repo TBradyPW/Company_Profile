@@ -8,19 +8,21 @@ $(window).on('load', function () {
             container.empty();
             if (data.data.length > 0) {
                 data.data.forEach(function (career) {
+                    var lowongan = DOMPurify.sanitize(career.lowong_krj);
+                    var keterangan = DOMPurify.sanitize(career.ket_lowong);
                     let konten = ` 
                     <div class="col-lg-3">
                             <a href="#" class="features-card mb-30 style-5">
                                 <div class="image">
                                     <img src="https://hexagon.co.id/storage/carrier-images/1WiFmQkGjMQDNBTikMEbP8N8wZOzgkzoKl1huIV7.jpg"
-                                        alt="${career.lowong_krj}">
+                                        alt="${lowongan}">
                                 </div>
                                 <div class="info">
                                     <h5 class="card-title">
-                                    ${career.lowong_krj}
+                                    ${lowongan}
                                     </h5>
                                     <p class="text">
-                                    ${career.ket_lowong}
+                                    ${keterangan}
                                     </p>
                                 </div>
                             </a>

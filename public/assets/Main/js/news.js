@@ -58,8 +58,10 @@ function tampilRandome() {
                     if (Array.isArray(card.tags)) {
                         tagsContent = card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ');
                     }
-                    let truncatedDescription = truncateText(card.ket_news, 100);
-                    let truncatedJudul = truncateText(card.judul_news, 40);
+                    var judul = DOMPurify.sanitize(card.judul_news);
+                    var keterangan = DOMPurify.sanitize(card.ket_news);
+                    let truncatedDescription = truncateText(keterangan, 100);
+                    let truncatedJudul = truncateText(judul, 40);
                     let timeAgo = timeSince(card.created_at);
                     let content = `
                     <div class="card border-0 bg-transparent rounded-0 border-bottom brd-gray pb-30 mb-30">
@@ -189,8 +191,10 @@ function beritaBaru() {
                 if (Array.isArray(card.tags)) {
                     tagsContent = card.tags.map(tag => `<a href="#">${tag}</a>`).join(' ');
                 }
-                let truncatedDescription = truncateText(card.ket_news, 100);
-                let truncatedJudul = truncateText(card.judul_news, 40);
+                var judul = DOMPurify.sanitize(card.judul_news);
+                var keterangan = DOMPurify.sanitize(card.ket_news);
+                let truncatedDescription = truncateText(keterangan, 100);
+                let truncatedJudul = truncateText(judul, 40);
                 let timeAgo = timeSince(card.created_at);
                 let content = `
                 <div class="col-lg-4">
