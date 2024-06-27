@@ -181,11 +181,12 @@
 
                 fetchNewsData(baseURL + 'News', id, function(news) {
                     let tampilfoto = `${baseURL}images/${news.fotonews}`;
+                    var content = DOMPurify.sanitize(news.ket_news.replace(/\n/g, '<br/>'));
                     if (news) {
 
                         $('#Judul').text(news.judul_news);
                         $('#judul').text(news.judul_news);
-                        $('#isi-konten').html(news.ket_news.replace(/\n/g, '<br/>'));
+                        $('#isi-konten').html(content);
                         $('#kategori').text(news.category_news);
                         if (news.fotonews && news.fotonews.length > 0) {}
                         $('#foto-berita').attr('src', tampilfoto);
@@ -221,8 +222,9 @@
             </a>`;
                         container.append(showAllButton);
                         categoryData.forEach(function(category) {
+                            var content1 = DOMPurify.sanitize(category.nama_category);
                             let content = `<a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
-                    <span>${category.nama_category}</span>
+                    <span>${content1}</span>
                 </a>`;
                             container.append(content);
                         });
