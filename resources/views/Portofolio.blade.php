@@ -5,8 +5,8 @@
         <!-- ====== start portfolio-projects ====== -->
         <section class="portfolio-projects section-padding pt-50 style-1 bg-[#e7f1ff]">
             <div class="container">
-                <div class="section-head text-center style-4 mb-40">
-                    <h2 class="mb-20">Our <span> Projects </span> </h2>
+                <div class="section-head text-center style-5 mb-40">
+                    <h2 class="mb-20" style="font-weight: bold;">Our <span> Projects </span> </h2>
                     <p>Empowering businesses, one solution at a time</p>
                 </div>
                 <!-- Modal -->

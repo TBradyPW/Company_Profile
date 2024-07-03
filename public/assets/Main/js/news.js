@@ -255,9 +255,10 @@ $(document).ready(function () {
             </a>`;
                 container.append(showAllButton);
                 categoryData.forEach(function (category) {
+                    var kategori = DOMPurify.sanitize(category.nama_category);
                     let content = `
                 <a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
-                    <span>${category.nama_category}</span>
+                    <span>${kategori}</span>
                 </a>`;
                     container.append(content);
                 });
@@ -276,20 +277,22 @@ $(document).ready(function () {
     // Function to fetch data and initialize Swiper
     function fetchJournalData() {
         $.ajax({
-            url: baseURL + 'News', // Update with the correct URL
+            url: baseURL + 'News',
             method: 'GET',
             success: function (data) {
-                var journalData = data.data; // Adjust based on your data structure
+                var journalData = data.data;
                 var journalSlides = $('#journalSlides');
-                journalSlides.empty(); // Clear existing slides
+                journalSlides.empty();
                 journalData.sort(function (a, b) {
                     return new Date(b.created_at) - new Date(a.created_at);
                 });
                 journalData = journalData.sort(() => Math.random() - 0.5).slice(0, 3);
                 if (journalData.length > 0) {
                     journalData.forEach(function (journal) {
-                        let truncatedDescription = truncateText2(journal.ket_news, 300);
-                        let truncatedJudul = truncateText2(journal.judul_news, 45);
+                        var keterangan = DOMPurify.sanitize(journal.ket_news);
+                        var judul = DOMPurify.sanitize(journal.judul_news);
+                        let truncatedDescription = truncateText2(keterangan, 300);
+                        let truncatedJudul = truncateText2(judul, 45);
                         let timeAgo = timeSince(journal.created_at);
                         let slideContent = `
                             <div class="swiper-slide">

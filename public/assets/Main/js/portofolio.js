@@ -157,11 +157,12 @@ $.ajax({
             var categoryData = response.data;
             var container = $('#Category');
             container.empty();
-            let showAllButton = `<button type="button"  ./ass="control" onclick="munculkanSemua(); $('.control').removeClass('active'); $(this).addClass('active');">All</button>`;
+            let showAllButton = `<button type="button" style="font-weight: bold; font-size: 14.4px; ./ass="control" onclick="munculkanSemua(); $('.control').removeClass('active'); $(this).addClass('active');">All</button>`;
             container.append(showAllButton);
             categoryData.forEach(function (category) {
-                let content = `<button type="button" class="control" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
-                    ${category.nama_category}
+                var kategori = DOMPurify.sanitize(category.nama_category);
+                let content = `<button type="button" style="font-weight: bold; font-size: 14.4px;" class="control" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
+                    ${kategori}
                 </button>`;
                 container.append(content);
             });

@@ -224,7 +224,7 @@
                         categoryData.forEach(function(category) {
                             var content1 = DOMPurify.sanitize(category.nama_category);
                             let content = `<a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
-                    <span>${content1}</span>
+                    <span><b>${content1}</b></span>
                 </a>`;
                             container.append(content);
                         });
