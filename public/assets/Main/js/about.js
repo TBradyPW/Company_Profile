@@ -12,10 +12,8 @@ function pesanHeader() {
         type: 'GET',
         success: function (data) {
             if (data.data.length > 0) {
-                var keterangan = data.data[data.data.length - 1].keterangan;
-                var Keterangan1 = keterangan.split('\n').join('<br>');
-                var KetSanitize = DOMPurify.sanitize(Keterangan1);
-                $('#brand_keterangan').html(KetSanitize);
+                var keterangan = DOMPurify.sanitize(data.data[data.data.length - 1].keterangan.split('\n').join('<br>'));
+                $('#brand_keterangan').html(keterangan);
             } else {
                 $('#brand_keterangan').text('Tidak ada pesan');
             }
@@ -43,6 +41,7 @@ function hero() {
     });
 }
 
+
 function culture() {
     $.ajax({
         url: baseURL + 'abt_culture',
@@ -54,10 +53,10 @@ function culture() {
                 var cultureData = data.data.slice(0, 3);
                 cultureData.forEach(function (culture) {
                     var judul = DOMPurify.sanitize(culture.judul_culture);
-                    var keterangan = DOMPurify.sanitize(culture.ket_culture);
+                    var keterangan = DOMPurify.sanitize(culture.ket_culture.split('\n').join('<br>'));
                     let konten = ` 
                         <div class="commun-card">
-                            <div class="inf">
+                            <div class="inf ml-50">
                                 <h5>${judul}</h5>
                                 <small>${keterangan}</small>
                             </div>
@@ -81,10 +80,11 @@ $.ajax({
     type: 'GET',
     success: function (data) {
         if (data.data.length > 0) {
-            var philosophy = data.data[data.data.length - 1].ket_pilo;
-            $('#philosophy').text(philosophy);
+            var philosophy = data.data[data.data.length - 1].ket_pilo.split('\n').join('<br>');
+            var philosophySain = DOMPurify.sanitize(philosophy);
+            $('#philosophy').html(philosophySain);
         } else {
-            $('#philosophy').text("Lebah adalah makhluk ajaib yang di informasikan oleh Allah SWT sebagai salah satu makhluk spesial yang mendapatkan wahyu (Surat An-Nahl Ayat 68-69). Lebah hidup dengan baik yaitu selalu dekat dengan yang baik, memakan yang baik, menghasilkan kebaikan dan kebermanfaatan. Lebah terkenal sebagai makhluk yang loyal, cerdas, kuat, massive dan sangat solid, salah satu kemampuan spesial dari lebah ialah selalu mampu mengetahui jalan pulang (solusi) sesulit dan sejauh apapun perjalanannya (proses)");
+            $('#philosophy').html("Lebah adalah makhluk ajaib yang di informasikan oleh Allah SWT sebagai salah satu makhluk spesial yang mendapatkan wahyu (Surat An-Nahl Ayat 68-69). Lebah hidup dengan baik yaitu selalu dekat dengan yang baik, memakan yang baik, menghasilkan kebaikan dan kebermanfaatan. Lebah terkenal sebagai makhluk yang loyal, cerdas, kuat, massive dan sangat solid, salah satu kemampuan spesial dari lebah ialah selalu mampu mengetahui jalan pulang (solusi) sesulit dan sejauh apapun perjalanannya (proses)");
         }
     },
     error: function (error) {
@@ -141,7 +141,7 @@ $.ajax({
         if (data.data.length > 0) {
             var serviceData = data.data.slice(0, 3);
             serviceData.forEach(function (service) {
-                var judul = DOMPurify.sanitize(service.service);
+                var judul = DOMPurify.sanitize(service.judul_service);
                 var keterangan = DOMPurify.sanitize(service.ket_service);
                 let konten = ` 
                         <li class="d-flex mb-40">   

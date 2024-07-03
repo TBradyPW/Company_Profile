@@ -12,8 +12,8 @@
                         <div class="section-head text-center mb-60 style-5">
                             <h2 class="mb-20 color-000" id="judul"></h2>
                             <small class="d-block date text">
-                                <a href="posts25d9.html?category=news"
-                                    class="text-uppercase border-end brd-gray pe-3 me-3 color-blue5 fw-bold" id="kategori">
+                                <a href="portofolio" class="text-uppercase brd-gray pe-3 me-3 color-blue5 fw-bold"
+                                    id="kategori">
                                 </a>
                             </small>
                         </div>
@@ -27,10 +27,10 @@
                             <div class="col-lg-8">
                                 <div class="d-flex small align-items-center justify-content-between mb-70 fs-12px">
                                     <div class="l_side d-flex align-items-center">
-                                        <a href="posts3e27.html?author=gilda.hidayanto" class="me-3 me-lg-5">
+                                        <a href="https://hexagon.co.id/" class="me-3 mt-10 me-lg-5">
                                             <span
                                                 class="icon-20 rounded-circle d-inline-flex justify-content-center align-items-center text-uppercase bg-main p-1 me-2 text-white">
-                                                a
+                                                H
                                             </span>
                                             <span class="">
                                                 By Admin Hexagon
@@ -48,19 +48,7 @@
                             <div class="col-lg-4">
                                 <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
 
-                                    <form action="https://hexagon.co.id/posts" class="search-form mb-50">
-                                        <h6 class="title mb-20 text-uppercase fw-normal">
-                                            search
-                                        </h6>
-                                        <div class="form-group position-relative">
-                                            <input type="text" class="form-control rounded-pill" placeholder="Search..."
-                                                name="search" value="">
-                                            <button class="search-btn border-0 bg-transparent" type="submit"> <i
-                                                    class="fas fa-search"></i> </button>
-                                        </div>
-                                    </form>
-
-                                    <div class="side-categories mb-50">
+                                    <div class="side-categories mb-50 mt-100">
                                         <h6 class="title mb-20 text-uppercase fw-normal">
                                             categories
                                         </h6>
