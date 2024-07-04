@@ -58,3 +58,12 @@ Route::get('/Portofolio/Post/{id}', function ($id) {
 Route::get('/about_layout', function () {
     return view('about_layout');
 });
+
+Route::get('/Service/IT Consultation', function () {
+    return view('IT Consultation');
+});
+
+
+Route::get('/Service/Digital Marketing', function () {
+    return view('Digital Marketing');
+});

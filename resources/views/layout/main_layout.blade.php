@@ -9,19 +9,15 @@
     <meta name="keywords" content="HTML5 Template Iteck Multi-Purpose themeforest" />
     <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
     <meta name="author" content="" />
-
     <!-- Title  -->
     <title>Hexagon Inc</title>
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav-hexagon.png') }}" title="Favicon" sizes="" />
-
     <!-- ====== bootstrap icons cdn ====== -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css""
         integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- bootstrap 5 -->
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/bootstrap.min.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js"></script>
