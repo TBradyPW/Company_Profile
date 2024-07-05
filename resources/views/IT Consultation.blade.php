@@ -18,7 +18,8 @@
                             <div class="text" id="keterangan">
                             </div>
                             <div class="bttns mt-5">
-                                <a href="{{ url('Services') }}" class="btn btn-dark">
+                                <a href="{{ url('Services') }}"
+                                    class="btn btn-dark sm-butn butn-gard  border-0 text-white rounded-pill bg-blue5 fw-bold text-white me-4">
                                     <span>our services</span>
                                 </a>
                                 <a href="https://youtu.be/pGbIOC83-So?t=21" data-lity class="vid-btn">

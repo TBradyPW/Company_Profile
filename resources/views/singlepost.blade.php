@@ -49,69 +49,33 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="side-blog style-5 ps-lg-5 mt-5 mt-lg-0">
-
-                                    <form action="https://hexagon.co.id/posts" class="search-form mb-50">
-                                        <h6 class="title mb-20 text-uppercase fw-normal">
-                                            search
+                                    <div class="side-categories mb-50">
+                                        <h6 class="title mb-20 mt-100 text-uppercase fw-normal">
+                                            categories
                                         </h6>
-                                        < class="form-group position-relative">
-                                            <input type="text" class="form-control rounded-pill" placeholder="Search..."
-                                                name="search" value="">
-                                            <button class="search-btn border-0 bg-transparent" type="submit"> <i
-                                                    class="fas fa-search"></i> </button>
+                                        <div id="Category"></div>
+                                    </div>
 
-
-                                            <div class="side-categories mb-50">
-                                                <h6 class="title mb-20 text-uppercase fw-normal">
-                                                    categories
-                                                </h6>
-                                                <div id="Category"></div>
-                                            </div>
-
-                                            <div class="side-newsletter mb-50">
-                                                <h6 class="title mb-10 text-uppercase fw-normal">
-                                                    newsletter
-                                                </h6>
-                                                <div class="text">
-                                                    Register now to get latest updates on promotions &amp; coupons.
-                                                </div>
-                                                <form action="https://smartinnovates.com/items/iteck/html/contact.php"
-                                                    class="form-subscribe" method="post">
-                                                    <div
-                                                        class="email-input d-flex align-items-center py-3 px-3 bg-white mt-3 radius-5">
-                                                        <span class="icon me-2 flex-shrink-0">
-                                                            <i class="far fa-envelope"></i>
-                                                        </span>
-                                                        <input type="text" placeholder="Email Address"
-                                                            class="border-0 bg-transparent fs-13px">
-                                                    </div>
-                                                    <button
-                                                        class="btn bg-blue5 sm-butn text-white hover-darkBlue w-100 mt-3 radius-5 py-3">
-                                                        <span>Subscribe</span>
-                                                    </button>
-                                                </form>
-                                            </div>
-
-                                            <div class="side-share mb-50">
-                                                <h6 class="title mb-20 text-uppercase fw-normal">
-                                                    social
-                                                </h6>
-                                                <a href="#" class="social-icon">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                                <a href="#" class="social-icon">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#" class="social-icon">
-                                                    <i class="fab fa-pinterest"></i>
-                                                </a>
-                                                <a href="#" class="social-icon">
-                                                    <i class="fab fa-goodreads-g"></i>
-                                                </a>
-                                                <a href="#" class="social-icon">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </div>
+                                    <div class="side-share mb-50">
+                                        <h6 class="title mb-20 text-uppercase fw-normal">
+                                            social
+                                        </h6>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-pinterest"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-goodreads-g"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

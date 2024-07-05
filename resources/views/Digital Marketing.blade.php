@@ -11,14 +11,12 @@
                         <div class="info style-5">
                             <small class="mb-50 title_small bg-blue5 text-white">Hexagon Inc.</small>
                             <h1 class="mb-30">Digital <span> Marketing </span></h1>
-                            <p class="text">No coding required to make customizations. The live customizer <br> has
-                                everything you need.</p>
+                            <p class="text" id="keterangan"></p>
                             <div class="d-flex align-items-center mt-50">
                                 <a href="https://www.apple.com/app-store/"
-                                    class=" btn sm-butn butn-gard border-0 text-white rounded-pill bg-blue5 fw-bold text-white me-4"
+                                    class=" btn btn-dark sm-butn butn-gard  border-0 text-white rounded-pill bg-blue5 fw-bold text-white me-4"
                                     target="_blank">
-                                    <small> <i class="fab fa-apple me-2 pe-2 border-end"></i>
-                                        Download App </small>
+                                    <small>Our Service </small>
                                 </a>
                                 <a href="https://youtu.be/pGbIOC83-So?t=21" data-lity class="play-btn">
                                     <span class="icon me-2">
@@ -888,5 +886,5 @@
 @endsection
 
 @section('script')
-    {{-- <script src="{{ asset('{{ asset('Main/js/career.js') }}"></script> --}}
+    <script src="{{ asset('assets/Main/js/digitalmarketing.js') }}"></script>
 @endsection

@@ -27,12 +27,13 @@
 
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/all.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/jquery-ui.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/jquery.fancybox.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/lity.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/swiper.min.css') }}" />
     <!-- ====== global style ====== -->
     <link rel="stylesheet" href="{{ asset('assets/Main/css/style.css') }}" />
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.4/dist/purify.min.js"></script>
 </head>
@@ -329,6 +330,7 @@
     <script src="{{ asset('assets/Main/js/lib/jquery-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/bootstrap.bundle.min.js') }}"></script>
+    <script src="assets/js/lib/jquery-ui.min.js"></script>
     <script src="{{ asset('assets/Main/js/lib/wow.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/jquery.fancybox.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/lity.js') }}"></script>
