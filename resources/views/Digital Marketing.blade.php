@@ -10,7 +10,7 @@
                     <div class="col-lg-6">
                         <div class="info style-5">
                             <small class="mb-50 title_small bg-blue5 text-white">Hexagon Inc.</small>
-                            <h1 class="mb-30">Note <span> Your Everything </span> In One App </h1>
+                            <h1 class="mb-30">Digital <span> Marketing </span></h1>
                             <p class="text">No coding required to make customizations. The live customizer <br> has
                                 everything you need.</p>
                             <div class="d-flex align-items-center mt-50">
@@ -428,14 +428,14 @@
                                     <div class="icon img-contain">
                                         <img src="{{ asset('assets/Main/img/icons/testi_s4_ic1.png') }}" alt="">
                                     </div>
-                                    <h2>2,5M+</h2>
+                                    <h2 class="color-blue5">2,5M+</h2>
                                     <p>Downloaded and <br> Installation</p>
                                 </div>
                                 <div class="num-card">
                                     <div class="icon img-contain">
                                         <img src="{{ asset('assets/Main/img/icons/testi_s4_ic2.png') }}" alt="">
                                     </div>
-                                    <h2>4.8/5</h2>
+                                    <h2 class="color-blue5">4.8/5</h2>
                                     <div class="stars">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
