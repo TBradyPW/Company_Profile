@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row gx-0">
                     <div class="col-lg-6">
-                        <div class="info style-5">
+                        <div class="info style-5" id="title">
                             <small class="mb-50 title_small bg-blue5 text-white">Hexagon Inc.</small>
                             <h1 class="mb-30">Digital <span> Marketing </span></h1>
                             <p class="text" id="keterangan"></p>
@@ -886,5 +886,5 @@
 @endsection
 
 @section('script')
-    <script src="{{ asset('assets/Main/js/digitalmarketing.js') }}"></script>
+    {{-- <script src="{{ asset('{{ asset('Main/js/career.js') }}"></script> --}}
 @endsection
