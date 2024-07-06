@@ -67,3 +67,8 @@ Route::get('/Service/IT Consultation', function () {
 Route::get('/Service/Digital Marketing', function () {
     return view('Digital Marketing');
 });
+
+
+Route::get('/Service/Branding', function () {
+    return view('Branding');
+});

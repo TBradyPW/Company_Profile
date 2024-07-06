@@ -39,7 +39,7 @@ $(document).ready(function () {
             success: function (data) {
                 var serviceFound = false;
                 for (var i = 0; i < data.data.length; i++) {
-                    if (data.data[i].judul_service === "IT Consultation") {
+                    if (data.data[i].judul_service === "Branding") {
                         var judul = DOMPurify.sanitize(data.data[i].judul_service);
                         var keterangan = DOMPurify.sanitize(data.data[i].ket_service);
                         $('#judul').text(judul);
