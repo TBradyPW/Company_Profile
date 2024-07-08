@@ -2,66 +2,13 @@
 
 <!--Contents-->
 @section('Contents')
-    <!-- ====== start header ====== -->
-    <header class="style-4" data-scroll-index="0">
-        <div class="content">
-            <div class="container">
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <div class="info style-5" id="title">
-                            <small class="mb-50 title_small bg-blue5 text-white">Hexagon Inc.</small>
-                            <h1 class="mb-30">Digital <span> Marketing </span></h1>
-                            <p class="text" id="keterangan"></p>
-                            <div class="d-flex align-items-center mt-50">
-                                <a href="https://www.apple.com/app-store/"
-                                    class=" btn btn-dark sm-butn butn-gard  border-0 text-white rounded-pill bg-blue5 fw-bold text-white me-4"
-                                    target="_blank">
-                                    <small>Our Service </small>
-                                </a>
-                                <a href="https://youtu.be/pGbIOC83-So?t=21" data-lity class="play-btn">
-                                    <span class="icon me-2">
-                                        <i class="fas fa-play ms-1"></i>
-                                    </span>
-                                    <strong class="small">View <br> Promotion</strong>
-                                </a>
-                            </div>
-                            <span class="mt-100 me-5">
-                                <small
-                                    class="icon-30 bg-gray rounded-circle color-blue5 d-inline-flex align-items-center justify-content-center me-1">
-                                    <i class="fas fa-sync"></i>
-                                </small>
-                                <small class="text-uppercase">Free 14 Days Trial</small>
-                            </span>
-                            <span class="mt-100">
-                                <small
-                                    class="icon-30 bg-gray rounded-circle color-blue5 d-inline-flex align-items-center justify-content-center me-1">
-                                    <i class="fas fa-credit-card"></i>
-                                </small>
-                                <small class="text-uppercase">One time payment</small>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="img">
-                            <img src="{{ asset('assets/Main/img/header/header_4.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img src="{{ asset('assets/Main/img/header/header_4_bubble.png') }}" alt="" class="bubble">
-        </div>
-        <img src="{{ asset('assets/Main/img/header/header_4_wave.png') }}" alt="" class="wave">
-    </header>
-    <!-- ====== end header ====== -->
-
     <!--Contents-->
     <main>
-
         <!-- ====== start clients ====== -->
         <section class="clients style-4">
             <div class="container">
                 <div class="text-center">
-                    <h5 class="fw-bold mb-60"><span class="color-blue5">25K+ Installation</span> and Featured on</h5>
+                    <h5 class="fw-bold mb-60"><span class="color-blue5">29K+ Installation</span> and Featured on</h5>
                 </div>
                 <div class="client-logos pb-70">
                     <div class="row align-items-center">

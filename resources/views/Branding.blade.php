@@ -1,48 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from iteck-html.themescamp.com/home-data-analysis.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 02:28:32 GMT -->
-
-<head>
-    <!-- Metas -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="keywords" content="HTML5 Template Iteck Multi-Purpose themeforest" />
-    <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
-    <meta name="author" content="" />
-
-    <!-- Title  -->
-    <title>Iteck</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav.png') }}" title="Favicon" sizes="16x16" />
-
-    <!-- ====== bootstrap icons cdn ====== -->
-    <link rel="stylesheet"
-        href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css')}}"
-        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/bootstrap.min.css') }}">
-
-    <!-- ====== font family ====== -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/all.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/animate.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/jquery-ui.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/jquery.fancybox.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/lity.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/swiper.min.css') }}" />
-    <!-- ====== global style ====== -->
-    <link rel="stylesheet" href="{{ asset('assets/Main/css/style.css') }}" />
-</head> --}}
-
 @extends ('layout.service_layout')
 
 <!--Contents-->
@@ -71,7 +26,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <p class="text-center color-999 mt-3"> *** We are not going to save your data </p>
+                            {{-- <p class="text-center color-999 mt-3"> *** We are not going to save your data </p> --}}
                         </div>
                     </div>
                     <div class="col-lg-6">
