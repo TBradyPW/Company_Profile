@@ -32,101 +32,46 @@ $(document).ready(function () {
         return text;
     }
 
-    function keteranganService() {
+    function service12() {
         $.ajax({
             url: baseURL + 'Service',
             type: 'GET',
             success: function (data) {
-                var serviceFound = false;
-                for (var i = 0; i < data.data.length; i++) {
-                    if (data.data[i].judul_service === "Branding") {
-                        var judul = DOMPurify.sanitize(data.data[i].judul_service);
-                        var keterangan = DOMPurify.sanitize(data.data[i].ket_service);
-                        $('#judul').text(judul);
-                        $('#keterangan').html(keterangan);
-                        serviceFound = true;
-                        break;
-                    }
-                }
-                if (!serviceFound) {
+                var container = $('#service');
+                container.empty();
+                var brandingService = data.data.find(item => item.judul_service === "Branding");
+                if (brandingService) {
+                    var judul = DOMPurify.sanitize(brandingService.judul_service);
+                    var keterangan = DOMPurify.sanitize(brandingService.ket_service);
+                    $('#judul').text(judul);
+                    $('#keterangan').html(keterangan);
+                } else {
                     $('#judul').text('Tidak ada judul');
                     $('#keterangan').html('Tidak ada keterangan');
                 }
-            },
-            error: function (error) {
-                console.error('Gagal mengambil data:', error);
-            }
-        });
-    }
-
-    function lastProject() {
-        $.ajax({
-            url: baseURL + 'Portofolio',
-            method: 'GET',
-            success: function (data) {
-                var container = $('#portofolio');
-                container.empty();
-                var portoLast = data.data.filter(function (project) { return project.Kategori === "Website Development" || project.Kategori === "Web Programmer"; });
-                if (data.data.length > 0) {
-                    portoLast.forEach(function (project) {
-                        let gambar = project.fotoprojek ? `${baseURL}images/${project.fotoprojek}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-project-management-enterprise-resource-planning-projects-hand-project-people.png`;
-                        var judul = DOMPurify.sanitize(project.judul_porto);
-                        var kategori = DOMPurify.sanitize(project.Kategori);
-                        var keterangan = DOMPurify.sanitize(project.ket_porto);
-                        let truncatedKeterangan = truncateText(keterangan, 50);
-                        let truncatedJudul = truncateText(judul, 10);
-                        let konten = `  
-                        <div class="swiper-slide">
-                                    <div class="portfolio-card">
-                                        <div class="img">
-                                            <img src="${gambar}" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <h5>
-                                                <a href="/Portofolio/Post/${project.id}"> ${truncatedJudul} </a>
-                                            </h5>
-                                            <small class="d-block color-main text-uppercase"><a href="#"> ${kategori}</a></small>
-                                            <div class="text">
-                                            ${truncatedKeterangan}
-                                            </div>
-                                            <div class="tags">
-                                            ${kategori}
-                                            </div>
-                                        </div>
+                var reviewData = data.data;
+                if (reviewData.length > 0) {
+                    reviewData.forEach(function (service) {
+                        let gambar = service.fotoservice ? `${baseURL}images/${service.fotoservice}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-project-management-enterprise-resource-planning-projects-hand-project-people.png`;
+                        var judul = DOMPurify.sanitize(service.judul_service);
+                        var keterangan = DOMPurify.sanitize(service.ket_service);
+                        let konten = `
+                             <div class="swiper-slide">
+                                <div class="service-card style-8">
+                                    <div class="icon">
+                                        <img src="${gambar}" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h5> ${judul} </h5>
+                                        <p> ${keterangan} </p>
                                     </div>
                                 </div>
-                    `;
+                            </div>
+                        `;
                         container.append(konten);
                     });
-                    var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                        loop: true,
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                        breakpoints: {
-                            0: {
-                                slidesPerView: 1,
-                                spaceBetween: 10
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 20
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 30
-                            }
-                        }
-                    });
                 } else {
-                    container.append('<center><h6>Data project kosong</h6></center>');
+                    container.append('<center><h1>Tidak ada</h1></center>');
                 }
             },
             error: function (error) {
@@ -135,6 +80,58 @@ $(document).ready(function () {
         });
     }
 
+    function review() {
+        $.ajax({
+            url: baseURL + 'review',
+            method: 'GET',
+            success: function (data) {
+                var container = $('#review');
+                container.empty();
+                var reviewData = data.data.filter(item => item.category_review === "IT").slice(0, 3);
+                if (reviewData.length > 0) {
+                    reviewData.forEach(function (review1) {
+                        let gambar = review1.foto ? `${baseURL}images/${review1.foto}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-project-management-enterprise-resource-planning-projects-hand-project-people.png`;
+                        var review = DOMPurify.sanitize(review1.review);
+                        var nama = DOMPurify.sanitize(review1.nama);
+                        var dari = DOMPurify.sanitize(review1.dari);
+                        let konten = `
+                            <div class="col-lg-4">
+                                <div class="testi-card wow fadeInUp">
+                                    <div class="info">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p> “ ${review} ” </p>
+                                        <img src="${gambar}" alt="" class="icon">
+                                    </div>
+                                    <div class="author mt-40">
+                                        <div class="img icon-60 rounded-circle overflow-hidden img-cover me-3 flex-shrink-0">
+                                            <img src="${gambar}" alt="">
+                                        </div>
+                                        <div class="inf">
+                                            <p>${dari} </p>
+                                            <h6> ${nama} </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        container.append(konten);
+                    });
+                } else {
+                    container.append('<center><h1>Tidak ada review</h1></center>');
+                }
+            },
+            error: function (_xhr, status, error) {
+                console.error(status + ': ' + error);
+            }
+        });
+    }
+    service12();
 
     function lastNewsIt() {
         $.ajax({
@@ -143,73 +140,38 @@ $(document).ready(function () {
             success: function (data) {
                 var container = $('#News');
                 container.empty();
-                var portoLast = data.data.filter(function (news) {
-                    return news.category_news === "TECHNOLOGY" || news.category_news === "TIPS & TRICK";
+                var portoLast = data.data.slice(0, 3);
+                portoLast.sort(function (a, b) {
+                    return new Date(b.created_at) - new Date(a.created_at);
                 });
                 if (data.data.length > 0) {
                     portoLast.forEach(function (news) {
                         let gambar = news.fotonews ? `${baseURL}images/${news.fotonews}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-News-management-enterprise-resource-planning-Newss-hand-News-people.png`;
                         var judul = DOMPurify.sanitize(news.judul_news);
-                        var kategori = DOMPurify.sanitize(news.category_news);
-                        var keterangan = DOMPurify.sanitize(news.ket_news);
-                        let truncatedKeterangan = truncateText(keterangan, 50);
                         let truncatedJudul = truncateText(judul, 10);
                         let timeAgo = timeSince(news.created_at);
-                        let konten = `  
-                          <div class="swiper-slide">
-                                    <div class="blog_box">
-                                        <div class="tags">
-                                            <a href="#">${kategori}</a>
-                                        </div>
-                                        <div class="img">
+                        let konten = `
+                          <div class="item wow fadeInUp">
+                                        <div class="img img-cover">
                                             <img src="${gambar}" alt="">
                                         </div>
                                         <div class="info">
-                                            <h6><a href="/News/Post/${news.news_id}">${truncatedJudul}</a></h6>
-                                            <div class="auther">
-                                                <span>
-                                                    <small><a href="#">By Admin Hexagon</a></small>
-                                                </span>
-                                                <span>
-                                                    <i class="bi bi-calendar2"></i>
-                                                    <small><a href="#">${timeAgo}</a></small>
-                                                </span>
+                                            <div class="date-author">
+                                                <a href="#" class="date">
+                                                    ${timeAgo}
+                                                </a>
+                                                <span class="color-999 mx-3"> | </span>
+                                                <a href="#" class="author color-999">
+                                                    By <span class="color-000 fw-bold"> Admin Hexagon</span>
+                                                </a>
                                             </div>
-                                            <div class="text">
-                                               ${truncatedKeterangan} 
-                                            </div>
+                                            <h4 class="title">
+                                                <a href="/News/Post/${news.news_id}"> ${truncatedJudul} </a>
+                                            </h4>
                                         </div>
                                     </div>
-                                </div>
                     `;
                         container.append(konten);
-                    });
-                    var swiper = new Swiper('.swiper-container', {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                        loop: true,
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                        breakpoints: {
-                            0: {
-                                slidesPerView: 1,
-                                spaceBetween: 10
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 20
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 30
-                            }
-                        }
                     });
                 } else {
                     container.append('<center><h6>Data News kosong</h6></center>');
@@ -220,7 +182,10 @@ $(document).ready(function () {
             }
         });
     }
+    // ourService();
     lastNewsIt();
-    lastProject();
+    // lastProject();
+    dataService();
+    review();
     keteranganService();
 });

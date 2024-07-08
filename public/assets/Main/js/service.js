@@ -39,7 +39,7 @@ function dataAtas() {
         url: baseURL + 'Service',
         method: 'GET',
         success: function (data) {
-            var container = $('#top-service-swiper');
+            var container = $('#service1');
             container.empty();
 
             if (data.data.length > 0) {

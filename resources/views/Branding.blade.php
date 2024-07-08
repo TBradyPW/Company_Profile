@@ -1,39 +1,87 @@
+{{-- <!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from iteck-html.themescamp.com/home-data-analysis.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 02:28:32 GMT -->
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="HTML5 Template Iteck Multi-Purpose themeforest" />
+    <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
+    <meta name="author" content="" />
+
+    <!-- Title  -->
+    <title>Iteck</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('assets/Main/img/fav.png') }}" title="Favicon" sizes="16x16" />
+
+    <!-- ====== bootstrap icons cdn ====== -->
+    <link rel="stylesheet"
+        href="../cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css')}}"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/bootstrap.min.css') }}">
+
+    <!-- ====== font family ====== -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/jquery-ui.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/jquery.fancybox.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/lity.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/lib/swiper.min.css') }}" />
+    <!-- ====== global style ====== -->
+    <link rel="stylesheet" href="{{ asset('assets/Main/css/style.css') }}" />
+</head> --}}
+
 @extends ('layout.service_layout')
 
 <!--Contents-->
 @section('Contents')
     <!-- ====== start header ====== -->
     <header class="style-8 bg-gray2">
-        <div class="navs-container pt-4">
-            <div class="container">
-                <div class="content section-padding">
-                    <div class="row align-items-center gx-0">
-                        <div class="col-lg-6">
-                            <div class="info">
-                                <p class="fw-bold color-main text-decoration-underline text-uppercase wow fadeInUp"> Hexagon
-                                    Inc
-                                </p>
-                                <h1 class="wow fadeInUp" id="judul"></h1>
-                                <div class="form wow fadeInUp">
-                                    <h5 id="keterangan"></h5>
-                                    <div class="d-flex align-items-center mt-50">
-                                        <a href="https://www.apple.com/app-store/"
-                                            class=" btn btn-dark sm-butn butn-gard  border-0 text-white rounded-pill bg-blue5 fw-bold text-white me-4"
-                                            target="_blank">
-                                            <small>Our Service </small>
-                                        </a>
-                                    </div>
+        <div class="container">
+            <div class="content section-padding">
+                <div class="row align-items-center gx-0">
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <p class="fw-bold color-main text-decoration-underline text-uppercase wow fadeInUp"> Hexagon Inc.
+                            </p>
+                            <h1 class="wow fadeInUp" id="judul"> </h1>
+                            <div class="form wow fadeInUp">
+                                <h5 id="keterangan"></h5>
+                                <div class="form-group mt-4">
+                                    <span class="icon flex-shrink-0 ms-3">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Business email address">
+                                    <button class="butn bg-orange1 border-0 rounded-pill hover-shadow flex-shrink-0"
+                                        type="submit">
+                                        <span class="text-white"> Get A Demo <i class="fal fa-long-arrow-right ms-2"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
+                            <p class="text-center color-999 mt-3"> *** We are not going to save your data </p>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="img mt-4 mt-lg-0 wow fadeIn">
-                                <img src="{{ asset('assets/Main/img/header/3d_vector_head8.svg') }}" alt="">
-                            </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="img mt-4 mt-lg-0 wow fadeIn">
+                            <img src="{{ asset('assets/Main/img/header/3d_vector_head8.svg') }}" alt="">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </header>
     <!-- ====== end header ====== -->
 
@@ -51,67 +99,7 @@
             <div class="content wow fadeInUp">
                 <div class="services-slider8 pb-60">
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="service-card style-8">
-                                    <div class="icon">
-                                        <img src="{{ asset('assets/Main/img/icons/serv_icons/25.png') }}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h5> AI Data Analysis </h5>
-                                        <p> Provides easy-to-use platform and tool for app analytics data. </p>
-                                        <a href="#"> Read More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="service-card style-8">
-                                    <div class="icon">
-                                        <img src="{{ asset('assets/Main/img/icons/serv_icons/26.png') }}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h5> Automation Research </h5>
-                                        <p> Provides easy-to-use platform and tool for app analytics data. </p>
-                                        <a href="#"> Read More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="service-card style-8">
-                                    <div class="icon">
-                                        <img src="{{ asset('assets/Main/img/icons/serv_icons/27.png') }}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h5> Artificial Intelligence </h5>
-                                        <p> Provides easy-to-use platform and tool for app analytics data. </p>
-                                        <a href="#"> Read More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="service-card style-8">
-                                    <div class="icon">
-                                        <img src="{{ asset('assets/Main/img/icons/serv_icons/28.png') }}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h5> Machine Learning </h5>
-                                        <p> Provides easy-to-use platform and tool for app analytics data. </p>
-                                        <a href="#"> Read More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="service-card style-8">
-                                    <div class="icon">
-                                        <img src="{{ asset('assets/Main/img/icons/serv_icons/29.png') }}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h5> BI Implementation </h5>
-                                        <p> Provides easy-to-use platform and tool for app analytics data. </p>
-                                        <a href="#"> Read More </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="swiper-wrapper" id="service">
                         </div>
                     </div>
                 </div>
@@ -497,85 +485,8 @@
                     <h3> Happy User Reviews </h3>
                 </div>
                 <div class="content">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="testi-card wow fadeInUp">
-                                <div class="info">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p> “ It uses a directory of over 20 latin words combine a half of model sentence
-                                        structures. ” </p>
-                                    <img src="{{ asset('assets/Main/img/icons/qout8.png') }}" alt=""
-                                        class="icon">
-                                </div>
-                                <div class="author mt-40">
-                                    <div class="img icon-60 rounded-circle overflow-hidden img-cover me-3 flex-shrink-0">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user8.png') }}" alt="">
-                                    </div>
-                                    <div class="inf">
-                                        <p> Head Of Idea </p>
-                                        <h6> Alonso D. Dowson </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="testi-card mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="info">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p> “ It uses a directory of over 20 latin words combine a half of model sentence
-                                        structures. ” </p>
-                                    <img src="{{ asset('assets/Main/img/icons/qout8.png') }}" alt=""
-                                        class="icon">
-                                </div>
-                                <div class="author mt-40">
-                                    <div class="img icon-60 rounded-circle overflow-hidden img-cover me-3 flex-shrink-0">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user7.png') }}" alt="">
-                                    </div>
-                                    <div class="inf">
-                                        <p> CEO </p>
-                                        <h6> Miranda H. Halim </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="testi-card mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="info">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p> “ It uses a directory of over 20 latin words combine a half of model sentence
-                                        structures. ” </p>
-                                    <img src="{{ asset('assets/Main/img/icons/qout8.png') }}" alt=""
-                                        class="icon">
-                                </div>
-                                <div class="author mt-40">
-                                    <div class="img icon-60 rounded-circle overflow-hidden img-cover me-3 flex-shrink-0">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user9.png') }}" alt="">
-                                    </div>
-                                    <div class="inf">
-                                        <p> Founder </p>
-                                        <h6> Rosalina D. William </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" id="review">
+
                     </div>
                 </div>
             </div>
@@ -808,64 +719,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="side-posts">
-                                    <div class="item wow fadeInUp">
-                                        <div class="img img-cover">
-                                            <img src="{{ asset('assets/Main/img/blog/19.jpg') }}" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="date-author">
-                                                <a href="#" class="date">
-                                                    Nov 21, 2023
-                                                </a>
-                                                <span class="color-999 mx-3"> | </span>
-                                                <a href="#" class="author color-999">
-                                                    By <span class="color-000 fw-bold"> Admin </span>
-                                                </a>
-                                            </div>
-                                            <h4 class="title">
-                                                <a href="#"> Best unlocked me an striking perceive. </a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="item wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="img img-cover">
-                                            <img src="{{ asset('assets/Main/img/blog/20.jpg') }}" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="date-author">
-                                                <a href="#" class="date">
-                                                    Nov 21, 2023
-                                                </a>
-                                                <span class="color-999 mx-3"> | </span>
-                                                <a href="#" class="author color-999">
-                                                    By <span class="color-000 fw-bold"> Admin </span>
-                                                </a>
-                                            </div>
-                                            <h4 class="title">
-                                                <a href="#"> Me in resolution pianoforte continuing we. </a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="item wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="img img-cover">
-                                            <img src="{{ asset('assets/Main/img/blog/21.jpg') }}" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <div class="date-author">
-                                                <a href="#" class="date">
-                                                    Nov 21, 2023
-                                                </a>
-                                                <span class="color-999 mx-3"> | </span>
-                                                <a href="#" class="author color-999">
-                                                    By <span class="color-000 fw-bold"> Admin </span>
-                                                </a>
-                                            </div>
-                                            <h4 class="title">
-                                                <a href="#"> Most my no spot felt by no he in forfeited. </a>
-                                            </h4>
-                                        </div>
-                                    </div>
+                                <div class="side-posts" id="News">
                                 </div>
                             </div>
                         </div>
@@ -876,22 +730,45 @@
         <!-- ====== end blog ====== -->
     </main>
     <!--End-Contents-->
+
+    <!-- ====== start to top button ====== -->
+    <a href="#"
+        class="to_top bg-gray rounded-circle icon-40 d-inline-flex align-items-center justify-content-center">
+        <i class="bi bi-chevron-up fs-6 text-dark"></i>
+    </a>
+    <!-- ====== end to top button ====== -->
 @endsection
+<!-- ====== request ====== -->
+<script src="{{ asset('assets/Main/js/lib/jquery-3.0.0.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/wow.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/jquery.fancybox.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/lity.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/swiper.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/lib/jquery.counterup.js') }}"></script>
+<!-- <script src="{{ asset('assets/Main/js/lib/pace.js') }}"></script> -->
+<script src="{{ asset('assets/Main/js/lib/scrollIt.min.js') }}"></script>
+<script src="{{ asset('assets/Main/js/main.js') }}"></script>
+
+<script>
+    $(function() {
+        $("#slider-range-min").slider({
+            range: "min",
+            value: 25,
+            min: 1,
+            max: 100,
+            slide: function(event, ui) {
+                $("#amount").val(ui.value);
+            }
+        });
+        $("#amount").val($("#slider-range-min").slider("value"));
+    });
+</script>
+
 
 @section('script')
-    <script>
-        $(function() {
-            $("#slider-range-min").slider({
-                range: "min",
-                value: 25,
-                min: 1,
-                max: 100,
-                slide: function(event, ui) {
-                    $("#amount").val(ui.value);
-                }
-            });
-            $("#amount").val($("#slider-range-min").slider("value"));
-        });
-    </script>
     <script src="{{ asset('assets/Main/js/branding.js') }}"></script>
 @endsection

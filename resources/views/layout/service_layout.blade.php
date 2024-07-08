@@ -98,17 +98,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="page-portfolio-5.html">
+                        <a class="nav-link" href="{{ route('IT Consultation') }}">
                             IT Consultan
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-blog-5.html">
+                        <a class="nav-link" href="{{ route('Digital Marketing') }}">
                             Digital Marketing
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page-contact-5.html">
+                        <a class="nav-link" href="{{ route('Branding') }}">
                             Branding
                         </a>
                     </li>
@@ -330,7 +330,7 @@
     <script src="{{ asset('assets/Main/js/lib/jquery-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/jquery-migrate-3.0.0.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/bootstrap.bundle.min.js') }}"></script>
-    <script src="assets/js/lib/jquery-ui.min.js"></script>
+    <script src="{{ asset('assets/Main/js/lib/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/wow.min.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/jquery.fancybox.js') }}"></script>
     <script src="{{ asset('assets/Main/js/lib/lity.js') }}"></script>

@@ -459,65 +459,8 @@
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            <div class="testi-cards">
-                                <div class="client_card">
-                                    <div class="user_img">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user4.png') }}" alt="">
-                                    </div>
-                                    <div class="inf_content">
-                                        <div class="stars mb-2">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <h6>
-                                            “You can even send emails to Evernote and gather <br> all of the things you need
-                                            in a single place.”
-                                        </h6>
-                                        <p>jurgen k. <span class="text-muted"> / Senior Marketing at <span>Brator</span>
-                                            </span></p>
-                                    </div>
-                                </div>
-                                <div class="client_card">
-                                    <div class="user_img">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user5.png') }}" alt="">
-                                    </div>
-                                    <div class="inf_content">
-                                        <div class="stars mb-2">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <h6>
-                                            “Notero - 1st my choice for notes app. Awesome”
-                                        </h6>
-                                        <p>foden p. <span class="text-muted"> / Director at <span>Ecoland Resort</span>
-                                            </span></p>
-                                    </div>
-                                </div>
-                                <div class="client_card">
-                                    <div class="user_img">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user6.png') }}" alt="">
-                                    </div>
-                                    <div class="inf_content">
-                                        <div class="stars mb-2">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <h6>
-                                            “.This app is seriously good. It’s simple, clean and <br> a real joy to use.”
-                                        </h6>
-                                        <p>Kerry T. <span class="text-muted"> / Designer at <span>Teckzone Inc</span>
-                                            </span></p>
-                                    </div>
-                                </div>
+                            <div class="testi-cards" id="review">
+
                                 <img src="{{ asset('assets/Main/img/contact_globe.svg') }}" alt=""
                                     class="testi-globe">
                             </div>
@@ -886,5 +829,5 @@
 @endsection
 
 @section('script')
-    {{-- <script src="{{ asset('{{ asset('Main/js/career.js') }}"></script> --}}
+    <script src="{{ asset('assets/Main/js/digitalmarketing.js') }}"></script>
 @endsection

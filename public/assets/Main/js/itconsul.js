@@ -220,6 +220,53 @@ $(document).ready(function () {
             }
         });
     }
+
+    function review() {
+        $.ajax({
+            url: baseURL + 'review',
+            method: 'GET',
+            success: function (data) {
+                var reviewData = data.data.filter(item => item.category_review === "IT").slice(0, 3);
+                var container = $('#review');
+                container.empty();
+                if (reviewData.length > 0) {
+                    reviewData.slice(0, 3).forEach(function (review1) {
+                        let gambar = review1.foto ? `${baseURL}images/${review1.foto}` : `https://w7.pngwing.com/pngs/432/664/png-transparent-computer-icons-project-management-enterprise-resource-planning-projects-hand-project-people.png`;
+                        var review = DOMPurify.sanitize(review1.review);
+                        var nama = DOMPurify.sanitize(review1.nama);
+                        var dari = DOMPurify.sanitize(review1.dari);
+                        let konten = `
+                          <div class="client_card" data-wow-delay="0.4s">
+                                    <div class="user_img">
+                                        <img src="${gambar}" alt="">
+                                    </div>
+                                    <div class="inf_content">
+                                        <div class="rate_stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h6>
+                                            “${review}”
+                                        </h6>
+                                        <p>${nama}. <span class="text-muted">/ ${dari}</span></p>
+                                    </div>
+                                </div>
+                        `;
+                        container.append(konten);
+                    });
+                } else {
+                    container.append('<center><h1>Tidak ada review</h1></center>');
+                }
+            },
+            error: function (_xhr, status, error) {
+                console.error(status + ': ' + error);
+            }
+        });
+    }
+    review();
     lastNewsIt();
     lastProject();
     keteranganService();

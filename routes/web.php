@@ -49,26 +49,26 @@ Route::get('/Contact', function () {
 
 Route::get('/News/Post/{id}', function ($id) {
     return view('singlepost', ['id' => $id]);
-});
+})->name('singlepost');
 
 Route::get('/Portofolio/Post/{id}', function ($id) {
     return view('singleporto', ['id' => $id]);
-});
+})->name('singleporto');
 
-Route::get('/about_layout', function () {
-    return view('about_layout');
-});
+// Route::get('/about_layout', function () {
+//     return view('about_layout');
+// });
 
 Route::get('/Service/IT Consultation', function () {
     return view('IT Consultation');
-});
+})->name('IT Consultation');
 
 
 Route::get('/Service/Digital Marketing', function () {
     return view('Digital Marketing');
-});
+})->name('Digital Marketing');
 
 
 Route::get('/Service/Branding', function () {
     return view('Branding');
-});
+})->name('Branding');

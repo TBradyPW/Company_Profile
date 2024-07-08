@@ -436,61 +436,8 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="info wow fadeInUp">
-                                <div class="client_card mb-2" data-wow-delay="0">
-                                    <div class="user_img">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user1.jpg') }}" alt="">
-                                    </div>
-                                    <div class="inf_content">
-                                        <div class="rate_stars">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <h6>
-                                            “Hexagon provide perfect IT solutions, fast process and affordable price.
-                                            We’re really satisfied!”
-                                        </h6>
-                                        <p>Ibrahima K. <span class="text-muted">/ Senior Marketing at Amazon</span></p>
-                                    </div>
-                                </div>
-                                <div class="client_card mb-2" data-wow-delay="0.2s">
-                                    <div class="user_img">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user2.jpg') }}" alt="">
-                                    </div>
-                                    <div class="inf_content">
-                                        <div class="rate_stars">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <h6>
-                                            “Hexagon - 1st my choice for cloud services method”
-                                        </h6>
-                                        <p> Ben S. <span class="text-muted">/ CEO at ThemesCamp</span></p>
-                                    </div>
-                                </div>
-                                <div class="client_card" data-wow-delay="0.4s">
-                                    <div class="user_img">
-                                        <img src="{{ asset('assets/Main/img/testimonials/user3.jpg') }}" alt="">
-                                    </div>
-                                    <div class="inf_content">
-                                        <div class="rate_stars">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <h6>
-                                            “Our profit increased so much. Really Awesome!”
-                                        </h6>
-                                        <p>Alexander A. <span class="text-muted">/ Tech Leader of Traveloka</span></p>
-                                    </div>
-                                </div>
+
+
                             </div>
                         </div>
                     </div>
