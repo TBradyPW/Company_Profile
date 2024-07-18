@@ -133,7 +133,6 @@
                             Contact
                         </a>
                     </li>
-
                 </ul>
                 <div class="col-lg-2">
                     <div class="items">
@@ -164,101 +163,182 @@
     <!--Contents-->
     @yield ('Contents')
     <!--End-Contents-->
-
-    <!-- ====== start footer ====== -->
-    <footer class="style-5">
+    <!-- ====== start chat-banner ====== -->
+    <section class="chat-banner style-7 py-5 bg-primary text-white my-50">
         <div class="container">
-            <div class="row gx-0 justify-content-between">
-                <div class="col-lg-3">
-                    <div class="items">
-                        <div class="title">
-                            PT. Hexagon Karyatama Indonesia
-                        </div>
-                        <small class="text">
-                            Founded under the name PT. Hexagon Karyatama Indonesia, Hexagon Inc. is a company that
-                            operates
-                            in the field of digital artwork and IT solutions. With a focus on education and a commitment
-                            to
-                            providing high-quality services, we have established ourselves as a leading provider in our
-                            industry
-                        </small>
-
+            <div class="row align-items-end">
+                <div class="col-lg-3 col-sm-6 d-none d-lg-block">
+                    <div class="img img1">
+                        <img src="{{ asset('assets/Main/img/vector1.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="items">
-                        <div class="title">
-                            Information
-                        </div>
-                        <small class="text mb-10 d-block">
-                            Jl. Abdul Halim No.128, Cimahi Tengah, <br> Kota Cimahi, Jawa Barat 40522, INA
-                        </small>
-                        <small class="text mb-10 d-block">
-                            <a href="https://wa.me/6281222181823">+62 812 2218 1823</a>
-                        </small>
-                        <small class="text d-block">
-                            <a
-                                href="https://mail.google.com/mail/u/0/?view=cm&amp;tf=1&amp;fs=1&amp;to=contact@hexagon.co.id">contact@hexagon.co.id</a>
-                        </small>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="items">
-                        <div class="title">
-                            Our Ecosystem
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="https://hexamedia.id/"> Hexamedia </a>
-                            </li>
-                            <li>
-                                <a href="#"> Hexa Journal </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="items">
-                        <div class="title">
-                            Follow Us
-                        </div>
-                        <div class="socail-icons">
-                            <a href="https://twitter.com/"
-                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2"
-                                target="_blank">
-                                <i class="fab fa-twitter"></i>
+                <div class="col-lg-5">
+                    <div class="info text-center text-lg-left">
+                        <p> Hire Us For Your Project </p>
+                        <h3> Let's Work Together </h3>
+                        <div class="btns mt-4">
+                            <a href="#0"
+                                class="btn btn-icon-circle rounded-pill bg-dark text-white fw-bold me-3 mb-3 mb-lg-0">
+                                <small> Estimate Project <i class="fas fa-long-arrow-alt-right"></i> </small>
                             </a>
-                            <a href="https://facebook.com/"
-                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray me-2"
-                                target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://instagram.com/"
-                                class="icon-35 rounded-circle bg-gray overflow-hidden d-inline-flex align-items-center justify-content-center text-gray"
-                                target="_blank">
-                                <i class="fab fa-instagram"></i>
+                            <a href="#0" class="btn btn-icon-circle rounded-pill border-light text-white">
+                                <small> Contact Us <i class="fas fa-long-arrow-alt-right"></i> </small>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="foot">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="logo">
-                            <img src="{{ asset('assets/Main/img/logo-footer-50.png') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <small class="small">
-                            © 2022 Copyrights by <a href="#" class="fw-bold text-decoration-underline">Hexagon
-                                Inc.</a> All
-                            Rights Reserved.
-                        </small>
+                <div class="col-lg-4">
+                    <div class="img img2">
+                        <img src="{{ asset('assets/Main/img/vector2.png') }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- ====== end chat-banner ====== -->
+    <!-- ====== start footer ====== -->
+    <footer class="style-7">
+        <div class="container">
+            <div class="content section-padding">
+                <div class="row">
+                    <div class="col-lg-4 border-1 border-end brd-gray">
+                        <div class="info-logo">
+                            <a href="#" class="logo">
+                                <img src="{{ asset('assets/Main/img/Hexagon-logo.png') }}" alt="">
+                            </a>
+                            <div class="text">
+                                Founded under the name PT. Hexagon Karyatama Indonesia, Hexagon Inc. is a company that
+                                operates in the field of digital artwork and IT solutions. With a focus on education and
+                                a commitment to providing high-quality services, we have established ourselves as a
+                                leading provider in our industry.
+                            </div>
+                            <div class="social-links">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="links-side">
+                            <div class="row gx-5">
+                                <div class="col-lg-6">
+                                    <div class="links-group">
+                                        <h5>What We Do</h5>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <ul class="links">
+                                                    <li>
+                                                        <a href="#">Online Marketing</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Technology</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Business</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Content strategy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Development</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Advertising Strategy</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <ul class="links">
+                                                    <li>
+                                                        <a href="#">Game Development</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Application Design</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">IT Solutions</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Texture & Pattern</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Data Analysis</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="links-group">
+                                        <h5>More Pages</h5>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <ul class="links">
+                                                    <li>
+                                                        <a href="#">About Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Blogs</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Shop</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Contact</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Privacy Policy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Terms of Use</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <ul class="links">
+                                                    <li>
+                                                        <a href="#">Refund Policy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Terms Conditions</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Join Us <small
+                                                                class="text-uppercase bg-blue7 text-white py-1 px-3 rounded-pill ms-2 lh-2">
+                                                                hiring </small></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Get In Touch</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">FAQ Page</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot bg-white p-3 rounded-pill text-center">
+                <p> Full Copyright <a href="#" class="fw-bold"> @Hexagon Inc. </a> - 2024 </p>
+            </div>
+        </div>
+        <!-- <img src="{{ asset('assets/Main/img/footer/footer_4_wave.png') }}" alt="" class="wave"> -->
     </footer>
     <!-- ====== end footer ====== -->
 

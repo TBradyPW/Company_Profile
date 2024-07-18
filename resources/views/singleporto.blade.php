@@ -18,9 +18,16 @@
                             </small>
                         </div>
 
-                        <div class="content-card">
-                            <div class="img">
-                                <img id="foto-berita" src="" alt="News">
+                        <div class="blog-details-slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper" id="foto-berita">
+                                    <!-- Gambar-gambar akan dimasukkan di sini -->
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                         </div>
                         <div class="row gx-4 gx-lg-5">
@@ -87,10 +94,34 @@
 @endsection
 
 @section('script')
+    <!-- Tambahkan Swiper CSS dan JS di sini -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
     <script>
         $(document).ready(function() {
             var pathArray = window.location.pathname.split('/');
             var id = pathArray[pathArray.length - 1];
+            var swiper = null; // Declare swiper variable outside fetchNewsData
 
             function fetchNewsData(url, id, callback) {
                 $.ajax({
@@ -112,35 +143,47 @@
                 });
             }
 
-            $(document).ready(function() {
-                var pathArray = window.location.pathname.split('/');
-                var id = pathArray[pathArray.length - 1];
+            fetchNewsData(baseURL + 'Portofolio', id, function(news) {
+                if (news) {
+                    $('#judul').text(news.judul_porto);
+                    $('#Judul').text(news.judul_porto);
+                    $('#isi-konten').html(news.ket_porto.replace(/\n/g, '<br/>'));
+                    $('#kategori').text(news.Kategori);
 
-                fetchNewsData(baseURL + 'Portofolio', id, function(news) {
-                    let tampilfoto = `${baseURL}images/${news.fotoprojek}`;
-                    if (news) {
-                        $('#judul').text(news.judul_porto);
-                        $('#Judul').text(news.judul_porto);
-                        $('#isi-konten').html(news.ket_porto.replace(/\n/g, '<br/>'));
-                        $('#kategori').text(news.Kategori);
-                        if (news.fotoprojek.length > 0) {}
-                        $('#foto-berita').attr('src', tampilfoto);
-                        if (tampilfoto && tampilfoto.length > 0) {
-                            $('#foto-berita').attr('src', tampilfoto);
-                        } else {
-                            $('#foto-berita').attr('src',
-                                'https://www.exabytes.co.id/blog/wp-content/uploads/2021/11/error-404-not-found.jpg'
-                            );
-                        }
-                    } else {
-                        $('#judul').text('Portofolio not found');
-                        $('#kategori').text('null');
-                        $('#foto-berita').attr('src',
-                            'https://www.exabytes.co.id/blog/wp-content/uploads/2021/11/error-404-not-found.jpg'
-                        );
+                    let fotoContainer = $('#foto-berita');
+                    fotoContainer.empty();
+                    news.images.forEach(image => {
+                        let imgElement =
+                            `<div class="swiper-slide"><img src="${baseURL}images/${image.images}" alt="" class="img-fluid mb-3"></div>`;
+                        fotoContainer.append(imgElement);
+                    });
+
+                    if (swiper) {
+                        swiper.destroy(true,
+                        true); // Destroy existing swiper instance before creating a new one
                     }
-                });
+
+                    // Initialize Swiper
+                    swiper = new Swiper('.swiper-container', {
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                } else {
+                    $('#judul').text('Portofolio not found');
+                    $('#kategori').text('null');
+                    $('#foto-berita').html(
+                        '<img src="https://www.exabytes.co.id/blog/wp-content/uploads/2021/11/error-404-not-found.jpg" alt="404 Not Found" class="img-fluid">'
+                    );
+                }
             });
+
             $.ajax({
                 url: baseURL + 'Category',
                 type: 'GET',
@@ -151,19 +194,19 @@
                         var container = $('#Category');
                         container.empty();
                         let showAllButton = `<a href="#" class="cat-item" onclick="munculkanSemua(); $('.cat-item').removeClass('active'); $(this).addClass('active');">
-                <span>All</span>
-            </a>`;
+                            <span>All</span>
+                        </a>`;
                         container.append(showAllButton);
                         categoryData.forEach(function(category) {
                             let content = `<a href="#" class="cat-item" data-filter="${category.nama_category}" onclick="munculkanBerdasarkan('${category.nama_category}')">
-                    <span>${category.nama_category}</span>
-                </a>`;
+                                <span>${category.nama_category}</span>
+                            </a>`;
                             container.append(content);
                         });
                     } else {
                         var container = $('#Category');
                         container.empty();
-                        let content = `<h1>Tidak ada category</h1>`;
+                        let content = `<h1>Tidak ada kategori</h1>`;
                         container.append(content);
                     }
                 },

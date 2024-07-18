@@ -11,7 +11,7 @@ function loadPage(page) {
     }
 }
 
-// Untuk membataskan panjang teks jika terlalu panjang
+// Untuk membatasi panjang teks jika terlalu panjang
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
         return text.substring(0, maxLength) + '...';
@@ -19,11 +19,11 @@ function truncateText(text, maxLength) {
     return text;
 }
 
-// Menampilkan seluruh data tanpa berdasarkan category
+// Menampilkan seluruh data tanpa berdasarkan kategori
 function munculkanSemua() {
     currentPage = 1;
     $.ajax({
-        url: baseURL + 'Portofolio?page=' + currentPage + '&page=' + currentPage,
+        url: baseURL + 'Portofolio?page=' + currentPage,
         type: 'GET',
         success: function (response) {
             var cardsContainer = $('#cardsContainer');
@@ -35,11 +35,12 @@ function munculkanSemua() {
                     let truncatedDescription = truncateText(keterangan, 60);
                     var kategori = DOMPurify.sanitize(card.Kategori);
                     var judul = DOMPurify.sanitize(card.judul_porto);
+                    var images = card.images.map(image => `<img src="${baseURL}images/${image.images}" alt="">`).join('');
                     let content = `
                         <div class="col-lg-4 mix ${kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="${baseURL}images/${card.fotoprojek}" alt="">
+                                    ${images}
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>
@@ -72,7 +73,7 @@ function munculkanSemua() {
     });
 }
 
-// Menampilkan data berdasarkan category
+// Menampilkan data berdasarkan kategori
 function munculkanBerdasarkan(nama_category) {
     currentCategory = nama_category;
     currentPage = 1;
@@ -89,11 +90,12 @@ function munculkanBerdasarkan(nama_category) {
                     let truncatedDescription = truncateText(keterangan, 60);
                     var kategori = DOMPurify.sanitize(card.Kategori);
                     var judul = DOMPurify.sanitize(card.judul_porto);
+                    var images = card.images.map(image => `<img src="${baseURL}images/${image.images}" alt="">`).join('');
                     let content = `
                         <div class="col-lg-4 mix ${kategori}">
                             <div class="portfolio-card mb-50">
                                 <div class="img">
-                                    <img src="${baseURL}images/${card.fotoprojek}" alt="">
+                                    ${images}
                                 </div>
                                 <div class="info" style="background-color: white;">
                                     <h5>
@@ -148,7 +150,7 @@ function hidePaginationControls() {
     $('.pagination').hide();
 }
 
-// Category portofolio
+// Mengambil dan menampilkan kategori portfolio
 $.ajax({
     url: baseURL + 'Category',
     type: 'GET',
@@ -157,7 +159,7 @@ $.ajax({
             var categoryData = response.data;
             var container = $('#Category');
             container.empty();
-            let showAllButton = `<button type="button" style="font-weight: bold; font-size: 14.4px; ./ass="control" onclick="munculkanSemua(); $('.control').removeClass('active'); $(this).addClass('active');">All</button>`;
+            let showAllButton = `<button type="button" style="font-weight: bold; font-size: 14.4px;" class="control" onclick="munculkanSemua(); $('.control').removeClass('active'); $(this).addClass('active');">All</button>`;
             container.append(showAllButton);
             categoryData.forEach(function (category) {
                 var kategori = DOMPurify.sanitize(category.nama_category);
@@ -177,11 +179,3 @@ $.ajax({
 });
 
 munculkanSemua();
-munculkanBerdasarkan();
-
-// $(window).on('load', function () {
-// });
-// $(document).ready(function () {
-//     munculkanSemua();
-//     munculkanBerdasarkan();
-// });
